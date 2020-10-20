@@ -15,15 +15,8 @@ do
 
 
         "update")
-
-echo "starting update script..."
+        
 sleep 1
-clear
-sleep 1
-
-read -p "to continue with update, Press [Enter], to cancel press [Ctrl-C]"
-read -p "the script will now look for updates, 
-to continue Press [Enter]"
 clear
 sudo apt update || echo "$(tput setaf 1)error occured! $(tput sgr 0)"
 sleep 4
