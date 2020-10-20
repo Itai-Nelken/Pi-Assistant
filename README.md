@@ -22,10 +22,10 @@ to update, type: git pull
 ## CHANGELOG (dd/mm/yy)
 
  * 20/10/2020 - shortened time about and credits are shown by 1 second, improvements to installation scripts, install script now creates menu shortcut
-  
+ * 20/10/2020 - BIG UPDATE: v1.1: added more apps, changed autoremove with apt tools (containing autoremove and autoclean), when commands finish running the script returns to the main menu and more
   
 ## To do:
 
-- [ ] return to main menu instead of exiting when executed command finishes
+- [x] return to main menu instead of exiting when executed command finishes
 - [ ] add uninstall script
   
