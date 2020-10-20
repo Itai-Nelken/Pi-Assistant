@@ -26,4 +26,5 @@ to update, type: git pull
 ## To do:
 =========
 - [ ] return to main menu instead of exiting when executed command finishes
+- [ ] add uninstall script
   
