@@ -15,7 +15,7 @@ to update, type: git pull
 
 <b>CHANGELOG (dd/mm/yy)<b/>
 ===========================
- * 20/10/2020 - shortened time about and credits are shown by 1 second, improvements to installation scripts,install script now creates menu shortcut
+ * 20/10/2020 - shortened time about and credits are shown by 1 second, improvements to installation scripts, install script now creates menu shortcut
   
   
 <b>To do:<b/>
