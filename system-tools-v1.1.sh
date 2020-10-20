@@ -1,7 +1,10 @@
 #!/bin/bash
 
+#run updater script
+./updater.sh
+
 #about & credits
-echo "$(tput setaf 3)system-tools v1.1 $(tput sgr 0)" 
+echo "$(tput setaf 3)system-tools v1.1-beta $(tput sgr 0)" 
 echo "$(tput setaf 3)by Itai Nelken $(tput sgr 0)" 
 
 #main menu
