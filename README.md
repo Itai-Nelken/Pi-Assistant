@@ -25,5 +25,5 @@ to update, type: git pull
   
 ## To do:
 =========
-- [ ] return to main menu instead of exiting when command executed finishes
+- [ ] return to main menu instead of exiting when executed command finishes
   
