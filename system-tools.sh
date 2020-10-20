@@ -66,8 +66,10 @@ sleep 2
 
         "root")
 
-
+echo "starting script..."
+sleep 1
 clear
+sleep 1
 
 echo you can use the same password as your user account if you wish
 sleep 5
@@ -84,6 +86,7 @@ done
 
 
 clear
+read -p "Press [Enter] to finish."
 
             break
             ;;
@@ -92,13 +95,14 @@ clear
  
         "install-applications")
 
-
+echo "starting script..."
+sleep 1
 clear
 
 read -p "this script will help you install and update applications.
 Press [Ctrl-C] to cancel, or [Enter] to continue..."
-PS3='Please enter the number above for application you would like to install (1 - 8): '
-options=("gparted" "chromium-web-browser" "firefox-esr" "blender" "audacity" "install/update snap-store" "inkscape")
+PS3='Please enter the number above for application you would like to install (1 - 7): '
+options=("gparted" "chromium-web-browser" "firefox-esr" "blender" "audacity" "install/update snap-store" "inkscape" )
 select opt in "${options[@]}"
 do
     case $opt in
@@ -358,10 +362,12 @@ Press [Enter] to continue."
 sleep 1
 clear
 sudo apt remove inkscape || echo "$(tput setaf 1)error occured! $(tput sgr 0)"
-sleep 2
+read -p "remove complete. Press [Enter] to continue..."
 
             break
             ;;
+
+
 
 
 
