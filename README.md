@@ -1,5 +1,5 @@
 # system-tools
-system-tools is a simple terminal app that makes updating the system, installing apps, and more easier than ever
+system-tools is a simple terminal app that makes updating the system, installing apps and more, easier than ever
 
 <b>Installation<b/>
 =======================
