@@ -1,8 +1,7 @@
 #!/bin/bash
 
-cd ~ && cd Desktop || echo "$(tput setaf 1)error occured! $(tput sgr 0)"
-sudo chmod +x system-tools.desktop || echo "$(tput setaf 1)error occured! $(tput sgr 0)"
-
+cd ~/Desktop || error "Failed to change to /home/pi/desktop/!"
+sudo chmod +x system-tools.desktop || error "failed to mark install2.sh as executable!"
 
 
 
