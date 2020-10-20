@@ -1,9 +1,11 @@
 #!/bin/bash
 
+#about & credits
 echo "$(tput setaf 3)system-tools v1.0 $(tput sgr 0)" 
 echo "$(tput setaf 3)by Itai Nelken $(tput sgr 0)"
-sleep 2 
+sleep 1 
 
+#main menu
 read -p "this script will help you install applications,
 update the system, and much more.
 Press [Enter] to continue, or [Ctrl-C] to quit."
