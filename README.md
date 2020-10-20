@@ -12,4 +12,4 @@ git clone https://github.com/Itai-Nelken/system-tools.git && cd system-tools && 
 
 <b>CHANGELOG<b/>
   * 20/10/2020 - shortened time about and credits are shown by 1 second
-  
+    improvements to installation scripts
