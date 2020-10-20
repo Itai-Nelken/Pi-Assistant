@@ -5,6 +5,6 @@ Terminal=true
 Exec=/home/pi/system-tools/system-tools.sh
 Name=system-tools
 Icon=/home/pi/system-tools/icons/system-tools.png
-Path=/home/system-tools
+Path=/home/pi/system-tools
 Comment=
 StartupNotify=false
