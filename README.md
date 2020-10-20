@@ -15,8 +15,8 @@ to update, type: git pull
 
 ## Screenshots
 
-![system-tools1](screenshots/system-tools-1.png)
-![system-tools2](screenshots/system-tools-2.png)
+![system-tools1](screenshots/system-tools-1a.png)
+![system-tools2](screenshots/system-tools-2a.png)
 
 
 ## CHANGELOG (dd/mm/yy)
