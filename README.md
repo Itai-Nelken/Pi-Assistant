@@ -15,7 +15,7 @@ to update, type: git pull
 
 ## Screenshots
 
-![system-tools1](screenshots/system-tools-1a.png)
+![system-tools1](screenshots/system-tools-1b.png)
 ![system-tools2](screenshots/system-tools-2a.png)
 
 
@@ -28,4 +28,5 @@ to update, type: git pull
 
 - [x] return to main menu instead of exiting when executed command finishes
 - [ ] add uninstall script
+- [ ] add update on startup script
   
