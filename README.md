@@ -11,7 +11,7 @@ system-tools is a simple terminal app that makes updating the system, installing
 
 to install system-tools, just type the following into terminal:
 git clone https://github.com/Itai-Nelken/system-tools.git && cd system-tools && sudo chmod +x install.sh && ./install.sh<br>
-to update, type: git pull
+system tools has a automatic updater that runs on startup, to get it, you have to reinstall system tools to the latest version if you have Version 1.0.
 
 ## Screenshots
 
@@ -23,10 +23,11 @@ to update, type: git pull
 
  * 20/10/2020 - shortened time about and credits are shown by 1 second, improvements to installation scripts, install script now creates menu shortcut
  * 20/10/2020 - BIG UPDATE: v1.1: added more apps, changed autoremove with apt tools (containing autoremove and autoclean), when commands finish running the script returns to the main menu and more
+ * 21/10/2020 - added updater script that runs on startup
   
 ## To do:
 
 - [x] return to main menu instead of exiting when executed command finishes
+- [x] add update on startup script
 - [ ] add uninstall script
-- [ ] add update on startup script
   
