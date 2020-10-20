@@ -2,6 +2,9 @@
 Version=1.0
 Type=Application
 Terminal=true
-Exec=~/system-tools/system-tools.sh
+Exec=/home/pi/system-tools/system-tools.sh
 Name=system-tools
 Icon=/home/pi/system-tools/icons/system-tools.png
+Path=/home/system-tools
+Comment=
+StartupNotify=false
