@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#run updater script (updater not working properly
-#./updater.sh
+#run updater script (updater might not work properly)
+./updater.sh
 
 #about & credits
 echo "$(tput setaf 3)system-tools v1.1.1 $(tput sgr 0)" 
