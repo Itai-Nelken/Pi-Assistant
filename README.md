@@ -31,7 +31,7 @@ $ rm -rf ~/system-tools && sudo rm -f ~/Desktop/system-tools.desktop && sudo rm 
 
 ## Screenshots
 
-![system-tools1](screenshots/system-tools-1b.png)
+![system-tools1](screenshots/system-tools-1c.png)
 ![system-tools2](screenshots/system-tools-2a.png)
 
 
