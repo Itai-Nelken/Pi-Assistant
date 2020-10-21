@@ -6,7 +6,6 @@
 #about & credits
 echo "$(tput setaf 3)system-tools v1.1.1 $(tput sgr 0)" 
 echo "$(tput setaf 3)by Itai Nelken $(tput sgr 0)"
-sleep 1 
 
 #main menu
 echo this script will help you install applications, update the system, and much more
@@ -41,7 +40,7 @@ clear
 
 clear
 
-cd ~/Desktop/system-tools-beta/apps/
+cd apps
 ./app-installer.sh
 
 clear
@@ -63,8 +62,6 @@ clear
 
 ./other.sh
 clear
-read -p "[Ctrl-C] to exit"
-
 
             break
             ;;

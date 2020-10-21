@@ -12,6 +12,7 @@ do
 
         "update")
 
+clear
 git pull || error "error occured! are you connected to the internet?"
 
             break
