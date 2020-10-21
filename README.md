@@ -39,7 +39,7 @@ $ rm -rf ~/system-tools && sudo rm -f ~/Desktop/system-tools.desktop && sudo rm 
 
  * 20/10/2020 - shortened time about and credits are shown by 1 second, improvements to installation scripts, install script now creates menu shortcut
  * 20/10/2020 - BIG UPDATE: v1.1: added more apps, changed autoremove with apt tools (containing autoremove and autoclean), when commands finish running the script returns to the main menu and more
- * 21/10/2020 - added updater script that runs on startup, added uninstall script, now you can update manually from system-tools.
+ * 21/10/2020 - added updater script that runs on startup, added uninstall script, now you can update manually from system-tools. fixed countless bugs
   
 ## To do:
 
