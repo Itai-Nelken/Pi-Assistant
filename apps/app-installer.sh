@@ -87,4 +87,4 @@ done
 
 sleep 1
 cd ..
-./system-tools-v1.1-beta.sh
+./system-tools-v1.1.1.sh

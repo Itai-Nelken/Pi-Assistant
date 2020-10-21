@@ -1,7 +1,7 @@
 #!/bin/bash  
 
 clear
-echo "this script will help you install or removegnome-system-monitor."
+echo "this script will help you install or remove gnome-system-monitor."
 PS3='Please enter the number for operation you want to perform (1 - 2): '
 options=("install" "remove")
 select opt in "${options[@]}"
