@@ -23,11 +23,11 @@ system tools has a automatic updater that runs on startup, to get it, you have t
 
  * 20/10/2020 - shortened time about and credits are shown by 1 second, improvements to installation scripts, install script now creates menu shortcut
  * 20/10/2020 - BIG UPDATE: v1.1: added more apps, changed autoremove with apt tools (containing autoremove and autoclean), when commands finish running the script returns to the main menu and more
- * 21/10/2020 - added updater script that runs on startup
+ * 21/10/2020 - added updater script that runs on startup, added uninstall script, now you can update manually from system-tools.
   
 ## To do:
 
 - [x] return to main menu instead of exiting when executed command finishes
 - [x] add update on startup script
-- [ ] add uninstall script
-  
+- [x] add uninstall script
+- [ ] add more features
