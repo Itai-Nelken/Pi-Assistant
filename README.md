@@ -7,11 +7,27 @@ system-tools is a simple terminal app that makes updating the system, installing
 * [My blog](https://thepisite.blogspot.com/)
 * [YouTube](https://youtube.com/channel/UCM4Fo6ncNybS1xhJHnWSODg)
 
-## Installation and updates
+## Installation 
 
 to install system-tools, just type the following into terminal:
-git clone https://github.com/Itai-Nelken/system-tools.git && cd system-tools && sudo chmod +x install.sh && ./install.sh<br>
-system tools has a automatic updater that runs on startup, to get it, you have to reinstall system tools to the latest version if you have Version 1.0.
+```sh-session
+$ git clone https://github.com/Itai-Nelken/system-tools.git && cd system-tools && sudo chmod +x install.sh && ./install.sh
+```
+## updates
+
+if you have v1.1.1 or later, go to 'other>update' to update. system tools also has a automatic updater that runs on startup<br>
+so if you see something happening when you open system-tools, don't worry, it's just the updater and it won't affect system-tools<br>
+in any way even if you get errors.<br>
+automatic updater was added in v1.1 and manual updater in v1.1.1, so if you have v1.0 or want to update from outside system-tools, open terminal and type the following to update to latest version:
+```sh-session
+$ cd ~/system-tools && git pull
+```
+
+## removal
+system-tools v1.1.1 and later has a removal script in 'other>remove' if you have an earlier version, open terminal and type: 
+```sh-session
+$ rm -rf ~/system-tools && sudo rm -f ~/Desktop/system-tools.desktop && sudo rm -f /usr/share/applications/system-tools.desktop 
+```
 
 ## Screenshots
 
