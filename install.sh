@@ -7,7 +7,7 @@ sudo cp ~/system-tools/system-tools.desktop /usr/share/applications || error "fa
 #mark as executable some neded scripts
 cd ~/system-tools || error "Failed to change to /home/pi/system-tools"
 sudo chmod +x system-tools-v1.1.1.sh || error "failed to mark system-tools-v1.1.1.sh as executable!"
-sudo chmod +x updater.sh || error "failed to mark updater.sh as executable!"
+
 sudo chmod +x other.sh || error "failed to mark other.sh as executable!"
 sudo chmod +x uninstall.sh || error "failed to mark uninstall.sh as executable!"
 

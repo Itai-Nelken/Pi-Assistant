@@ -1,22 +1,16 @@
 #!/bin/bash  
 
 clear
+echo more features coming soon..
 echo "this script will help you update or remove system-tools."
-PS3='Please enter the number for operation you want to perform (1 - 3): '
-options=("update" "remove" "recovery")
+PS3='Please enter the number for operation you want to perform (1 - 1): '
+options=("remove")
 select opt in "${options[@]}"
 do
     case $opt in
 
 
 
-        "update")
-echo the updater is still in development and isn't working properly
-echo starting updater in 5 seconds, press [Ctrl-C] to exit
-git pull || error "error occured! are you connected to the internet?"
-
-            break
-            ;;
 
         "remove")
 
@@ -26,13 +20,6 @@ git pull || error "error occured! are you connected to the internet?"
             break
             ;;
 
-"recovery")
-
-./recovery.sh|| error "error occured! can't start recovery script"
-
-
-            break
-            ;;
 
       *) echo "invalid option $REPLY";;
     esac
