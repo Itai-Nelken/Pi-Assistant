@@ -17,6 +17,8 @@
 #3.remove folder: (sudo) rm -rf /path/to/folder
 #remove file: (sudo) rm -f /path/to/file
 
+#4. echo -n "Do yo want to continue? [Y/n] "
+
 
 #if box86 is installed then ask if you want to reinstall, if box86 isn't installed, proceed with compile.
 if
@@ -38,6 +40,9 @@ then
 #create a zoom directory (~/zoom)
 mkdir -p ~/zoom
 #copyy the libraries neede for zoom to the newly created directory
-cp ~/system-tools/apps/zoom
+cp ~/system-tools/apps/zoom/xmrig-aarch64.tar.gz ~/zoom
+#go to zoom directory
+cd ~ && cd zoom
+
 
 	
