@@ -14,14 +14,8 @@ to install system-tools, just type the following into terminal:
 $ git clone https://github.com/Itai-Nelken/system-tools.git && cd system-tools && sudo chmod +x install.sh && ./install.sh
 ```
 ## updates
-
-if you have v1.1.1 or later, go to 'other>update' to update. system tools also has a automatic updater that runs on startup<br>
-so if you see something happening when you open system-tools, don't worry, it's just the updater and it won't affect system-tools<br>
-in any way even if you get errors.<br>
-automatic updater was added in v1.1 and manual updater in v1.1.1, so if you have v1.0 or want to update from outside system-tools, open terminal and type the following to update to latest version:
-```sh-session
-$ cd ~/system-tools && git pull
-```
+the updater isn't functional yet, nad fails most of the time,
+if you have v1.1.1 or later, go to 'other>update' to update. 
 
 ## removal
 system-tools v1.1.1 and later has a removal script in 'other>remove' if you have an earlier version, open terminal and type: 
