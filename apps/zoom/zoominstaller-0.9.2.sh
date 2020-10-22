@@ -13,4 +13,5 @@ if
 	
 	
 then
+	#install box86 (maybe add this?: https://archive.org/details/box86.7z_20200928)
 	sudo dpkg -i box86-armhf.deb
