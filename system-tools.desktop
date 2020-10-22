@@ -2,7 +2,7 @@
 Version=1.1.1
 Type=Application
 Terminal=true
-Exec=/home/pi/system-tools/system-tools-v1.1.1.sh
+Exec=/home/pi/system-tools/system-tools-v1.1.1.sh 
 Name=system-tools
 Icon=/home/pi/system-tools/icons/system-tools.png
 Path=/home/pi/system-tools
