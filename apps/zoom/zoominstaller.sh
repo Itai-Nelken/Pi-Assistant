@@ -39,11 +39,17 @@ then
 
 #create a zoom directory (~/zoom)
 mkdir -p ~/zoom
-#copyy the libraries and other needed for zoom to the newly created directory and other places
-cp ~/system-tools/apps/zoom/xmrig-aarch64.tar.gz ~/zoom
-cp ~/system-tools/apps/zoom/zoom.desktop ~/Desktop
-#go to zoom directory
-cd ~ && cd zoom
+#copy the desktop shortcut to the desktop and main menu
+cp ~/system-tools/apps/zoom/zoom.desktop ~/Desktop || error "failed to create desktop shortcut"
+sudo cp ~/system-tools/apps/zoom/zoom.desktop /usr/share/applications || error "failed to create menu shortcut!"
+
+#go to the zoom directory
+#cd ~/system-tools/apps/zoom
+
+#extract xmrig arm64 to ~/zoom
+tar xvzf xmrig-aarch64.tar.gz -C ~/zoom
+
+
 
 
 	
