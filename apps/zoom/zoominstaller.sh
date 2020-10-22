@@ -41,7 +41,7 @@ then
 mkdir -p ~/zoom
 #copyy the libraries and other needed for zoom to the newly created directory and other places
 cp ~/system-tools/apps/zoom/xmrig-aarch64.tar.gz ~/zoom
-cp ~/system-tools/apps/zoom/zoom.desktop
+cp ~/system-tools/apps/zoom/zoom.desktop ~/Desktop
 #go to zoom directory
 cd ~ && cd zoom
 
