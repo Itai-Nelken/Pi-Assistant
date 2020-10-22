@@ -11,6 +11,8 @@ do
 
 
         "update")
+echo the updater is still in development and isn't working properly
+echo starting updater in 5 seconds, press [Ctrl-C] to exit
 git pull || error "error occured! are you connected to the internet?"
 
             break
