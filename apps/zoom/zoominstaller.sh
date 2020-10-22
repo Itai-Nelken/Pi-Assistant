@@ -1,9 +1,12 @@
 #!/bin/bash
+#big thanks to ptitSeb for creating box86, find him at: https://github.com/ptitSeb/box86
+
 
 #commands to remember
 #1. find /where/to/look/up criteria action
 
-#2.how to compile box86:
+#2.how to compile box86: https://github.com/ptitSeb/box86/blob/master/COMPILE.md
+
 #git clone https://github.com/ptitSeb/box86
 #cd box86
 #mkdir build; cd build; cmake .. -DRPI4=1 -DCMAKE_BUILD_TYPE=RelWithDebInfo
