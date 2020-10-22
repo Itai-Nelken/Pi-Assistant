@@ -1,6 +1,7 @@
 #!/bin/bash   
 
-
+echo you might see some errors if snap-store is not installed
+sleep 2
 sudo apt update || error "error occured! are you connected to the internet?"
 sleep 2
 clear
