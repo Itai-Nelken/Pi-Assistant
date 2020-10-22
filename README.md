@@ -43,4 +43,3 @@ $ rm -rf ~/system-tools && sudo rm -f ~/Desktop/system-tools.desktop && sudo rm 
 - [x] return to main menu instead of exiting when executed command finishes
 - [x] add update on startup script
 - [x] add uninstall script
-- [ ] add more features
