@@ -21,8 +21,8 @@
 #if box86 is installed then ask if you want to reinstall, if box86 isn't installed, proceed with compile.
 if
 	if
-	
-		#box86 installed (search for ~/box86 folder)
+		#is box86 installed? (search for ~/box86 folder)
+		
 		
 	then
 		#ask if you want to reinstall, if no, exit both loops
@@ -32,4 +32,12 @@ if
 then
 	#compile box86 for raspberry pi
 	
+	
+	
+
+#create a zoom directory (~/zoom)
+mkdir -p ~/zoom
+#copyy the libraries neede for zoom to the newly created directory
+cp ~/system-tools/apps/zoom
+
 	
