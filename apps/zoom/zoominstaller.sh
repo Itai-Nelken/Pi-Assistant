@@ -38,7 +38,16 @@ then
 	
 
 #create a zoom directory (~/zoom)
-mkdir -p ~/zoom
+#mkdir -p ~/zoom
+
+#download some tools needed
+sudo apt install xz-utils
+
+#download zoom (other linux OS>32 bit>Download)
+
+#extract zoom to /home/Pi and then delete the .tar.xz
+
+
 #copy the desktop shortcut to the desktop and main menu
 cp ~/system-tools/apps/zoom/zoom.desktop ~/Desktop || error "failed to create desktop shortcut"
 sudo cp ~/system-tools/apps/zoom/zoom.desktop /usr/share/applications || error "failed to create menu shortcut!"
