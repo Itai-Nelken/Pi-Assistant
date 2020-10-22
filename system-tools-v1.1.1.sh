@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#run updater script (updater might not work properly)
-./updater.sh
+#uncoment line below to run updater script at startup (the updater is still in development, and fails most of the time, use it at your own risk)
+#./updater.sh
 
 #about & credits
 echo "$(tput setaf 3)system-tools v1.1.1 $(tput sgr 0)" 
