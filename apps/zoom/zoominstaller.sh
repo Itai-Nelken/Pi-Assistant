@@ -1,5 +1,5 @@
 #!/bin/bash
-#big thanks to ptitSeb for creating box86, find him at: https://github.com/ptitSeb/box86
+#big thanks to ptitSeb for creating box86: https://github.com/ptitSeb/box86
 
 
 #commands to remember
