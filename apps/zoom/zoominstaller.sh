@@ -11,9 +11,22 @@
 #sudo make install
 #sudo systemctl restart systemd-binfmt
 
+#3.remove folder: (sudo) rm -rf /path/to/folder
+#remove file: (sudo) rm -f /path/to/file
+
 
 #if box86 is installed then ask if you want to reinstall, if box86 isn't installed, proceed with compile.
 if
+	if
+	
+		#box86 installed (search for ~/box86 folder)
+		
+	then
+		#ask if you want to reinstall, if no, exit both loops
+	
 	
 	
 then
+	#compile box86 for raspberry pi
+	
+	
