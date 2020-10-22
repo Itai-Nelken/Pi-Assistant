@@ -1,7 +1,7 @@
 #!/bin/bash
 
-cp ~/system-tools/system-tools.desktop ~/Desktop || echo "$(tput setaf 1)failed to create desktop shortcut! $(tput sgr 0)"
-sudo cp ~/system-tools/system-tools.desktop /usr/share/applications || echo "$(tput setaf 1)failed to create menu shortcut! $(tput sgr 0)"
+cp ~/system-tools/system-tools.desktop ~/Desktop || error "failed to create desktop shortcut!"
+sudo cp ~/system-tools/system-tools.desktop /usr/share/applications || error "failed to create menu shortcut!"
 cd ~/system-tools || error "Failed to change to /home/pi/system-tools"
 sudo chmod +x system-tools-v1.1.1.sh || error "failed to mark system-tools-v1.1.1.sh as executable!"
 sudo chmod +x updater.sh || error "failed to mark updater.sh as executable!"
