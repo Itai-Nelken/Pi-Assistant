@@ -46,8 +46,8 @@ sudo cp ~/system-tools/apps/zoom/zoom.desktop /usr/share/applications || error "
 #go to the zoom directory
 #cd ~/system-tools/apps/zoom
 
-#extract xmrig arm64 to ~/zoom
-tar xvzf xmrig-aarch64.tar.gz -C ~/zoom
+#extract libxcb-xtest.so.0 to ~/zoom
+tar xvzf libxcb-xtest.so.0 -C ~/zoom
 
 
 
