@@ -1,4 +1,4 @@
-# system-tools
+# system-tools (soon to be renamed)
 
 system-tools is a simple terminal app that makes updating the system, installing apps and more, easier and faster, especially if you are new to the Linux command line or you forget the commands.
 
