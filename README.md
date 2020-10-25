@@ -13,9 +13,6 @@ to install system-tools, just type the following into terminal:
 ```sh-session
 $ git clone https://github.com/Itai-Nelken/system-tools.git && cd system-tools && sudo chmod +x install.sh && ./install.sh
 ```
-## updates
-the updater IS NOT functional yet, and fails most of the time. 
-if you have v1.1.1 or later, go to 'other>update' to launch the updater. 
 
 ## removal
 system-tools v1.1.1 and later has a removal script in 'other>remove' if you have an earlier version, open terminal and type: 
@@ -41,6 +38,6 @@ $ rm -rf ~/system-tools && sudo rm -f ~/Desktop/system-tools.desktop && sudo rm 
 ## To do:
 
 - [x] return to main menu instead of exiting when executed command finishes
-- [x] add update on startup script
 - [x] add uninstall script
-- [ ] add zoom
+- [ ] add update script and make it run on startup
+- [ ] add zoom & box86
