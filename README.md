@@ -33,7 +33,7 @@ $ rm -rf ~/system-tools && sudo rm -f ~/Desktop/system-tools.desktop && sudo rm 
  * 21/10/2020 - added updater script that runs on startup, version 1.1.1 released, added uninstall script, now you can update manually from system-tools. fixed countless bugs. 
   
 ## Known issues and bugs
-*updater not working
+*no updater and updates don't work, you have to reinstall to get the new version
   
 ## To do:
 
