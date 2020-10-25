@@ -2,7 +2,7 @@
 
 clear
 echo more features coming soon..
-echo "this script will help you update or remove system-tools."
+echo "this script will help you remove system-tools (update still in development)."
 PS3='Please enter the number for operation you want to perform (1 - 1): '
 options=("remove")
 select opt in "${options[@]}"
