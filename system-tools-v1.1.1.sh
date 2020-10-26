@@ -70,7 +70,6 @@ clear
      "other")
 
 ./other.sh
-clear
 read -p "[Ctrl-C] to exit"
 
 

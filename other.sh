@@ -13,7 +13,8 @@ do
         "update")
 
 ./updater.sh|| error "error occured! can't start updater script"
-
+clear
+echo "$(tput setaf 6)you need to reopen the app. $(tput sgr 0)"
 
             break
             ;;
