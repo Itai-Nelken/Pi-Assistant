@@ -10,6 +10,11 @@
 #	esac
 #done
 
+function error {
+  echo -e "\\e[91m$1\\e[39m"
+  exit 1
+}
+
 
 #about & credits
 echo "$(tput setaf 3)system-tools v1.1.1 $(tput sgr 0)" 

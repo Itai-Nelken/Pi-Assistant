@@ -1,5 +1,10 @@
 #!/bin/bash  
 
+function error {
+  echo -e "\\e[91m$1\\e[39m"
+  exit 1
+}
+
 clear
 echo more features coming soon..
 echo "this script will help you remove system-tools (update still in development)."
