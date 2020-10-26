@@ -2,13 +2,13 @@
 
 #start updater
 
-while true; do
-	case $yn in
-		[Yy]* ) ./updater.sh; break;;
-	    [Nn]* ) echo skipping updater
-	    * ) echo "please answer yes or no.";;
-	esac
-done
+#while true; do
+#	case $yn in
+#		[Yy]* ) ./updater.sh; break;;
+#	    [Nn]* ) echo skipping updater
+#	    * ) echo "please answer yes or no.";;
+#	esac
+#done
 
 
 #about & credits
