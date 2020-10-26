@@ -20,6 +20,7 @@ do
 ./updater.sh|| error "error occured! can't start updater script"
 clear
 echo "$(tput setaf 6)you need to reopen the app. $(tput sgr 0)"
+read -p "[Ctrl-C] to exit"
 
             break
             ;;
@@ -39,4 +40,4 @@ echo "$(tput setaf 6)you need to reopen the app. $(tput sgr 0)"
 done
 
 sleep 1
-clear
+
