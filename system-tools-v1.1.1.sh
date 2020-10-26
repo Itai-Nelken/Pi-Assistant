@@ -1,5 +1,15 @@
 #!/bin/bash
 
+#start updater
+
+while true; do
+	case $yn in
+		[Yy]* ) ./updater.sh; break;;
+	    [Nn]* ) echo skipping updater
+	    * ) echo "please answer yes or no.";;
+	esac
+done
+
 
 #about & credits
 echo "$(tput setaf 3)system-tools v1.1.1 $(tput sgr 0)" 
