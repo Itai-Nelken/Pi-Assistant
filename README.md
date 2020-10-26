@@ -30,14 +30,16 @@ $ rm -rf ~/system-tools && sudo rm -f ~/Desktop/system-tools.desktop && sudo rm 
 
  * 20/10/2020 - shortened time about and credits are shown by 1 second, improvements to installation scripts, install script now creates menu shortcut
  * 20/10/2020 - BIG UPDATE: v1.1: added more apps, changed autoremove with apt tools (containing autoremove and autoclean), when commands finish running the script returns to the main menu and more
- * 21/10/2020 - added updater script that runs on startup, version 1.1.1 released, added uninstall script, now you can update manually from system-tools. fixed countless bugs. 
+ * 21/10/2020 - added updater script that runs on startup, version 1.1.1 released, added uninstall script, now you can update manually from system-tools. fixed countless bugs.
+ * 26/10/2020 - added updater (might not work), bug fixes. 
   
 ## Known issues and bugs
-*no updater and updates don't work, you have to reinstall to get the new version
+*updater might not work, if it fails you have to reinstall to get the new version
   
 ## To do:
 
 - [x] return to main menu instead of exiting when executed command finishes
 - [x] add uninstall script
-- [ ] add update script and make it run on startup
+- [x] add updater script 
+- [ ] make updater script to run on startup
 - [ ] add zoom & box86
