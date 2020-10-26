@@ -2,7 +2,7 @@
 
 echo more apps
 PS3='Please enter the number for application you would like to install/update/remove (1 - 2): '
-options=("kdenlive" "gnome-system-monitor")
+options=("kdenlive" "gnome-system-monitor" "flatpak")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -19,6 +19,14 @@ clear
   "gnome-system-monitor")
 
 ./gsystem-monitor.sh
+clear
+            break
+            ;;
+
+
+        "flatpak")
+
+./flatpak+flathub.sh.sh
 clear
             break
             ;;
