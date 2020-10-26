@@ -10,6 +10,7 @@ sudo chmod +x system-tools-v1.1.1.sh || error "failed to mark system-tools-v1.1.
 
 sudo chmod +x other.sh || error "failed to mark other.sh as executable!"
 sudo chmod +x uninstall.sh || error "failed to mark uninstall.sh as executable!"
+sudo chmod +x updater.sh
 
 #mark as executable and run 2nd install script
 sudo chmod +x install2.sh || error "failed to mark install2.sh as executable!"
