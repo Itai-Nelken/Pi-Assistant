@@ -1,5 +1,10 @@
 #!/bin/bash
 
+function error {
+  echo -e "\\e[91m$1\\e[39m"
+  exit 1
+}
+
 #copy desktop shortcut to desktop and main menu
 cp ~/system-tools/system-tools.desktop ~/Desktop || error "failed to create desktop shortcut!"
 sudo cp ~/system-tools/system-tools.desktop /usr/share/applications || error "failed to create menu shortcut!"
@@ -10,7 +15,7 @@ sudo chmod +x system-tools-v1.1.1.sh || error "failed to mark system-tools-v1.1.
 
 sudo chmod +x other.sh || error "failed to mark other.sh as executable!"
 sudo chmod +x uninstall.sh || error "failed to mark uninstall.sh as executable!"
-sudo chmod +x updater.sh
+sudo chmod +x updater.sh || error "failed to mark updater.sh as executable!"
 
 cd ~/system-tools/apps
 sudo chmod +x app-installer.sh
