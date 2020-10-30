@@ -21,7 +21,7 @@ sudo chmod +x updater.sh || error "failed to mark updater.sh as executable!"
 
 #mark as executable and run 2nd install script
 sudo chmod +x install2.sh || error "failed to mark install2.sh as executable!"
-./install2.sh || error "failed to run install4pi-apps.sh!"
+./install2.sh || error "failed to run install2.sh!"
 
 #print in green 'installation succesful' and in orange how to run system tools
 echo "$(tput setaf 2)Installation succesful! $(tput sgr 0)"
