@@ -1,8 +1,8 @@
 #!/bin/bash  
 
 echo more apps
-PS3='Please enter the number for application you would like to install/update/remove (1 - 2): '
-options=("kdenlive" "gnome-system-monitor" "flatpak")
+PS3='Please enter the number for application you would like to install/update/remove (1 - 4): '
+options=("kdenlive" "gnome-system-monitor" "flatpak" "back1p")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -30,6 +30,14 @@ clear
 clear
             break
             ;;
+
+
+ ""back1p"")
+
+./app-installer.sh
+            break
+            ;;
+
 
 
         *) echo "invalid option $REPLY";;
