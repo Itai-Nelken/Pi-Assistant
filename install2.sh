@@ -15,9 +15,12 @@ sudo chmod +x kdenlive.sh
 sudo chmod +x snapd-snap-store.sh
 sudo chmod +x SSR.sh
 cd ..
+sudo chmod +x other.sh || error "failed to mark other.sh as executable!"
+sudo chmod +x uninstall.sh || error "failed to mark uninstall.sh as executable!"
+sudo chmod +x updater.sh || error "failed to mark updater.sh as executable!"
 
 cd ~/Desktop || error "Failed to change to /home/pi/desktop/!"
 sudo chmod +x system-tools.desktop || error "failed to mark desktop shortcut as executable!"
 
-./install.sh
+
 
