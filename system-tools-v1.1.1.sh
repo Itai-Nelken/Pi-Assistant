@@ -54,7 +54,7 @@ clear
 
 clear
 
-cd ~/Desktop/system-tools-beta/apps/
+cd ~/Desktop/system-tools/apps/
 ./app-installer.sh
 
 clear
