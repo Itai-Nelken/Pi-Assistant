@@ -12,6 +12,10 @@ sudo chmod +x other.sh || error "failed to mark other.sh as executable!"
 sudo chmod +x uninstall.sh || error "failed to mark uninstall.sh as executable!"
 sudo chmod +x updater.sh
 
+cd ~/system-tools/apps
+sudo chmod +x app-installer.sh
+cd ~/system-tools
+
 #mark as executable and run 2nd install script
 sudo chmod +x install2.sh || error "failed to mark install2.sh as executable!"
 ./install2.sh || error "failed to run install4pi-apps.sh!"
