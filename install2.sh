@@ -1,5 +1,10 @@
 #!/bin/bash
 
+function error {
+  echo -e "\\e[91m$1\\e[39m"
+  exit 1
+}
+
 cd apps
 sudo chmod +x app-installer.sh
 sudo chmod +x app-installer2.sh
