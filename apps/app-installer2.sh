@@ -27,7 +27,7 @@ clear
 
         "flatpak")
 
-./flatpak+flathub.sh.sh
+./flatpak+flathub.sh
 clear
             break
             ;;
