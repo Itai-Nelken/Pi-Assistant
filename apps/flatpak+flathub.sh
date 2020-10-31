@@ -17,7 +17,7 @@ do
          "install")
 
 sudo apt update || error "error occured! are you connected to the internet?"
-echo "$(tput setaf 3)installing snapd... $(tput sgr 0)"
+echo "$(tput setaf 3)installing flatpak... $(tput sgr 0)"
 sudo apt install flatpak || error "error occured! are you connected to the internet?"
 echo "do you want to add the flathub repository (recommended)?"
 PS3='Please enter the number for add or skip (1 - 2): '
