@@ -1,6 +1,6 @@
 # Pi-Assistant
 
-Pi-Assistantis a simple terminal app that makes updating the system, installing apps and more, easier and faster, especially if you are new to the Linux command line or you forget the commands.
+Pi-Assistant is a simple terminal app that makes updating the system, installing apps and more, easier and faster, especially if you are new to the Linux command line or you forget the commands.
 
 ## links
 
@@ -43,6 +43,6 @@ $ rm -rf ~/system-tools && sudo rm -f ~/Desktop/system-tools.desktop && sudo rm 
 - [x] add uninstall script
 - [x] add updater script 
 - [ ] make updater script to run on startup
-- [x] add zoom & box86
+- [ ] add zoom & box86
+- [ ] add etched (newest version, the one with 'Flash from URL' and 'clone drive')
 
--[]
