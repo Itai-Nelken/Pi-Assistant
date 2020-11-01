@@ -11,7 +11,7 @@ Pi-Assistant is a simple terminal app that makes updating the system, installing
 
 to install Pi-Assistant, just type the following into terminal:
 ```sh-session
-$ git clone https://github.com/Itai-Nelken/Pi-Assistant.git && cd pi-Assistant && sudo chmod +x install.sh && ./install.sh
+$ git clone https://github.com/Itai-Nelken/Pi-Assistant.git && cd Pi-Assistant && sudo chmod +x install.sh && ./install.sh
 ```
 
 ## removal
