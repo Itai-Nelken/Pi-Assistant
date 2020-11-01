@@ -2,9 +2,9 @@
 Version=1.1.1
 Type=Application
 Terminal=true
-Exec=/home/pi/system-tools/system-tools-v1.1.1.sh 
-Name=system-tools
+Exec=/home/pi/Pi-Assistant/system-tools-v1.1.1.sh 
+Name=Pi Assistant
 Icon=/home/pi/system-tools/icons/system-tools.png
-Path=/home/pi/system-tools
-Comment=
+Path=/home/pi/Pi-Assistant
+Comment= 
 StartupNotify=false
