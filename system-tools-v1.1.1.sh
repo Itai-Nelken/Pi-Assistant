@@ -17,7 +17,7 @@ function error {
 
 
 #about & credits
-echo "$(tput setaf 3)system-tools v1.1.1 $(tput sgr 0)" 
+echo "$(tput setaf 3)Pi-Assistant v1.1.1 $(tput sgr 0)" 
 echo "$(tput setaf 3)by Itai Nelken $(tput sgr 0)"
 sleep 1 
 
