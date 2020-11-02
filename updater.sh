@@ -11,7 +11,7 @@ git reset --hard
 git pull
 sudo chmod +x system-tools-v1.1.1.sh
 sudo chmod +x updater.sh
-cd ~/system-tools/
+cd ~/Pi-Assistant/
 sudo chmod +x install2.sh
 ./install2.sh
 echo "$(tput setaf 3)finished...$(tput sgr 0)"
