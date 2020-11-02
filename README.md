@@ -21,7 +21,7 @@ To update, start Pi-Assistant and go to other>update-this-tool
 ## removal
 Pi-Assistant v1.1.1 and later has a removal script in 'other>remove' if you have an earlier version or wan't to manually remove, open terminal and type: 
 ```sh-session
-$ rm -rf ~/Pi-Assistant && sudo rm -f ~/Desktop/Pi-Assistant.desktop && sudo rm -f /usr/share/applications/Pi-Assistant.desktop 
+$ rm -rf ~/Pi-Assistant && sudo rm -f ~/Desktop/Pi-Assistant.desktop && sudo rm -f /usr/share/applications/system-tools.desktop 
 ```
 
 ## Screenshots
@@ -40,7 +40,7 @@ $ rm -rf ~/Pi-Assistant && sudo rm -f ~/Desktop/Pi-Assistant.desktop && sudo rm 
   
 ## Known issues and bugs
 * updater might not work, if it fails you have to reinstall to get the new version
-* if you installed when the name was system-tools, then after updating to the version after the rename the script won't work. 
+* if you installed when the name was system-tools, then after updating to the version after the rename the icons won't change. 
  
 ## To do:
 
