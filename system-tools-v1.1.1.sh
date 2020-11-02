@@ -54,7 +54,7 @@ clear
 
 clear
 
-cd ~/Desktop/system-tools-beta/apps/
+cd ~/system-tools/apps/
 ./app-installer.sh
 
 clear
@@ -93,5 +93,5 @@ clear
 sleep 1
 echo operation complete. When ready, 
 read -p "press [Enter] to return to main menu or [Ctrl-C] to exit"
-./system-tools-v1.1-beta.sh
+./system-tools-v1.1.1.sh
 
