@@ -10,7 +10,7 @@ cp ~/Pi-Assistant/system-tools.desktop ~/Desktop || error "failed to create desk
 sudo cp ~/Pi-Assistant/system-tools.desktop /usr/share/applications || error "failed to create menu shortcut!"
 
 #mark as executable some neded scripts
-cd ~/Pi-6 || error "Failed to change to /home/pi/Pi-Assistant"
+cd ~/Pi-Assistant || error "Failed to change to /home/pi/Pi-Assistant"
 sudo chmod +x system-tools-v1.1.1.sh || error "failed to mark system-tools-v1.1.1.sh as executable!"
 
 sudo chmod +x other.sh || error "failed to mark other.sh as executable!"
