@@ -54,7 +54,7 @@ clear
 
 clear
 
-cd ~/system-tools/apps/
+cd ~/Pi-Assistant/apps/
 ./app-installer.sh
 
 clear
