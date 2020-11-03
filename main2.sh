@@ -1,3 +1,7 @@
+#!/bin/bash
+
+clear
+
 #main menu
 echo this script will help you install applications, update the system, and much more
 echo press [Ctrl-C] to exit
