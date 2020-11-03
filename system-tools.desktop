@@ -7,4 +7,5 @@ Name=Pi Assistant
 Icon=/home/pi/Pi-Assistant/icons/pi-assistant-logopng.png
 Path=/home/pi/Pi-Assistant
 Comment= 
+Categories=Application;Internet;Utilities
 StartupNotify=false
