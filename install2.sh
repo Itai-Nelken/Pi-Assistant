@@ -20,6 +20,7 @@ sudo chmod +x kdenlive.sh || error "failed to mark kdenlive.sh as executable!"
 sudo chmod +x snapd-snap-store.sh || error "failed to mark snapd-snap-store.sh as executable!"
 sudo chmod +x SSR.sh || error "failed to mark SSR.sh as executable!"
 cd ..
+sudo chmod +x main2.sh || error "failed to mark main2.sh as executable!"
 sudo chmod +x other.sh || error "failed to mark other.sh as executable!"
 sudo chmod +x uninstall.sh || error "failed to mark uninstall.sh as executable!"
 sudo chmod +x updater.sh || error "failed to mark updater.sh as executable!"
