@@ -39,7 +39,6 @@ $ rm -rf ~/Pi-Assistant && sudo rm -f ~/Desktop/system-tools.desktop && sudo rm 
  * 1/11/2020 - renamed system-tools to Pi-Assistant, more bug fixes. 
   
 ## Known issues and bugs
-* updater might not work, if it fails you have to reinstall to get the new version
 * if you installed when the name was system-tools, then after updating to the version after the rename the icons won't change. 
  
 ## To do:
