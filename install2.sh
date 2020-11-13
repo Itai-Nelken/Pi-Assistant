@@ -25,6 +25,7 @@ sudo chmod +x other.sh || error "failed to mark other.sh as executable!"
 sudo chmod +x uninstall.sh || error "failed to mark uninstall.sh as executable!"
 sudo chmod +x updater.sh || error "failed to mark updater.sh as executable!"
 sudo chmod +x apt-tools.sh || error "failed to mark apt-tools.sh as executable!"
+sudo chmod +x change-password.sh || error "failed to mark change-password.sh as executable!"
 
 cd ~/Desktop || error "Failed to change to /home/pi/desktop/!"
 sudo chmod +x system-tools.desktop || error "failed to mark desktop shortcut as executable!"
