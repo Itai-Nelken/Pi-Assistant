@@ -10,7 +10,7 @@ Pi-Assistant is a simple terminal app that makes updating the system, installing
 ## Installation 
 
 to install Pi-Assistant, just type the following into terminal:
-```sh-session
+```
 $ git clone https://github.com/Itai-Nelken/Pi-Assistant.git && cd Pi-Assistant && sudo chmod +x install.sh && ./install.sh
 ```
 
@@ -20,13 +20,13 @@ To update, start Pi-Assistant and go to other>update-this-tool
 
 ## removal
 Pi-Assistant v1.1.1 and later has a removal script in 'other>remove' if you have an earlier version or wan't to manually remove, open terminal and type: 
-```sh-session
+```
 $ rm -rf ~/Pi-Assistant && sudo rm -f ~/Desktop/system-tools.desktop && sudo rm /usr/local/bin/piassist && sudo rm -f /usr/share/applications/system-tools.desktop 
 ```
 
 ## Screenshots
 
-![system-tools1](screenshots/system-tools-1c.png)
+![system-tools1](screenshots/pi-assistant.png)
 ![system-tools2](screenshots/system-tools-2a.png)
 
 
