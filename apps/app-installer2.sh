@@ -3,7 +3,7 @@
 clear
 echo more apps
 PS3='Please enter the number for application you would like to install/update/remove (1 - 4): '
-options=("kdenlive" "gnome-system-monitor" "flatpak" "back-1-page")
+options=("kdenlive" "gnome-system-monitor" "flatpak" "Balena Etcher" "back-1-page")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -32,8 +32,15 @@ clear
             break
             ;;
 
+       "Balena Etcher")
 
- ""back-1-page"")
+./balenaetcher.sh
+clear
+            break
+            ;;
+
+
+ "back-1-page")
 
 ./app-installer.sh
             break
