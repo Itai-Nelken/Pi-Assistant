@@ -19,6 +19,7 @@ sudo chmod +x inkscape.sh || error "failed to mark inkscape.sh as executable!"
 sudo chmod +x kdenlive.sh || error "failed to mark kdenlive.sh as executable!"
 sudo chmod +x snapd-snap-store.sh || error "failed to mark snapd-snap-store.sh as executable!"
 sudo chmod +x SSR.sh || error "failed to mark SSR.sh as executable!"
+sudo chmod +x balenaetcher.sh || error "failed to mark balenaetcher.sh as executable!"
 cd ..
 sudo chmod +x main2.sh || error "failed to mark main2.sh as executable!"
 sudo chmod +x other.sh || error "failed to mark other.sh as executable!"
