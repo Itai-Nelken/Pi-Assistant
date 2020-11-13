@@ -5,7 +5,8 @@ Pi-Assistant is a simple terminal app that makes updating the system, installing
 ## links
 
 * [My blog](https://thepisite.blogspot.com/)
-* [YouTube](https://youtube.com/channel/UCM4Fo6ncNybS1xhJHnWSODg)
+* [My Raspberry Pi YouTube channel](https://youtube.com/channel/UCaKFjYULBDdkfEcx6oy9Gow)
+* [My other YouTube channel](https://youtube.com/channel/UCM4Fo6ncNybS1xhJHnWSODg)
 
 ## Installation 
 
@@ -13,7 +14,12 @@ to install Pi-Assistant, just type the following into terminal:
 ```
 $ git clone https://github.com/Itai-Nelken/Pi-Assistant.git && cd Pi-Assistant && sudo chmod +x install.sh && ./install.sh
 ```
+## Run Pi-Assistant
 
+To run Pi-Assistant, use the menu or Desktop shortcuts. alternatively you can type in terminal (from anywhere)
+```
+piassist
+```
 ## Updates
 
 To update, start Pi-Assistant and go to other>update-this-tool
