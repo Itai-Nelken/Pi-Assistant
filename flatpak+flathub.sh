@@ -1,5 +1,10 @@
 #!/bin/bash
 
+function error {
+  echo -e "\\e[91m$1\\e[39m"
+  exit 1
+}
+
 echo this script will help you install or remove flatpak
 echo after installation you have to reboot, are you sure you want to continue?
 PS3='Please enter the number for install or remove (1 - 2): '
