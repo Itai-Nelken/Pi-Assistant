@@ -6,7 +6,19 @@ function error {
   exit 1
 }
 
+read -p "this script will help you install or remove Balena Etcher compiloed for arm.
+Press [Ctrl-C] to cancel, or [Enter] to continue..."
+PS3='Please enter the number for install or remove (1 - 2): '
+options=("install" "remove")
+select opt in "${options[@]}"
+do
+    case $opt in
 
+
+
+        "install")
+
+sudo apt update || error "error occured! are you connected to the internet?"
 if $(uname -m | grep '64'); then
 
   wget https://github.com/Itai-Nelken/Etcher-arm-32-64/releases/download/realease/balena-etcher-electron_1.5.110+1f8f7ad7_arm64.deb -O ~/etcher64.deb || error "Failed to download!"
@@ -20,6 +32,23 @@ else
   rm -f ~/etcher32.deb
 
 fi
+
+            break
+            ;;
+   
+   "remove")  
+   
+sudo apt purge -y balena-etcher-electron || error "failed to purge the deb file!"
+   
+            break
+            ;;
+     
+       *) echo "invalid option $REPLY";;
+    esac
+done     
+
+
+
 
 sleep 2
 clear
