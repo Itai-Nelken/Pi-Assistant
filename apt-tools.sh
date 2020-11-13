@@ -1,5 +1,10 @@
 #!/bin/bash  
 
+function error {
+  echo -e "\\e[91m$1\\e[39m"
+  exit 1
+}
+
 clear
 echo "this script will help you run apt tools."
 PS3='Please enter the number for operation you want to perform (1 - 2): '
