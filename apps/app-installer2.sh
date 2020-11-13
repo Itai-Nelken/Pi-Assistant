@@ -42,6 +42,7 @@ clear
 
  "back-1-page")
 
+clear
 ./app-installer.sh
             break
             ;;
