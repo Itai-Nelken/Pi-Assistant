@@ -44,6 +44,7 @@ $ rm -rf ~/Pi-Assistant && sudo rm -f ~/Desktop/system-tools.desktop && sudo rm 
  * 26/10/2020 - fixed updater (might not work), bug fixes and improvements. 
  * 1/11/2020 - renamed system-tools to Pi-Assistant, more bug fixes. 
  * 13/11/2020 - UPDATE: v1.1.2: fixed bug where the change-password.sh script wasn't executable, more bug fixes, added more apps
+ * 13/11/2020 - UPDATE: v1.1.3: add Balena Etcher app
   
 ## Known issues and bugs
 * if you installed when the name was system-tools, then after updating to the version after the rename the icons won't change. 
@@ -55,7 +56,7 @@ $ rm -rf ~/Pi-Assistant && sudo rm -f ~/Desktop/system-tools.desktop && sudo rm 
 - [x] add updater script 
 - [ ] make updater script to run on startup
 - [ ] add zoom & box86
-- [ ] add etcher (newest version, the one with 'Flash from URL' and 'clone drive')
+- [x] add etcher (newest version, the one with 'Flash from URL' and 'clone drive'). (added as of v1.1.3, installs 32 or 64 bit             version depending on your system arch)
 
 
 ## FAQ
