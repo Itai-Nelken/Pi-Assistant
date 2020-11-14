@@ -6,7 +6,7 @@ clear
 echo this script will help you install applications, update the system, and much more
 echo press [Ctrl-C] to exit
 PS3='Please enter the number above for operation you would like to perform (1 - 5): '
-options=("update" "change-password" "install-applications" "apt-tools" "other")
+options=("update" "change-password" "install-applications" "system-tools" "other")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -45,7 +45,7 @@ clear
 
 
 
-        "apt-tools")
+        "system-tools")
 
 ./apt-tools.sh
 clear
