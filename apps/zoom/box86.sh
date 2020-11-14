@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd ~
 git clone https://github.com/ptitSeb/box86 || error "failed to download repo!"
 cd box86 || error "failed to enter directory!"
 mkdir build; cd build
