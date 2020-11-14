@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Zoom
 Exec=lxterminal --title 'Close this window to exit Zoom' -e #"\""$HOME/zoom/runzoom.sh"\""
-#Icon=~/pi-assistant/icons/zoom-icon.???
+Icon=~/pi-assistant/icons/zoom-icon.png
 Path=~/zoom/
 Type=Application
 Comment=Linux x86 version of Zom cloud meetings running using Box86
