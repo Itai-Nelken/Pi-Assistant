@@ -32,8 +32,9 @@ $ rm -rf ~/Pi-Assistant && sudo rm -f ~/Desktop/system-tools.desktop && sudo rm 
 
 ## Screenshots
 
-![system-tools1](screenshots/pi-assistant.png)
-![system-tools2](screenshots/system-tools-2a.png)
+![pi-assistant2.png](screenshots/pi-assistant2.png)
+![system-tools2a.png](screenshots/system-tools-2a.png)
+![pi-assistant.gif](screenshots/pi-assistant.gif)
 
 
 ## CHANGELOG (dd/mm/yy)
