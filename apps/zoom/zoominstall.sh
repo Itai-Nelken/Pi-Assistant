@@ -53,6 +53,6 @@ case "$choice" in
   * ) echo "invalid";;
 esac
 sudo cp ~/Pi-Assistant/apps/zoom/files/zoom.desktop /usr/share/applications || error "failed to copy menu shortcut!"
-cp ~/pi-assistant/apps/zoom/files/libxcb-xtest.so.0 ~/zoom || error "failed to copy libxcb-xtest.so.0 to ~/zoom"
+cp ~/Pi-Assistant/apps/zoom/files/libxcb-xtest.so.0 ~/zoom || error "failed to copy libxcb-xtest.so.0 to ~/zoom"
 
 echo installation complete!
