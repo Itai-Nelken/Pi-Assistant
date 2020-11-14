@@ -37,8 +37,8 @@ free -m || error "error occured!"
 
 read -p "is there enough free space in ram to move swap contents to it (y/n)?" choice
 case "$choice" in 
-  y|Y ) echo "clearing swap..." && sudo swapoff -a;;
-  n|N ) sudo swapon -a ;;
+  y|Y ) echo "clearing swap..." && sudo swapoff -a && sudo swapon -a;;
+  n|N ) echo "$(tput setaf 1)aborting.$(tput sgr 0)"   ;;
   * ) echo "invalid";;
 esac
 
