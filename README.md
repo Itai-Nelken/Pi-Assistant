@@ -16,16 +16,14 @@ $ git clone https://github.com/Itai-Nelken/Pi-Assistant.git && cd Pi-Assistant &
 ```
 ## Run Pi-Assistant
 
-To run Pi-Assistant, use the menu or Desktop shortcuts. alternatively you can type in terminal (from anywhere)
-```
-piassist
-```
+To run Pi-Assistant, use the menu or Desktop shortcuts. alternatively you can type in terminal (from anywhere) `piassist`
+
 ## Updates
 
-To update, start Pi-Assistant and go to other>update-this-tool
+To update, start Pi-Assistant and go to `other>update-this-tool`
 
 ## removal
-Pi-Assistant v1.1.1 and later has a removal script in 'other>remove' if you have an earlier version or wan't to manually remove, open terminal and type: 
+Pi-Assistant v1.1.1 and later has a removal script in `other>remove` if you have an earlier version or wan't to manually remove, open terminal and type: 
 ```
 $ rm -rf ~/Pi-Assistant && sudo rm -f ~/Desktop/system-tools.desktop && sudo rm /usr/local/bin/piassist && sudo rm -f /usr/share/applications/system-tools.desktop 
 ```
