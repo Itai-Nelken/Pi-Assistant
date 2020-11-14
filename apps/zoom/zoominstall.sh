@@ -48,7 +48,7 @@ fi
 #copy the desktop shortcut to the desktop and main menu and a dependency to the zoom directory
 read -p "Do you want to create a shortcut on your Desktop (y/n)?" choice
 case "$choice" in 
-  y|Y ) echo "creating desktop shortcut" && cp ~/pi-assistant/apps/zoom/files/zoom.desktop ~/Desktop || error "failed to copy desktop shortcut";;
+  y|Y ) echo "creating desktop shortcut" && cp ~/pi-assistant/apps/zoom/files/zoom.desktop ~/Desktop && sudo chmod +x ~/zoom.desktop || error "failed to copy desktop shortcut";;
   n|N ) echo "skipping desktop shortcut"   ;;
   * ) echo "invalid";;
 esac
