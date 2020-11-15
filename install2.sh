@@ -24,6 +24,7 @@ cd zoom
 sudo chmod +x box86.sh || error "failed to mark box86.sh as executable!"
 sudo chmod +x zoominstall.sh || error "failed to mark zoominstall.sh as executable!"
 sudo chmod +x startzoom.sh || error "failed to mark startzoom.sh as executable!"
+sudo chmod +x remove-zoom.sh || error "failed to mark remove-zoom.sh as executable!"
 cd ..
 cd ..
 sudo chmod +x main2.sh || error "failed to mark main2.sh as executable!"
