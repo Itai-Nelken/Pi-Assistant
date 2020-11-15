@@ -13,6 +13,7 @@ sudo apt update || error "failed to update! are you connected to the internet?"
 #install dependencies for box86
 sudo apt install cmake || error "failed to install cmake! are you connected to the internet?"
 
+mkdir zoom 
 #compile and install box86
 if [ -d ~/box86 ];then
   read -p "box86 is already installed. Do you want to reinstall (recommended) (y/n)?" choice
