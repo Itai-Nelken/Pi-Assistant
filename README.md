@@ -45,6 +45,7 @@ $ rm -rf ~/Pi-Assistant && sudo rm -f ~/Desktop/system-tools.desktop && sudo rm 
  * 13/11/2020 - UPDATE: v1.1.2: fixed bug where the change-password.sh script wasn't executable, more bug fixes, added more apps
  * 13/11/2020 - UPDATE: v1.1.3: add Balena Etcher app
  * 14/11/2020 - rename 'apt-tools' to 'system-tools', add 'clear swap' option to 'system-tools'
+ * 15/11/2020 - UPDATE: v1.1.4: added Zoom with box86
   
 ## Known issues and bugs
 * if you installed when the name was system-tools, then after updating to the version after the rename the icons won't change. 
