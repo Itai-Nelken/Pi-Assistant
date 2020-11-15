@@ -23,8 +23,8 @@ To run Pi-Assistant, use the menu or Desktop shortcuts. alternatively you can ty
 To update, start Pi-Assistant and go to `other>update-this-tool`
 
 ## removal
-Pi-Assistant v1.1.1 and later has a removal script in `other>remove` if you have an earlier version or wan't to manually remove, open terminal and type: 
-```
+Pi-Assistant v1.1.1 and later has a removal script in `other>remove` if you have an earlier version or need to manually remove, open terminal and type: 
+```sh-session
 $ rm -rf ~/Pi-Assistant && sudo rm -f ~/Desktop/system-tools.desktop && sudo rm /usr/local/bin/piassist && sudo rm -f /usr/share/applications/system-tools.desktop 
 ```
 
