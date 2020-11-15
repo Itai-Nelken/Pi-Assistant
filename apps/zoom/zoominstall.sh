@@ -6,6 +6,19 @@ function error {
   exit 1
  }
 
+
+
+echo "this script will help you Install and remove Zoom cloud meetings (running with box86)."
+PS3='Please enter the number for operation you want to perform (1 - 2): '
+options=("install" "remove")
+select opt in "${options[@]}"
+do
+    case $opt in
+
+
+        "install")
+#install zoom
+
 cd ~
 
 sudo apt update || error "failed to update! are you connected to the internet?"
@@ -58,3 +71,32 @@ cp ~/Pi-Assistant/apps/zoom/files/libxcb-xtest.so.0 ~/zoom || error "failed to c
 cp ~/Pi-Assistant/apps/zoom/startzoom.sh ~/zoom
 
 echo installation complete!
+
+
+            break
+            ;;
+
+
+        "remove")
+#remove zoom
+
+cd ~/Pi-Assistant/apps/zoom/
+./remove-zoom.sh
+
+
+            break
+            ;;
+
+
+      *) echo "invalid option $REPLY";;
+    esac
+done
+
+
+
+
+
+
+
+
+
