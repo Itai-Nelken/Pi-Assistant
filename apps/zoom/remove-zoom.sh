@@ -1,14 +1,20 @@
 #!/bin/bash
 
-sudo rm /usr/share/applications/zoom.desktop || error "failed tp remove menu shortcut"
-rm ~/Desktop/zoom.desktop || error " failed to remove desktop shortcut, doesit exist?"
+function error {
+  echo -e "\\e[91m$1\\e[39m"
+  exit 1
+ }
+
+
+sudo rm /usr/share/applications/zoom.desktop || error "failed to remove menu shortcut"
+rm ~/Desktop/zoom.desktop || error " failed to remove desktop shortcut, does it exist?"
 rm -rf ~/zoom
 
 #remove dependencies
 if $(uname -m | grep '64'); then
 
   #64 bit
-  echo "unfortunately 64bit support isn't here yet, I'm still working on it." && rm -rf ~/zoom && sleep 5 && exit
+  echo "unfortunately 64bit support isn't here yet, I'm still working on it." sleep 5 && exit
 
 else
   #32 bit 
