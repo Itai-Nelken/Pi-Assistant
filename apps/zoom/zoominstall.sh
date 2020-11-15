@@ -26,11 +26,15 @@ fi
 
 
 #Download zoom
+cd ~/zoom
 echo "Downloading Zoom..."
-cd ~ && mkdir zoom && cd zoom
+cd ~ && cd zoom
 wget https://zoom.us/client/latest/zoom_i686.tar.xz -O zoomx86.tar.xz || error 'Failed to download Zoom!'
+echo "extracting zoom"
 tar -xf zoomx86.tar.xz || error 'Failed to extract Zoom!'
+cp zoom ~
 rm -f zoomx86.tar.xz 
+rm -rf zoom
 
 
 if $(uname -m | grep '64'); then
