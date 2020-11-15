@@ -7,7 +7,6 @@ function error {
 
 
 sudo rm /usr/share/applications/zoom.desktop || error "failed to remove menu shortcut"
-rm ~/Desktop/zoom.desktop || error " failed to remove desktop shortcut, does it exist?"
 rm -rf ~/zoom
 
 #remove dependencies
@@ -41,6 +40,6 @@ case "$choice" in
   * ) echo "invalid";;
 esac
 
-
+rm ~/Desktop/zoom.desktop || error " failed to remove desktop shortcut, does it exist?"
 echo "$(tput setaf 2)zoom removed $(tput sgr 0)"
 
