@@ -40,6 +40,6 @@ case "$choice" in
   * ) echo "invalid";;
 esac
 
+echo "$(tput setaf 2)zoom removed, ignore following error if you don't have a Desktop shortcut $(tput sgr 0)"
+sleep 3
 rm ~/Desktop/zoom.desktop || error " failed to remove desktop shortcut, does it exist?"
-echo "$(tput setaf 2)zoom removed $(tput sgr 0)"
-
