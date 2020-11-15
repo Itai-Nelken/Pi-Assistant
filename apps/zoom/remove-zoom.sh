@@ -23,15 +23,15 @@ case "$choice" in
   y|Y ) sudo apt remove libxcb-xtest0 libxcb-xfixes0 ;;
   n|N ) echo "dependencies won't be removed"   ;;
   * ) echo "invalid";;
+esac
 fi
-
 
 read -p "Do you want to remove box86 (y/n)?" choice
 case "$choice" in 
   y|Y ) rm ~/box86 && sudo rm -f /usr/local/bin/box86;;
   n|N ) echo "box86 won't be removed"   ;;
   * ) echo "invalid";;
-fi
+esac
 
 
 read -p "Do you want to remove pulseaudio (don't do if you are using twisterOS) (y/n)?" choice
@@ -39,8 +39,8 @@ case "$choice" in
   y|Y ) sudo apt remove pulseaudio-utils pulseaudio;;
   n|N ) echo "pulseaudio won't be removed"   ;;
   * ) echo "invalid";;
-fi
+esac
 
 
-echo "$(tput setaf 2)zoom removed(tput sgr 0)"
+echo "$(tput setaf 2)zoom removed $(tput sgr 0)"
 

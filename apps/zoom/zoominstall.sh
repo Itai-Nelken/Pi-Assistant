@@ -55,5 +55,6 @@ case "$choice" in
 esac
 sudo cp ~/Pi-Assistant/apps/zoom/files/zoom.desktop /usr/share/applications || error "failed to copy menu shortcut!"
 cp ~/Pi-Assistant/apps/zoom/files/libxcb-xtest.so.0 ~/zoom || error "failed to copy libxcb-xtest.so.0 to ~/zoom"
+cp ~/Pi-Assistant/apps/zoom/startzoom.sh ~/zoom
 
 echo installation complete!
