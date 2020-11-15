@@ -13,7 +13,7 @@ sudo apt update || error "failed to update! are you connected to the internet?"
 #install dependencies for box86
 sudo apt install cmake || error "failed to install cmake! are you connected to the internet?"
 
-mkdir zoom 
+
 #compile and install box86
 if [ -d ~/box86 ];then
   read -p "box86 is already installed. Do you want to reinstall (recommended) (y/n)?" choice
@@ -25,17 +25,13 @@ esac
   
 fi
 
-
 #Download zoom
-cd ~/zoom
+cd ~
 echo "Downloading Zoom..."
-cd ~ && cd zoom
 wget https://zoom.us/client/latest/zoom_i686.tar.xz -O zoomx86.tar.xz || error 'Failed to download Zoom!'
-echo "extracting zoom"
+echo "extracting zoom..."
 tar -xf zoomx86.tar.xz || error 'Failed to extract Zoom!'
-cp zoom ~
 rm -f zoomx86.tar.xz 
-rm -rf zoom
 
 
 if $(uname -m | grep '64'); then
@@ -44,7 +40,7 @@ if $(uname -m | grep '64'); then
   echo "unfortunately 64bit support isn't here yet, I'm still working on it." && sleep 5 && exit
 
 else
-  #32 bit installation
+  #32 bit 
   #install dependencies for zoom
   sudo apt install libxcb-xtest0 libxcb-xfixes0 cmake pulseaudio-utils pulseaudio
 
