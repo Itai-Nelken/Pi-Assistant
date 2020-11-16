@@ -3,7 +3,7 @@
 clear
 echo more apps
 PS3='Please enter the number for application you would like to install/update/remove (1 - 4): '
-options=("kdenlive" "gnome-system-monitor" "flatpak" "Balena Etcher" "Zoom" "back-1-page")
+options=("kdenlive" "gnome-system-monitor" "flatpak" "Balena Etcher" "Zoom" "box86" "back-1-page")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -52,6 +52,14 @@ cd ~/Pi-Assistant/apps/
             break
             ;;
 
+ "back-1-page")
+
+clear
+./box86-install-remove.sh
+
+
+            break
+            ;;
 
  "back-1-page")
 
