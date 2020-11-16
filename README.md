@@ -46,6 +46,7 @@ $ rm -rf ~/Pi-Assistant && sudo rm -f ~/Desktop/system-tools.desktop && sudo rm 
  * 13/11/2020 - UPDATE: v1.1.3: add Balena Etcher app
  * 14/11/2020 - rename 'apt-tools' to 'system-tools', add 'clear swap' option to 'system-tools'
  * 15/11/2020 - UPDATE: v1.1.4: added Zoom with box86
+ * 16/11/2020 - added box86 app
   
 ## Known issues and bugs
 * if you installed when the name was system-tools, then after updating to the version after the rename the icons won't change. 
@@ -57,12 +58,12 @@ $ rm -rf ~/Pi-Assistant && sudo rm -f ~/Desktop/system-tools.desktop && sudo rm 
 - [x] add updater script 
 - [ ] make updater script to run on startup
 - [x] add zoom & box86
-- [ ] add box86 as standalone app 
+- [x] add box86 as standalone app 
 - [x] add etcher (newest version, the one with 'Flash from URL' and 'clone drive'). (added as of v1.1.3, installs 32 or 64 bit             version depending on your system architecture)
 
 
 ## FAQ
 
 ### why is the main script called system-tools-v.1.1.1.sh?
-* because before I split the script, I changed the name every release. but now changing the name would mean finding all the places where the name appears and changing it. 
+* because before I split the script, I changed the name every release. but now changing the name would mean finding all the places where the name appears and changing it, I might do it in the future. 
 
