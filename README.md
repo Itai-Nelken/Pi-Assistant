@@ -60,6 +60,8 @@ $ rm -rf ~/Pi-Assistant && sudo rm -f ~/Desktop/system-tools.desktop && sudo rm 
 - [x] add zoom & box86
 - [x] add box86 as standalone app 
 - [x] add etcher (newest version, the one with 'Flash from URL' and 'clone drive'). (added as of v1.1.3, installs 32 or 64 bit             version depending on your system architecture)
+- [ ] add USBImager
+- [ ] add speedtest-cli
 
 
 ## FAQ
