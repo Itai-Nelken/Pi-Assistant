@@ -20,6 +20,7 @@ sudo chmod +x kdenlive.sh || error "failed to mark kdenlive.sh as executable!"
 sudo chmod +x snapd-snap-store.sh || error "failed to mark snapd-snap-store.sh as executable!"
 sudo chmod +x SSR.sh || error "failed to mark SSR.sh as executable!"
 sudo chmod +x balenaetcher.sh || error "failed to mark balenaetcher.sh as executable!"
+sudo chmod +x box86-install-remove.sh || error "failed to mark box86-install-remove.sh as executable!
 cd zoom
 sudo chmod +x box86.sh || error "failed to mark box86.sh as executable!"
 sudo chmod +x zoominstall.sh || error "failed to mark zoominstall.sh as executable!"
