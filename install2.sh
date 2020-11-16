@@ -37,6 +37,3 @@ sudo chmod +x change-password.sh || error "failed to mark change-password.sh as 
 
 cd ~/Desktop || error "Failed to change to /home/pi/desktop/!"
 sudo chmod +x system-tools.desktop || error "failed to mark desktop shortcut as executable!"
-
-
-
