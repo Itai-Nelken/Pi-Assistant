@@ -52,7 +52,7 @@ cd ~/Pi-Assistant/apps/
             break
             ;;
 
- "back-1-page")
+ "box86")
 
 clear
 ./box86-install-remove.sh
