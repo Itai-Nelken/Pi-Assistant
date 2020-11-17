@@ -6,8 +6,7 @@ function error {
   exit 1
 }
 
-read -p "this script will help you install or remove Balena Etcher compiloed for arm.
-Press [Ctrl-C] to cancel, or [Enter] to continue..."
+echo "this script will help you install or remove Balena Etcher compiloed for arm."
 PS3='Please enter the number for install or remove (1 - 2): '
 options=("install" "remove")
 select opt in "${options[@]}"
