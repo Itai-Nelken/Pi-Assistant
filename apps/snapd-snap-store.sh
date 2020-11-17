@@ -13,7 +13,7 @@ do
 
 sudo apt update || error "error occured! are you connected to the internet?"
 echo "$(tput setaf 3)installing snapd... $(tput sgr 0)"
-sudo apt install snapd || error "error occured! are you connected to the internet?"
+sudo apt install -y snapd || error "error occured! are you connected to the internet?"
 echo do you want to install the snap-store?
 PS3='Please enter the number for install or skip (1 - 2): '
 options=("skip" "install")
@@ -65,7 +65,7 @@ sleep 2
     
    "remove")
 
-sudo apt remove snapd
+sudo apt remove -y snapd
             break
             ;;  
     
