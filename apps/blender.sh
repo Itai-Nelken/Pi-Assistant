@@ -12,14 +12,14 @@ do
         "install")
 
 sudo apt update || error "error occured! are you connected to the internet?"
-sudo apt install blender || error "error occured! are you connected to the internet?"
+sudo apt install -y blender || error "error occured! are you connected to the internet?"
 
             break
             ;;
    
    "remove")  
    
-sudo apt remove blender || error "error occured! can't remove blender"
+sudo apt remove -y blender || error "error occured! can't remove blender"
    
             break
             ;;
