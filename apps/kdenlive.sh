@@ -14,7 +14,7 @@ do
 
 echo "$(tput setaf 3)installing kdenlive...$(tput sgr 0)"
 sudo apt update || error "error occured! are you connected to the internet?"
-sudo apt install kdenlive || error "error occured! are you connected to the internet?"
+sudo apt install -y kdenlive || error "error occured! are you connected to the internet?"
 echo "$(tput setaf 2)kdenlive installed$(tput sgr 0)"
 
             break
@@ -23,7 +23,7 @@ echo "$(tput setaf 2)kdenlive installed$(tput sgr 0)"
  "remove")
 
 echo "$(tput setaf 3)removing kdenlive...$(tput sgr 0)"
-sudo apt remove kdenlive || error "error occured! can't remove kdenlive"
+sudo apt remove -y kdenlive || error "error occured! can't remove kdenlive"
 clear
 echo "$(tput setaf 2)kdenlive removed$(tput sgr 0)"
 
