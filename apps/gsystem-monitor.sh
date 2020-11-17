@@ -13,14 +13,14 @@ do
         "install")
 
 sudo apt update || error "error occured! are you connected to the internet?"
-sudo apt install gnome-system-monitor || error "error occured! are you connected to the internet?"
+sudo apt install -y gnome-system-monitor || error "error occured! are you connected to the internet?"
 
             break
             ;;
 
  "remove")
 
-sudo apt remove gnome-system-monitor|| error "error occured! can't remove gnome-system-monitor"
+sudo apt remove -y gnome-system-monitor|| error "error occured! can't remove gnome-system-monitor"
 
 
             break
