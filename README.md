@@ -50,6 +50,7 @@ $ rm -rf ~/Pi-Assistant && sudo rm -f ~/Desktop/system-tools.desktop && sudo rm 
   
 ## Known issues and bugs
 * if you installed when the name was system-tools, then after updating to the version after the rename the icons won't change. 
+* zoom installer is broken because it can't download zoom for some reason
  
 ## To do:
 
