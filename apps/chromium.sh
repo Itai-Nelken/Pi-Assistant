@@ -1,7 +1,6 @@
 #!/bin/bash  
 
-read -p "this script will help you install or remove chromium.
-Press [Ctrl-C] to cancel, or [Enter] to continue..."
+echo "this script will help you install or remove chromium."
 PS3='Please enter the number for install/remove (1 - 2): '
 options=("install" "remove")
 select opt in "${options[@]}"
@@ -11,8 +10,7 @@ do
 "install")
            
 sudo apt update || error "error occured! are you connected to the internet?"
-sudo apt install chromium-browser || error "error occured! are you connected to the internet?"
-echo "$(tput setaf 2)chromium web browser installed✔️ $(tput sgr 0)"
+sudo apt install -y chromium-browser || error "error occured! are you connected to the internet?"
 sleep 2
 
             break
@@ -20,8 +18,7 @@ sleep 2
 
 "remove")
    
-sudo apt remove chromium-browser || error "error occured! are you connected to the internet?"
-echo "$(tput setaf 2)chromium web browser removed️ $(tput sgr 0)"
+sudo apt remove -y chromium-browser || error "error occured! are you connected to the internet?"
 sleep 2
 
             break
