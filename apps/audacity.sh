@@ -12,14 +12,14 @@ do
          "install")
 
 sudo apt update || error "error occured! are you connected to the internet?"
-sudo apt install audacity || error "error occured! are you connected to the internet?"
+sudo apt install -y audacity || error "error occured! are you connected to the internet?"
 
             break
             ;;
    
    "remove")  
    
-sudo apt remove audacity || error "error occured!"
+sudo apt remove -y audacity || error "error occured!"
    
             break
             ;;
