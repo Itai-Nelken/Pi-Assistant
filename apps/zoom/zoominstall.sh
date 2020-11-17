@@ -25,13 +25,19 @@ sudo apt update || error "failed to update! are you connected to the internet?"
 
 #compile and install box86
 if [ -d ~/box86 ];then
-  read -p "box86 is already installed. Do you want to reinstall (recommended) (y/n)?" choice
+  read -p "box86 is already installed. Do you want to install (recommended) (y/n)?" choice
 case "$choice" in 
   y|Y ) echo "box86 will be installed" && gio trash ~/box86 && ./box86.sh;;
   n|N ) echo "box86 won't be installed"   ;;
   * ) echo "invalid";;
 esac
-  
+else
+ read -p "box86 isn't installed but required. install (required) (y/n)?" choice
+case "$choice" in 
+  y|Y ) echo "box86 will be installed" && gio trash ~/box86 && ./box86.sh;;
+  n|N ) echo "box86 won't be installed. can't install zoom. exiting" && sleep 5 && cd ~/Pi-Assistant && main2.sh ;;
+  * ) echo "invalid";;
+esac
 fi
 
 #Download zoom
@@ -46,7 +52,7 @@ rm -f zoomx86.tar.xz
 if $(uname -m | grep '64'); then
 
   #64 bit
-  echo "unfortunately 64bit support isn't here yet, I'm still working on it." && sleep 5 && exit
+  echo "unfortunately 64bit support isn't here yet, I'm still working on it." && sleep 5 && cd ~/Pi-Assistant && ./main2.sh
 
 else
   #32 bit 
