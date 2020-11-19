@@ -24,7 +24,8 @@ sudo apt autoremove || error "error occured!"
 
  "autoclean")
 
-sudo apt autoclean|| error "error occured!"
+sudo apt autoclean || error "error occured!"
+sudo apt clean || error "error occured!"
 
 
             break
