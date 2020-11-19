@@ -26,7 +26,9 @@ sudo chmod +x piassist
 
 cd ~/Pi-Assistant
 #remove zoom.tar.xz as it isn't needed unless you install zoom, and the zoom installer downloads it.
+cd apps/zoom/files
 rm zoom.tar.xz 
+cd ~/Pi-Assistant
 
 #mark as executable and run 2nd install script
 sudo chmod +x install2.sh || error "failed to mark install2.sh as executable!"
