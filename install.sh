@@ -23,6 +23,11 @@ clear && cd ~/Pi-Assistant/ && ./system-tools-v1.1.1.sh" > ~/Downloads/piassist
 sudo mv ~/Downloads/piassist /usr/local/bin/
 cd /usr/local/bin
 sudo chmod +x piassist
+
+cd ~/Pi-Assistant
+#remove zoom.tar.xz as it isn't needed unless you install zoom, and the zoom installer downloads it.
+cd apps/zoom/files
+rm zoom.tar.xz 
 cd ~/Pi-Assistant
 
 #mark as executable and run 2nd install script

@@ -18,7 +18,7 @@ do
 
 sudo apt update || error "error occured! are you connected to the internet?"
 echo "$(tput setaf 3)installing flatpak... $(tput sgr 0)"
-sudo apt install flatpak || error "error occured! are you connected to the internet?"
+sudo apt install -y flatpak || error "error occured! are you connected to the internet?"
 echo "do you want to add the flathub repository (recommended)?"
 PS3='Please enter the number for add or skip (1 - 2): '
 options=("skip" "add")
@@ -29,7 +29,7 @@ do
    "skip")
 
 echo flathub repository WILL NOT be added
-sleep 1
+sleep 2
             break
             ;;  
     
@@ -37,7 +37,7 @@ sleep 1
 
 echo "$(tput setaf 3)adding flathub repository... $(tput sgr 0)"
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo || error "error occured! are you connected to the internet?"
-echo rebooting in 10 seconds. press [Ctrl-C] to cancel and exit
+echo "rebooting in 10 seconds. press [Ctrl-C] to cancel and exit"
 
             break
             ;;  

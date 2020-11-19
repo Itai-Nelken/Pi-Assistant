@@ -14,8 +14,7 @@ do
 
 echo "$(tput setaf 3)installing inkscape...$(tput sgr 0)"
 sudo apt update || error "error occured! are you connected to the internet?"
-sudo apt install inkscape || error "error occured! are you connected to the internet?"
-echo "$(tput setaf 2)inkscape installed$(tput sgr 0)"
+sudo apt install -y inkscape || error "error occured! are you connected to the internet?"
 
             break
             ;;
@@ -23,9 +22,7 @@ echo "$(tput setaf 2)inkscape installed$(tput sgr 0)"
  "remove")
 
 echo "$(tput setaf 3)removing inkscape...$(tput sgr 0)"
-sudo apt remove inkscape || error "error occured! can't remove inkscape"
-clear
-echo "$(tput setaf 2)inkscape removed$(tput sgr 0)"
+sudo apt remove -y inkscape || error "error occured! can't remove inkscape"
 
             break
             ;;

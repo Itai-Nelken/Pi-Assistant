@@ -14,7 +14,7 @@ do
 
 echo "$(tput setaf 3)installing simplescreenrecorder...$(tput sgr 0)"
 sudo apt update || error "error occured! are you connected to the internet?"
-sudo apt install simplescreenrecorder || error "error occured! are you connected to the internet?"
+sudo apt install -y simplescreenrecorder || error "error occured! are you connected to the internet?"
 echo "$(tput setaf 2)simplescreenrecorder installed$(tput sgr 0)"
 
             break
@@ -23,7 +23,7 @@ echo "$(tput setaf 2)simplescreenrecorder installed$(tput sgr 0)"
  "remove")
 
 echo "$(tput setaf 3)removing simplescreenrecorder...$(tput sgr 0)"
-sudo apt remove inkscape || error "error occured! can't remove simplescreenrecorder"
+sudo apt remove -y inkscape || error "error occured! can't remove simplescreenrecorder"
 clear
 echo "$(tput setaf 2)simplescreenrecorder removed$(tput sgr 0)"
 

@@ -1,7 +1,6 @@
-#!/bin/bash 
+#!/bin/bash
 
-read -p "this script will help you install or remove firfox-esr.
-Press [Ctrl-C] to cancel, or [Enter] to continue..."
+echo "this script will help you install or remove firfox-esr."
 PS3='Please enter the number for application you would like to install/remove (1 - 2): '
 options=("install" "remove")
 select opt in "${options[@]}"
@@ -13,14 +12,14 @@ do
         "install")
 
 sudo apt update || error "error occured! are you connected to the internet?"
-sudo apt install firefox-esr || error "error occured! are you connected to the internet?"
+sudo apt install -y firefox-esr || error "error occured! are you connected to the internet?"
 
             break
             ;;
    
    "remove")  
    
-sudo apt remove firefox-esr || error "error occured!"
+sudo apt remove -y firefox-esr || error "error occured!"
    
             break
             ;;
