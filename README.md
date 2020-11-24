@@ -64,6 +64,7 @@ $ rm -rf ~/Pi-Assistant && sudo rm -f ~/Desktop/system-tools.desktop && sudo rm 
 - [ ] add USBImager
 - [ ] add speedtest-cli
 - [ ] add browsh
+- [ ] add box86 install script for 64bit OS's
 
 
 ## FAQ
