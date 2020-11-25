@@ -44,6 +44,8 @@ echo "$(tput setaf 2)box86 installed.$(tput sgr 0)"
  "remove")
 
 echo "$(tput setaf 3)removing box86...$(tput sgr 0)"
+cd ~/box86/build
+sudo make uninstall
 sudo rm -rf ~/box86 || error "can't remove ~/box86"
 sudo rm -f /usr/local/bin/box86 || error "can't remove /usr/local/bin/box86"
 
