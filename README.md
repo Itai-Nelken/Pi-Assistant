@@ -47,10 +47,15 @@ $ rm -rf ~/Pi-Assistant && sudo rm -f ~/Desktop/system-tools.desktop && sudo rm 
  * 14/11/2020 - rename 'apt-tools' to 'system-tools', add 'clear swap' option to 'system-tools'
  * 15/11/2020 - UPDATE: v1.1.4: added Zoom with box86
  * 16/11/2020 - added box86 app, fixed bug with install2.sh
+ * 25/11/2020 - UPDATE: v1.1.5: bug fixes, updated box86 installer.
   
 ## Known issues and bugs
 * if you installed when the name was system-tools, then after updating to the version after the rename the icons won't change. 
-* zoom installer is broken because it can't download zoom for some reason
+* zoom menu icon doesn't work for some reason.
+
+### Fixed temporarily
+- zoom installer is broken because it can't download zoom for some reason
+
  
 ## To do:
 
