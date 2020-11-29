@@ -26,7 +26,7 @@ sleep 2
 echo "$(tput setaf 2)starting zoom, ignore any errors...$(tput sgr 0)"
 sleep 1
 #start zoom with box86
-pulseaudio &
+pulseaudio --start
 box86 zoom || error "can't start zoom!"
 echo "$(tput setaf 2)exiting in 5 seconds:($(tput sgr 0)"
 sleep 5
