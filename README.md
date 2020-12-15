@@ -25,7 +25,7 @@ To update, start Pi-Assistant and go to `other>update-this-tool`
 ## removal
 Pi-Assistant v1.1.1 and later has a removal script in `other>remove` if you have an earlier version or need to manually remove, open terminal and type: 
 ```sh-session
-$ rm -rf ~/Pi-Assistant && sudo rm -f ~/Desktop/system-tools.desktop && sudo rm /usr/local/bin/piassist && sudo rm -f /usr/share/applications/system-tools.desktop 
+$ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/uninstall.sh | bash
 ```
 
 ## Screenshots
