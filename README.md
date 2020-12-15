@@ -12,7 +12,7 @@ Pi-Assistant is a simple terminal app that makes updating the system, installing
 
 to install Pi-Assistant, just type the following into terminal:
 ```
-$ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/testing/install.sh | bash
+$ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/install.sh | bash
 ```
 ## Run Pi-Assistant
 
