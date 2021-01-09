@@ -8,6 +8,8 @@ function error {
 cd $HOME
 git clone https://github.com/Itai-Nelken/Pi-Assistant.git; cd ~/Pi-Assistant
 
+#install dependency for main menu
+sudo apt updatesudo apt install dialog -y
 #copy desktop shortcut to desktop and main menu
 cp ~/Pi-Assistant/system-tools.desktop ~/Desktop || error "failed to create desktop shortcut!"
 sudo cp ~/Pi-Assistant/system-tools.desktop /usr/share/applications || error "failed to create menu shortcut!"
