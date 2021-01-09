@@ -2,14 +2,14 @@
 
 
 #variables
-DIRECTORY=~/Pi-Assistant
-APPS=~/Pi-Assistant/apps
+#DIRECTORY=~/Pi-Assistant
+#APPS=~/Pi-Assistant/apps
 
-cd $DIRECTORY
+cd ~/Pi-Assistant
 #variables containing the command for each option
 update=./update.sh
 passwd=./change-password.sh
-apps=cd $APPS; ./app-installer.sh
+apps=cd ~/Pi-Assistant/apps; ./app-installer.sh
 systools=./apt-tools.sh
 other=./other.sh
 
