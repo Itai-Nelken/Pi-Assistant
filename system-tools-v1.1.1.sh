@@ -5,14 +5,14 @@
 #DIRECTORY=~/Pi-Assistant
 #APPS=~/Pi-Assistant/apps
 
-cd ~/Pi-Assistant
+cd $HOME/Pi-Assistant
 #variables containing the command for each option
-main=./system-tools-v1.1.1.sh
-update=./update.sh
-passwd=./change-password.sh
-apps=cd ~/Pi-Assistant/apps; ./app-installer.sh
-systools=./apt-tools.sh
-other=./other.sh
+main="./system-tools-v1.1.1.sh"
+update="./update.sh"
+passwd="./change-password.sh"
+apps="$HOME/Pi-Assistant/apps/app-installer.sh"
+systools="./apt-tools.sh"
+other="./other.sh"
 
 #dialog variables
 HEIGHT=15
