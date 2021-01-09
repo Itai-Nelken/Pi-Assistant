@@ -10,10 +10,12 @@ Pi-Assistant is a simple terminal app that makes updating the system, installing
 
 ## Installation 
 
-to install Pi-Assistant, just type the following into terminal:
+to install Pi-Assistant beta, just type the following into terminal:
 ```
-$ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/install.sh | bash
+$ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/dialog-gui-testing/install.sh | bash
 ```
+if you want the current stable version, go to [here](https://github.com/Itai-Nelken/Pi-Assistant#installation).
+
 ## Run Pi-Assistant
 
 To run Pi-Assistant, use the menu or Desktop shortcuts. alternatively you can type in terminal (from anywhere) `piassist`
@@ -25,7 +27,7 @@ To update, start Pi-Assistant and go to `other>update-this-tool`
 ## removal
 Pi-Assistant v1.1.1 and later has a removal script in `other>remove` if you have an earlier version or need to manually remove, open terminal and type: 
 ```sh-session
-$ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/uninstall.sh | bash
+$ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/dialog-gui-testing/uninstall.sh | bash
 ```
 
 ## Screenshots
