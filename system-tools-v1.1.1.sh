@@ -18,8 +18,8 @@ other=./other.sh
 HEIGHT=15
 WIDTH=40
 CHOICE_HEIGHT=5
-BACKTITLE="Pi-Assistant v1.2-beta 1. author: Itai Nelken."
-COMMIT="`git log -1 | grep commit*`"
+BACKTITLE="Pi-Assistant v1.2-beta 1,"
+COMMIT="`git log -1 | grep commit* | cut -c1-14`::::::Itai Nelken::::::"
 TITLE="Main Menu"
 MENU="Choose one of the following options:"
 
