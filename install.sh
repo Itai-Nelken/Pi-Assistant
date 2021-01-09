@@ -7,7 +7,8 @@ function error {
 
 cd $HOME
 echo "cloning repo..."
-git clone https://github.com/Itai-Nelken/Pi-Assistant.git; cd ~/Pi-Assistant
+git clone --single-branch --branch  dialog-gui-testing https://github.com/Itai-Nelken/Pi-Assistant.git; cd ~/Pi-Assistant
+; cd ~/Pi-Assistant
 
 #install dependency for main menu
 echo "installing dependencies..."
