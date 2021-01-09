@@ -87,4 +87,4 @@ done
 
 sleep 1
 cd ..
-./main2.sh
+
