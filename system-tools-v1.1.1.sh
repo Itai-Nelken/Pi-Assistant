@@ -7,6 +7,7 @@
 
 cd ~/Pi-Assistant
 #variables containing the command for each option
+main=./system-tools-v1.1.1.sh
 update=./update.sh
 passwd=./change-password.sh
 apps=cd ~/Pi-Assistant/apps; ./app-installer.sh
@@ -38,18 +39,18 @@ CHOICE=$(dialog --clear \
 clear
 case $CHOICE in
         1)
-            $update
+            $update; $main
             ;;
         2)
-            $passwd
+            $passwd; $main
             ;;
         3)
-            $apps
+            $apps; $main
             ;;
         4)
-            $systools
+            $systools; $main
             ;;
         5)
-            $other
+            $other; $main
             ;;
 esac
