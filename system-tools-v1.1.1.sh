@@ -1,97 +1,55 @@
 #!/bin/bash
 
-#start updater
 
-#while true; do
-#	case $yn in
-#		[Yy]* ) ./updater.sh; break;;
-#	    [Nn]* ) echo skipping updater
-#	    * ) echo "please answer yes or no.";;
-#	esac
-#done
+#variables
+DIRECTORY=~/Pi-Assistant
+APPS=~/Pi-Assistant/apps
 
-function error {
-  echo -e "\\e[91m$1\\e[39m"
-  exit 1
-}
+cd $DIRECTORY
+#variables containing the command for each option
+update=./update.sh
+passwd=./change-password.sh
+apps=cd $APPS; ./app-installer.sh
+systools=./apt-tools.sh
+other=./other.sh
 
+#dialog variables
+HEIGHT=15
+WIDTH=40
+CHOICE_HEIGHT=5
+BACKTITLE="Pi-Assistant v1.2-beta 1. author: Itai Nelken."
+TITLE="Main Menu"
+MENU="Choose one of the following options:"
 
-#about & credits
-echo "$(tput setaf 3)Pi-Assistant v1.1.1 $(tput sgr 0)" 
-echo "$(tput setaf 3)by Itai Nelken $(tput sgr 0)"
-sleep 1 
+OPTIONS=(1 "Update"
+         2 "Change password"
+         3 "Application installer"
+         4 "System tools"
+         5 "Other")
 
-#main menu
-echo this script will help you install applications, update the system, and much more
-echo press [Ctrl-C] to exit
-PS3='Please enter the number above for operation you would like to perform (1 - 5): '
-options=("update" "change-password" "install-applications" "system-tools" "other")
-select opt in "${options[@]}"
-do
-    case $opt in
-
-
-        "update")
-        
-./update.sh
-            break
-            ;;
-
-
-        "change-password")
-
-./change-password.sh
+CHOICE=$(dialog --clear \
+                --backtitle "$BACKTITLE" \
+                --title "$TITLE" \
+                --menu "$MENU" \
+                $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                "${OPTIONS[@]}" \
+                2>&1 >/dev/tty)
 
 clear
-
-            break
+case $CHOICE in
+        1)
+            $update
             ;;
-
-
-
- 
-        "install-applications")
-
-clear
-
-cd ~/Pi-Assistant/apps/
-./app-installer.sh
-
-clear
-
-            break
+        2)
+            $passwd
             ;;
-
-
-
-        "system-tools")
-
-./apt-tools.sh
-clear
-
-            break
+        3)
+            $apps
             ;;
-
-     "other")
-
-./other.sh
-read -p "[Ctrl-C] to exit"
-
-
-            break
+        4)
+            $systools
             ;;
-
-
-
-
-        *) echo "invalid option $REPLY";;
-    esac
-done
-
-
-clear
-sleep 1
-echo operation complete. When ready, 
-read -p "press [Enter] to return to main menu or [Ctrl-C] to exit"
-./main2.sh
-
+        5)
+            $other
+            ;;
+esac

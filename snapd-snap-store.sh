@@ -14,7 +14,8 @@ do
 
 sudo apt update || error "error occured! are you connected to the internet?"
 echo "$(tput setaf 3)installing snapd... $(tput sgr 0)"
-sudo apt install snapd || error "error occured! are you connected to the internet?"
+sudo apt install snapd || error "Failed to install snapd"
+sudo snap install core || error "Failed to install snap core"
 echo do you want to install the snap-store?
 PS3='Please enter the number for install or skip (1 - 2): '
 options=("skip" "install")
@@ -32,7 +33,7 @@ sleep 1
    "install")
 
 echo "$(tput setaf 3)installing snap-store snap... $(tput sgr 0)"
-sudo snap install snap-store || error "error occured! are you connected to the internet?"
+sudo snap install snap-store || error "Failed to install snap-store"
 echo rebooting in 10 seconds. press [Ctrl-C] to cancel and exit
 
             break
