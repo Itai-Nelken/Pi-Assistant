@@ -19,6 +19,7 @@ HEIGHT=15
 WIDTH=40
 CHOICE_HEIGHT=5
 BACKTITLE="Pi-Assistant v1.2-beta 1. author: Itai Nelken."
+COMMIT="`git log -1 | grep commit*`"
 TITLE="Main Menu"
 MENU="Choose one of the following options:"
 
@@ -29,7 +30,7 @@ OPTIONS=(1 "Update"
          5 "Other")
 
 CHOICE=$(dialog --clear \
-                --backtitle "$BACKTITLE" \
+                --backtitle "$BACKTITLE $COMMIT" \
                 --title "$TITLE" \
                 --menu "$MENU" \
                 $HEIGHT $WIDTH $CHOICE_HEIGHT \
