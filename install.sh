@@ -6,15 +6,19 @@ function error {
 }
 
 cd $HOME
+echo "cloning repo..."
 git clone https://github.com/Itai-Nelken/Pi-Assistant.git; cd ~/Pi-Assistant
 
 #install dependency for main menu
-sudo apt updatesudo apt install dialog -y
+echo "installing dependencies..."
+sudo apt update; sudo apt install dialog -y
 #copy desktop shortcut to desktop and main menu
+echo "copying desktop shortcut..."
 cp ~/Pi-Assistant/system-tools.desktop ~/Desktop || error "failed to create desktop shortcut!"
 sudo cp ~/Pi-Assistant/system-tools.desktop /usr/share/applications || error "failed to create menu shortcut!"
 
 #mark as executable some neded scripts
+echo "marking scripts as executable..."
 cd ~/Pi-Assistant || error "Failed to change to /home/pi/Pi-Assistant"
 sudo chmod +x system-tools-v1.1.1.sh || error "failed to mark system-tools-v1.1.1.sh as executable!"
 
