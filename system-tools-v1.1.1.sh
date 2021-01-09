@@ -20,6 +20,9 @@ WIDTH=40
 CHOICE_HEIGHT=5
 BACKTITLE="Pi-Assistant v1.2-beta 1,"
 COMMIT="`git log -1 | grep commit* | cut -c1-14`::::::Itai Nelken::::::"
+#CPU="CPU `lscpu | grep "Model name*"`"
+#MODEL="`cat /proc/cpuinfo | grep "Raspberry*"`"
+SPACER="_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_"
 TITLE="Main Menu"
 MENU="Choose one of the following options:"
 
@@ -30,7 +33,7 @@ OPTIONS=(1 "Update"
          5 "Other")
 
 CHOICE=$(dialog --clear \
-                --backtitle "$BACKTITLE $COMMIT" \
+                --backtitle "$BACKTITLE $COMMIT $SPACER" \
                 --title "$TITLE" \
                 --menu "$MENU" \
                 $HEIGHT $WIDTH $CHOICE_HEIGHT \
