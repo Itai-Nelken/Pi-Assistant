@@ -6,7 +6,7 @@ function error {
 }
 
 cd $HOME
-git clone https://github.com/Itai-Nelken/Pi-Assistant.git; cd ~/Pi-Assistant
+git clone --single-branch --branch  dialog-gui-testing https://github.com/Itai-Nelken/Pi-Assistant.git; cd ~/Pi-Assistant
 
 #copy desktop shortcut to desktop and main menu
 cp ~/Pi-Assistant/system-tools.desktop ~/Desktop || error "failed to create desktop shortcut!"
