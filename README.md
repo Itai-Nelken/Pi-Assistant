@@ -29,7 +29,7 @@ Pi-Assistant v1.1.1 and later has a removal script in `other>remove` if you have
 $ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/uninstall.sh | bash
 ```
 
-## Screenshots
+## Screenshots (old screenshots, the app doesn't look like this anymore)
 
 ![pi-assistant2.png](screenshots/pi-assistant2.png)
 ![system-tools2a.png](screenshots/system-tools-2a.png)
