@@ -5,10 +5,8 @@ function error {
 }
 
 #variables
-#DIRECTORY="$HOME/Pi-Assistant"
-#APPS="$HOME/Pi-Assistant/apps"
-DIRECTORY="$HOME/Documents/github/Pi-Assistant(test)" #for testing purposes only
-APPS="$HOME/Documents/github/Pi-Assistant(test)/apps" #for testing purposes only
+DIRECTORY="$HOME/Pi-Assistant"
+APPS="$HOME/Pi-Assistant/apps"
 
 cd $DIRECTORY
 #variables containing the command for each app

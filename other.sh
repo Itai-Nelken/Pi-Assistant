@@ -5,13 +5,11 @@ function error {
 }
 
 #variables
-#DIRECTORY="$HOME/Pi-Assistant"
-#APPS="$HOME/Pi-Assistant/apps"
-DIRECTORY="$HOME/Documents/github/Pi-Assistant(test)" #for testing purposes only
-APPS="$HOME/Documents/github/Pi-Assistant(test)/apps" #for testing purposes only
+DIRECTORY="$HOME/Pi-Assistant"
+APPS="$HOME/Pi-Assistant/apps"
 
 echo "this script will help you update or uninstall Pi-Assistant."
-PS3='Please enter the number for install or remove (1 - 3): '
+PS3='Please enter the number for install or remove (1 - 3):'
 options=("Update Pi-Assistant" "uninstall Pi-Assistant" "back to main menu")
 select opt in "${options[@]}"
 do

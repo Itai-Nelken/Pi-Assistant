@@ -1,11 +1,8 @@
 #!/bin/bash  
 
 #variables
-#DIRECTORY="$HOME/Pi-Assistant"
-#APPS="$HOME/Pi-Assistant/apps"
-DIRECTORY="$HOME/Documents/github/Pi-Assistant(test)" #for testing purposes only
-APPS="$HOME/Documents/github/Pi-Assistant(test)/apps" #for testing purposes only
-
+DIRECTORY="$HOME/Pi-Assistant"
+APPS="$HOME/Pi-Assistant/apps"
 
 function error {
   echo -e "\\e[91m$1\\e[39m"
