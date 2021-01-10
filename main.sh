@@ -19,6 +19,8 @@ systools="$DIRECTORY/systools.sh"
 other="$DIRECTORY/other.sh"
 exit="exit"
 
+#change to $DIRECTORY (for $COMMIT to work)
+
 #dialog variables
 HEIGHT=15
 WIDTH=40
