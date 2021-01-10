@@ -36,6 +36,26 @@ cp ~/.local/share/applications/piassist.desktop ~/Desktop/
 #add startup from terminal using 'piassist'
 echo "creating /usr/local/bin/piassist"
 echo "#!/bin/bash
+if  [[ $1 = "--version" ]]; then
+    clear
+    echo -e "
+  _                                            
+ |_) o __ /\   _  _ o  _ _|_  _. ._ _|_        
+ |   |  _/--\ _> _>_| _>  |_ (_| | | |_        
+   /|    ) __ |_) / /|                         
+ \/ | o /____ | \ \_ |                         
+ |_        | _|_  _. o   |\ |  _  | |   _  ._  
+ |_) \/   _|_ |_ (_| |   | \| (/_ | |< (/_ | | 
+     /                                         
+"
+sleep 10
+read -p "[Ctrl+C] to exit"
+elif [[ $1 = "--secret" ]]; then
+    xdg-open ~/Pi-Assistant/icons/ascii-art.html
+    sleep 10
+    clear
+    read -p "[Ctrl+C] to exit"
+fi
 clear && $HOME/Pi-Assistant/main.sh" > ~/Downloads/piassist
 sudo mv ~/Downloads/piassist /usr/local/bin/
 sudo chmod +x /usr/local/bin/piassist

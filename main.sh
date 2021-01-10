@@ -27,8 +27,11 @@ if  [[ $1 = "--version" ]]; then
 "
 sleep 10
 read -p "[Ctrl+C] to exit"
-elif [[ $2 = "--secret" ]]; then
+elif [[ $1 = "--secret" ]]; then
     xdg-open ~/Pi-Assistant/icons/ascii-art.html
+    sleep 10
+    clear
+    read -p "[Ctrl+C] to exit"
 fi
 
 
