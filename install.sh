@@ -27,8 +27,8 @@ Type=Application
 Name=Pi-Assistant
 Exec="$HOME/Pi-Assistant/main.sh"
 Icon="$HOME/Pi-Assistant/icons/pi-assistant-logopng.png"
-Categories=Games
-Comment="Pi-Assistant v1.2 beta 2"" > ~/.local/share/applications/piassist.desktop
+Categories=Utility;
+Comment="Pi-Assistant v1.2 rc1"" > ~/.local/share/applications/piassist.desktop
 
 #add startup from terminal using 'piassist'
 echo "creating /usr/local/bin/piassist"
