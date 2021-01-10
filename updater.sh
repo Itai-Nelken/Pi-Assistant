@@ -1,5 +1,8 @@
 #!/bin/bash
 
+DIRECTORY="$HOME/Pi-Assistant"
+APPS="$HOME/Pi-Assistant/apps"
+
 echo "$(tput setaf 3)updating...$(tput sgr 0)"
 sleep 1
 cd $DIRECTORY
@@ -20,7 +23,7 @@ sudo chmod +x apps/blender.sh
 sudo chmod +x apps/audacity.sh
 sudo chmod +x apps/inkscape.sh
 sudo chmod +x apps/snap.sh
-sudo chmod +x apps/ssr.sh
+sudo chmod +x apps/SSR.sh
 sudo chmod +x apps/kdenlive.sh
 sudo chmod +x apps/gsysmon.sh
 sudo chmod +x apps/flatpak.sh
