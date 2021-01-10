@@ -43,6 +43,8 @@ sudo chmod +x systools.sh
 sudo chmod +x other.sh
 sudo chmod +x install.sh
 sudo chmod +x update.sh
+sudo chmod +x updater.sh
+sudo chmod +x uninstall.sh
 sudo chmod +x apps/appinstaller.sh
 sudo chmod +x apps/gparted.sh
 sudo chmod +x apps/chromium.sh
