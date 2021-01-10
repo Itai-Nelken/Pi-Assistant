@@ -27,6 +27,10 @@ when running with `piassist` you can add flags, to see a list off all flags run 
 ## Updates
 
 To update, start Pi-Assistant and go to `other>update-this-tool`
+if that doesn't work, or you think something is broken with the scripts, run this command:
+```sh-seesion
+$ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/updater.sh | bash
+```
 
 ## removal
 Pi-Assistant v1.1.1 and later has a removal script in `other>remove` if you have an earlier version or need to manually remove, open terminal and copy: 
