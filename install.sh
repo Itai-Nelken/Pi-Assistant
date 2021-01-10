@@ -25,10 +25,10 @@ sudo cp ~/Pi-Assistant/system-tools.desktop /usr/share/applications || error "fa
 echo "creating /usr/local/bin/piassist"
 echo "#!/bin/bash
 #variables
-#DIRECTORY="$HOME/Pi-Assistant"
-#APPS="$HOME/Pi-Assistant/apps"
-DIRECTORY="$HOME/Documents/github/Pi-Assistant(test)" #for testing purposes only
-APPS="$HOME/Documents/github/Pi-Assistant(test)/apps" #for testing purposes only
+#DIRECTORY=$HOME/Pi-Assistant
+#APPS=$HOME/Pi-Assistant/apps
+DIRECTORY=$HOME/Documents/github/Pi-Assistant(test) #for testing purposes only
+APPS=$HOME/Documents/github/Pi-Assistant(test)/apps #for testing purposes only
 clear && $DIRECTORY/main.sh" > ~/Downloads/piassist
 sudo mv ~/Downloads/piassist /usr/local/bin/
 cd /usr/local/bin
