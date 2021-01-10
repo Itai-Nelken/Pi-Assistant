@@ -7,10 +7,10 @@ sudo rm /usr/local/bin/piassist
 sudo rm -f ~/Desktop/piassist.desktop || error "failed to remove desktop shortcut!"
 sudo rm -f ~/.local/share/applications/piassist.desktop || error "failed to remove menu button!"
 
-read -p "Do you want to uninstall the dependencies (dialog, yad) (y/n)?" choice
+read -p "Do you want to uninstall the dependencies (dialog, yad, xdg-utils) (y/n)?" choice
 case "$choice" in 
-  y|Y ) sudo apt purge dialog yad -y;;
-  n|N ) echo "dependencies (dialog, yad) won't be removed."; sleep 2;;
+  y|Y ) sudo apt purge dialog yad xdg-utils -y;;
+  n|N ) echo "dependencies (dialog, yad, xdg-utils) won't be removed."; sleep 2;;
   * ) echo "invalid";;
 esac
 

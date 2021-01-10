@@ -17,7 +17,7 @@ APPS="$HOME/Pi-Assistant/apps"
 
 #install dependencies for main menu windows and pop-up windows
 echo "installing dependencies..."
-sudo apt update; sudo apt install dialog yad -y
+sudo apt update; sudo apt install dialog yad xdg-utils -y
 
 
 #create menu shortcut
