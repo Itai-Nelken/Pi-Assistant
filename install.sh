@@ -14,10 +14,18 @@ echo "installing dependencies..."
 sudo apt update; sudo apt install dialog yad -y
 
 #copy desktop shortcut to desktop and main menu
-echo "copying desktop shortcut to Desktop..."
-cp ~/Pi-Assistant/system-tools.desktop ~/Desktop || error "failed to create desktop shortcut!"
-echo "adding desktop shortcut to main menu..."
-sudo cp ~/Pi-Assistant/system-tools.desktop /usr/share/applications || error "failed to create menu shortcut!"
+ech '[Desktop Entry]
+Version=1.1.1
+Type=Application
+Terminal=true
+Exec=/home/pi/Pi-Assistant/system-tools-v1.1.1.sh 
+Name=Pi Assistant
+Icon=/home/pi/Pi-Assistant/icons/pi-assistant-logopng.png
+Path=/home/pi/Pi-Assistant
+Comment= 
+Categories=Utility;
+StartupNotify=false' > ~/.local/share/applications/piassist.desktop
+cp ~/.local/share/applications/piassist.desktop ~/Desktop || error "failed to create desktop shortcut!"
 
 #add startup from terminal using 'piassist'
 echo "creating /usr/local/bin/piassist"
