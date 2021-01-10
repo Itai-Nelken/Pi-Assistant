@@ -57,8 +57,10 @@ elif [[ $1 = "--secret" ]]; then
     clear
     read -p "[ENTER] to continue"
 elif [[ $1 = "-ni" ]]; then
+    
     INTERNETCHECK=1
-elif [[ $1 = "--help" ]]; then
+fi
+if [[ $1 = "--help" ]]; then
     echo -e "
     $(tput setaf 6)$(tput bold)usage:$(tput sgr 0)
     piassist [flag]
