@@ -1,5 +1,9 @@
 #!/bin/bash
 
+function error {
+  echo -e "\e[91m$1\e[39m"
+}
+
 #variables
 DIRECTORY="$HOME/Pi-Assistant"
 APPS="$HOME/Pi-Assistant/apps"
