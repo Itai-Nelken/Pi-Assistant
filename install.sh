@@ -35,7 +35,7 @@ cp ~/.local/share/applications/piassist.desktop ~/Desktop/
 
 #add startup from terminal using 'piassist'
 echo "creating /usr/local/bin/piassist"
-echo "#!/bin/bash
+echo '#!/bin/bash
 if  [[ $1 = "--version" ]]; then
     clear
     echo -e "
@@ -55,8 +55,21 @@ elif [[ $1 = "--secret" ]]; then
     sleep 10
     clear
     read -p "[Ctrl+C] to exit"
+elif [[ $1 = "--help" ]]; then
+    echo -e "
+    $(tput setaf 6)$(tput bold)usage:$(tput sgr 0)
+    piassist [flag]
+
+   $(tput setaf 6)$(tput bold)available flags:$(tput sgr 0)
+   --version
+   --secret
+   --help
+
+   $(tput setaf 6)$(tput bold)example:$(tput sgr 0)
+   piassist --secret
+   "
 fi
-clear && $HOME/Pi-Assistant/main.sh" > ~/Downloads/piassist
+clear && $HOME/Pi-Assistant/main.sh' > ~/Downloads/piassist
 sudo mv ~/Downloads/piassist /usr/local/bin/
 sudo chmod +x /usr/local/bin/piassist
 

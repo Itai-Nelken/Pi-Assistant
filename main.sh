@@ -32,8 +32,20 @@ elif [[ $1 = "--secret" ]]; then
     sleep 10
     clear
     read -p "[Ctrl+C] to exit"
-fi
+elif [[ $1 = "--help" ]]; then
+    echo -e "
+    $(tput setaf 6)$(tput bold)usage:$(tput sgr 0)
+    piassist [flag]
 
+   $(tput setaf 6)$(tput bold)available flags:$(tput sgr 0)
+   --version
+   --secret
+   --help
+
+   $(tput setaf 6)$(tput bold)example:$(tput sgr 0)
+   piassist --secret
+   "
+fi
 
 
 #variables
