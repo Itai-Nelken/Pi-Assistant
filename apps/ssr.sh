@@ -1,9 +1,16 @@
-#!/bin/bash  
+#!/bin/bash 
 
-clear
+function error {
+  echo -e "\e[91m$1\e[39m"
+}
+
+#variables
+DIRECTORY="$HOME/Pi-Assistant"
+APPS="$HOME/Pi-Assistant/apps"
+
 echo "this script will help you install or remove simplescreenrecorder."
-PS3='Please enter the number for install or remove (1 - 2): '
-options=("install" "remove")
+PS3='Please enter the number for install or remove (1 - 3): '
+options=("install" "remove" "back to app installer")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -12,27 +19,29 @@ do
 
         "install")
 
-echo "$(tput setaf 3)installing simplescreenrecorder...$(tput sgr 0)"
-sudo apt update || error "error occured! are you connected to the internet?"
-sudo apt install -y simplescreenrecorder || error "error occured! are you connected to the internet?"
-echo "$(tput setaf 2)simplescreenrecorder installed$(tput sgr 0)"
+sudo apt update || error "Failed to update repos (not critical)."
+sudo apt install -y simplescreenrecorder || error "Failed to install simplescreenrecorder!"
+
+            break
+            ;;
+   
+   "remove")  
+   
+sudo apt purge -y simplescreenrecorder || error "failed to remove simplescreenrecorder!"
+   
+            break
+            ;;
+
+"back to app installer")
+   
+$APPS/appinstaller.sh
 
             break
             ;;
 
- "remove")
-
-echo "$(tput setaf 3)removing simplescreenrecorder...$(tput sgr 0)"
-sudo apt remove -y inkscape || error "error occured! can't remove simplescreenrecorder"
-clear
-echo "$(tput setaf 2)simplescreenrecorder removed$(tput sgr 0)"
-
-            break
-            ;;
-
-      *) echo "invalid option $REPLY";;
+       *) echo "invalid option $REPLY";;
     esac
-done
+done     
 
-sleep 1
+sleep 2
 clear
