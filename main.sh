@@ -4,6 +4,15 @@ function error {
   echo -e "\e[91m$1\e[39m"
 }
 
+
+if  [[ $1 = "--install" ]]; then
+    echo "you found the secret command that will install apps in the future!" sleep 1
+else
+    echo " "
+fi
+
+
+
 #variables
 DIRECTORY="$HOME/Pi-Assistant"
 APPS="$HOME/Pi-Assistant/apps"
