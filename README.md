@@ -17,7 +17,12 @@ $ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/inst
 
 ## Run Pi-Assistant
 
-To run Pi-Assistant, use the menu or Desktop shortcuts. alternatively you can type in terminal (from anywhere) `piassist`
+To run Pi-Assistant, use the menu or Desktop shortcuts. alternatively you can type in terminal (from anywhere) `piassist`<br>
+when running with `piassist` you can add flags, to see a list off all flags run `piassist --help`.
+### Flags
+`--help` - show all flags and how to use them.<br>
+`--version` - show version (in ascii art text)<br>
+`--secret` - a secret easter egg :upside_down_face:<br>
 
 ## Updates
 
