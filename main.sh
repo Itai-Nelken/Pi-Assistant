@@ -27,8 +27,8 @@ if  [[ $1 = "--version" ]]; then
 "
 sleep 10
 read -p "[Ctrl+C] to exit"
-else
-    echo " "
+elif [[ $2 = "--secret" ]]; then
+    xdg-open $DIRECTORY/icons/ascii-art.html
 fi
 
 
