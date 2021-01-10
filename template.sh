@@ -1,58 +1,44 @@
-echo this script will help you install applications, update the system, and much more
-echo press [Ctrl-C] to exit
+echo "this script will help you do something"
 PS3='Please enter the number above for operation you would like to perform (1 - 5): '
-options=("update" "change-password" "install-applications" "system-tools" "other")
+options=("operation 1" "operation 2" "operation 3" "operation 4" "operation 5")
 select opt in "${options[@]}"
 do
     case $opt in
 
 
-        "update")
+        "operation 1")
         
-./update.sh
+echo "you selected option 1"
             break
             ;;
 
 
-        "change-password")
+        "operation 2")
 
-./change-password.sh
-
-clear
-
+echo "you selected option 2"
             break
             ;;
 
 
 
  
-        "install-applications")
+        "operation 3")
 
-clear
-
-cd ~/Pi-Assistant/apps/
-./app-installer.sh
-
-clear
-
+echo "you selected option 3"
             break
             ;;
 
 
 
-        "system-tools")
+        "operation 4")
 
-./apt-tools.sh
-clear
-
+echo "you selected option 4"
             break
             ;;
 
-     "other")
+     "operation 5")
 
-./other.sh
-read -p "[Ctrl-C] to exit"
-
+echo "you selected option 5"
 
             break
             ;;
