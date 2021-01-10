@@ -76,7 +76,7 @@ sudo ldconfig
 if [ $download == 1 ];then
    echo "Downloading zoom..."
    rm -rf "${HOME}/zoom" ~/zoomx86.tar.xz
-   wget https://github.com/Itai-Nelken/Pi-Assistant/raw/main/apps/zoom/files/zoom.tar.xz -O zoomx86.tar.xz || error 'Failed to download Zoom!'
+   wget https://github.com/Itai-Nelken/Pi-Assistant-files/raw/main/files/zoom.tar.xz -O zoomx86.tar.xz || error 'Failed to download Zoom!'
    echo "extracting zoom..."
    tar -xf zoomx86.tar.xz || error 'Failed to extract Zoom!'
    rm -f zoomx86.tar.xz 
