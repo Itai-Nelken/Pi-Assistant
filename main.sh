@@ -9,7 +9,7 @@ DIRECTORY="$HOME/Pi-Assistant"
 APPS="$HOME/Pi-Assistant/apps"
 
 #cd $HOME/Pi-Assistant
-cd "$HOME/Documents/github/Pi-Assistant(test)"
+cd "$HOME/Pi-Assistant"
 #variables containing the command for each option
 main="$DIRECTORY/main.sh" 
 update="$DIRECTORY/update.sh"
@@ -25,7 +25,7 @@ exit="exit"
 HEIGHT=15
 WIDTH=40
 CHOICE_HEIGHT=6
-BACKTITLE="Pi-Assistant v1.2-beta 1,"
+BACKTITLE="Pi-Assistant v1.2-RC 1,"
 COMMIT="`git log -1 | grep commit* | cut -c1-14`::::::Itai Nelken::::::"
 #CPU="CPU `lscpu | grep "Model name*"`"
 #MODEL="`cat /proc/cpuinfo | grep "Raspberry*"`"
