@@ -1,9 +1,16 @@
-#!/bin/bash  
+#!/bin/bash 
 
-clear
-echo "this script will help you install or remove kdenlive video editor."
-PS3='Please enter the number for install or remove (1 - 2): '
-options=("install" "remove")
+function error {
+  echo -e "\e[91m$1\e[39m"
+}
+
+#variables
+DIRECTORY="$HOME/Pi-Assistant"
+APPS="$HOME/Pi-Assistant/apps"
+
+echo "this script will help you install or remove kdenlive."
+PS3='Please enter the number for install or remove (1 - 3): '
+options=("install" "remove" "back to app installer")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -12,27 +19,29 @@ do
 
         "install")
 
-echo "$(tput setaf 3)installing kdenlive...$(tput sgr 0)"
-sudo apt update || error "error occured! are you connected to the internet?"
-sudo apt install -y kdenlive || error "error occured! are you connected to the internet?"
-echo "$(tput setaf 2)kdenlive installed$(tput sgr 0)"
+sudo apt update || error "Failed to update repos (not critical)."
+sudo apt install -y kdenlive || error "Failed to install kdenlive!"
+
+            break
+            ;;
+   
+   "remove")  
+   
+sudo apt purge -y kdenlive || error "failed to remove kdenlive!"
+   
+            break
+            ;;
+
+"back to app installer")
+   
+$APPS/appinstaller.sh
 
             break
             ;;
 
- "remove")
-
-echo "$(tput setaf 3)removing kdenlive...$(tput sgr 0)"
-sudo apt remove -y kdenlive || error "error occured! can't remove kdenlive"
-clear
-echo "$(tput setaf 2)kdenlive removed$(tput sgr 0)"
-
-            break
-            ;;
-
-      *) echo "invalid option $REPLY";;
+       *) echo "invalid option $REPLY";;
     esac
-done
+done     
 
-sleep 1
+sleep 2
 clear
