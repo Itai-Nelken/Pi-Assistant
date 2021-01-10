@@ -9,7 +9,7 @@ DIRECTORY="$HOME/Pi-Assistant"
 APPS="$HOME/Pi-Assistant/apps"
 
 echo "this script will help you execute system maintenance tasks"
-PS3='Please enter the number above for operation you would like to perform (1 - 5): '
+PS3='Please enter the number above for task you would like to perform (1 - 5): '
 options=("autoremove" "autoclean" "fix broken install" "clear swap" "back to main menu")
 select opt in "${options[@]}"
 do
