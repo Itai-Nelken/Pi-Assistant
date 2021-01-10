@@ -4,6 +4,9 @@ function error {
   echo -e "\e[91m$1\e[39m"
 }
 
+DIRECTORY="$HOME/Pi-Assistant"
+APPS="$HOME/Pi-Assistant/apps"
+
 cd $HOME
 echo "cloning repo..."
 git clone https://github.com/Itai-Nelken/Pi-Assistant.git
@@ -27,6 +30,8 @@ Exec="$HOME/Pi-Assistant/main.sh"
 Icon="$HOME/Pi-Assistant/icons/pi-assistant-logopng.png"
 Categories=Utility;
 Comment="Pi-Assistant v1.2-RC1"" > ~/.local/share/applications/piassist.desktop
+#copy menu shortcut to desktop
+cp ~/.local/share/applications/piassist.desktop ~/Desktop/
 
 #add startup from terminal using 'piassist'
 echo "creating /usr/local/bin/piassist"
@@ -54,7 +59,7 @@ sudo chmod +x apps/blender.sh
 sudo chmod +x apps/audacity.sh
 sudo chmod +x apps/inkscape.sh
 sudo chmod +x apps/snap.sh
-sudo chmod +x apps/ssr.sh
+sudo chmod +x apps/SSR.sh
 sudo chmod +x apps/kdenlive.sh
 sudo chmod +x apps/gsysmon.sh
 sudo chmod +x apps/flatpak.sh
@@ -62,10 +67,6 @@ sudo chmod +x apps/etcher.sh
 sudo chmod +x apps/zoom.sh
 sudo chmod +x apps/box86.sh
 
-#remove zoom.tar.xz as it isn't needed unless you install zoom, and the zoom installer downloads it.
-echo "removing unneeded files..."
-cd $DIRECTORY
-rm -rf files
 
 #print in green 'installation succesful' and in orange how to run system tools
 echo "$(tput setaf 2)Installation succesful! $(tput sgr 0)"
