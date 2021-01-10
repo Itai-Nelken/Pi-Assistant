@@ -15,13 +15,12 @@ sudo apt update; sudo apt install dialog yad -y
 
 #copy desktop shortcut to desktop and main menu
 ech '[Desktop Entry]
-Version=1.1.1
 Type=Application
 Terminal=true
-Exec=/home/pi/Pi-Assistant/system-tools-v1.1.1.sh 
+Exec="$HOME/Pi-Assistant/main.sh"
 Name=Pi Assistant
-Icon=/home/pi/Pi-Assistant/icons/pi-assistant-logopng.png
-Path=/home/pi/Pi-Assistant
+Icon="$HOME/Pi-Assistant/icons/pi-assistant-logopng.png"
+Path="$HOME/Pi-Assistant"
 Comment= 
 Categories=Utility;
 StartupNotify=false' > ~/.local/share/applications/piassist.desktop
