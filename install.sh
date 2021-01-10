@@ -1,38 +1,41 @@
 #!/bin/bash
 
-#variables
-DIRECTORY="$HOME/Pi-Assistant"
-APPS="$HOME/Pi-Assistant/apps"
+function error {
+  echo -e "\e[91m$1\e[39m"
+}
 
 cd $HOME
 echo "cloning repo..."
 #git clone https://github.com/Itai-Nelken/Pi-Assistant.git
-git clone --single-branch --branch  dialog-gui-testing https://github.com/Itai-Nelken/Pi-Assistant.git #for testing purposes only
+#for testing purposes only. comment the line bellow and uncoment the line above for main branch
+git clone --single-branch --branch  dialog-gui-testing https://github.com/Itai-Nelken/Pi-Assistant.git
 
-#install dependencies for main menu and pop-up windows
+#variables for the main app folders. DIRECTORY is the main folder, APP is the apps folder ($DIRECTORY/apps)
+DIRECTORY="$HOME/Pi-Assistant"
+APPS="$HOME/Pi-Assistant/apps"
+
+#install dependencies for main menu windows and pop-up windows
 echo "installing dependencies..."
 sudo apt update; sudo apt install dialog yad -y
 
-#copy desktop shortcut to desktop and main menu
-ech '[Desktop Entry]
-Type=Application
+
+#create menu shortcut
+echo "[Desktop Entry]
+StartupNotify=true
 Terminal=true
+Type=Application
+Name=Pi-Assistant
 Exec="$HOME/Pi-Assistant/main.sh"
-Name=Pi Assistant
 Icon="$HOME/Pi-Assistant/icons/pi-assistant-logopng.png"
-Path="$HOME/Pi-Assistant"
-Comment= 
-Categories=Utility;
-StartupNotify=false' > ~/.local/share/applications/piassist.desktop
-cp ~/.local/share/applications/piassist.desktop ~/Desktop || error "failed to create desktop shortcut!"
+Categories=Games
+Comment="Pi-Assistant v1.2 beta 2"" > ~/.local/share/applications/piassist.desktop
 
 #add startup from terminal using 'piassist'
 echo "creating /usr/local/bin/piassist"
 echo "#!/bin/bash
 clear && $HOME/Pi-Assistant/main.sh" > ~/Downloads/piassist
 sudo mv ~/Downloads/piassist /usr/local/bin/
-cd /usr/local/bin
-sudo chmod +x piassist
+sudo chmod +x /usr/local/bin/piassist
 
 #mark all scripts as executables
 echo "marking all scripts as executable..."
@@ -62,7 +65,7 @@ sudo chmod +x apps/zoom.sh
 sudo chmod +x apps/box86.sh
 
 #remove zoom.tar.xz as it isn't needed unless you install zoom, and the zoom installer downloads it.
-echo "removing unended files..."
+echo "removing unneeded files..."
 cd $DIRECTORY
 rm -rf files
 
