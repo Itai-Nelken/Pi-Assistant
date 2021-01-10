@@ -18,7 +18,7 @@ INTERNETCHECK=0
 fi
 
 #print a "loading screen"
-echo "$(tput setaf 2)$(tput bold)LOADING...$(tpu sgr 0)"
+echo "$(tput setaf 2)$(tput bold)LOADING...$(tput sgr 0)"
 
 #flags
 if  [[ $1 = "--version" ]]; then
