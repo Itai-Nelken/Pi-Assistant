@@ -1,54 +1,69 @@
 #!/bin/bash
 
-function error {
-  echo -e "\\e[91m$1\\e[39m"
-  exit 1
-}
+#variables
+#DIRECTORY="$HOME/Pi-Assistant"
+#APPS="$HOME/Pi-Assistant/apps"
+DIRECTORY="$HOME/Documents/github/Pi-Assistant(test)" #for testing purposes only
+APPS="$HOME/Documents/github/Pi-Assistant(test)/apps" #for testing purposes only
 
 cd $HOME
 echo "cloning repo..."
-git clone --single-branch --branch  dialog-gui-testing https://github.com/Itai-Nelken/Pi-Assistant.git; cd ~/Pi-Assistant
-; cd ~/Pi-Assistant
+#git clone https://github.com/Itai-Nelken/Pi-Assistant.git
+git clone --single-branch --branch  dialog-gui-testing https://github.com/Itai-Nelken/Pi-Assistant.git #for testing purposes only
 
-#install dependency for main menu
+#install dependencies for main menu and pop-up windows
 echo "installing dependencies..."
-sudo apt update; sudo apt install dialog -y
+sudo apt update; sudo apt install dialog yad -y
+
 #copy desktop shortcut to desktop and main menu
-echo "copying desktop shortcut..."
+echo "copying desktop shortcut to Desktop..."
 cp ~/Pi-Assistant/system-tools.desktop ~/Desktop || error "failed to create desktop shortcut!"
+echo "adding desktop shortcut to main menu..."
 sudo cp ~/Pi-Assistant/system-tools.desktop /usr/share/applications || error "failed to create menu shortcut!"
 
-#mark as executable some neded scripts
-echo "marking scripts as executable..."
-cd ~/Pi-Assistant || error "Failed to change to /home/pi/Pi-Assistant"
-sudo chmod +x system-tools-v1.1.1.sh || error "failed to mark system-tools-v1.1.1.sh as executable!"
-
-sudo chmod +x other.sh || error "failed to mark other.sh as executable!"
-sudo chmod +x uninstall.sh || error "failed to mark uninstall.sh as executable!"
-sudo chmod +x updater.sh || error "failed to mark updater.sh as executable!"
-
 #add startup from terminal using 'piassist'
+echo "creating /usr/local/bin/piassist"
 echo "#!/bin/bash
-clear && cd ~/Pi-Assistant/ && ./system-tools-v1.1.1.sh" > ~/Downloads/piassist
+#variables
+#DIRECTORY="$HOME/Pi-Assistant"
+#APPS="$HOME/Pi-Assistant/apps"
+DIRECTORY="$HOME/Documents/github/Pi-Assistant(test)" #for testing purposes only
+APPS="$HOME/Documents/github/Pi-Assistant(test)/apps" #for testing purposes only
+clear && $DIRECTORY/main.sh" > ~/Downloads/piassist
 sudo mv ~/Downloads/piassist /usr/local/bin/
 cd /usr/local/bin
 sudo chmod +x piassist
 
-cd ~/Pi-Assistant
-#remove zoom.tar.xz as it isn't needed unless you install zoom, and the zoom installer downloads it.
-cd apps/zoom/files
-rm zoom.tar.xz 
-cd ~/Pi-Assistant
+#mark all scripts as executables
+echo "marking all scripts as executable..."
+cd $DIRECTORY
+sudo chmod +x main.sh
+sudo chmod +x passwd.sh
+sudo chmod +x systools.sh
+sudo chmod +x other.sh
+sudo chmod +x install.sh
+sudo chmod +x update.sh
+sudo chmod +x apps/appinstaller.sh
+sudo chmod +x apps/gparted.sh
+sudo chmod +x apps/chromium.sh
+sudo chmod +x apps/firefox.sh
+sudo chmod +x apps/blender.sh
+sudo chmod +x apps/audacity.sh
+sudo chmod +x apps/inkscape.sh
+sudo chmod +x apps/snap.sh
+sudo chmod +x apps/ssr.sh
+sudo chmod +x apps/kdenlive.sh
+sudo chmod +x apps/gsysmon.sh
+sudo chmod +x apps/flatpak.sh
+sudo chmod +x apps/etcher.sh
+sudo chmod +x apps/zoom.sh
+sudo chmod +x apps/box86.sh
 
-#mark as executable and run 2nd install script
-sudo chmod +x install2.sh || error "failed to mark install2.sh as executable!"
-./install2.sh || error "failed to run install2.sh!"
+#remove zoom.tar.xz as it isn't needed unless you install zoom, and the zoom installer downloads it.
+echo "removing unended files..."
+cd $DIRECTORY
+rm -rf files
 
 #print in green 'installation succesful' and in orange how to run system tools
 echo "$(tput setaf 2)Installation succesful! $(tput sgr 0)"
 echo "$(tput setaf 3)to run Pi-Assistant, run the desktop shortcut or main menu>other>Pi-Assistant  $(tput sgr 0)"
-
-#print 'exiting in 5 seconds', wait 5 seconds and exit
-echo exiting in 5 seconds...
-sleep 5
-exit

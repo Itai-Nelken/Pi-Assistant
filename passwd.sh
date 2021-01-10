@@ -10,33 +10,33 @@ function error {
 DIRECTORY="$HOME/Documents/github/Pi-Assistant(test)" #for testing purposes only
 APPS="$HOME/Documents/github/Pi-Assistant(test)/apps" #for testing purposes only
 
-echo "this script will help you install or remove kdenlive."
+echo "this script will help you install or remove audacity."
 PS3='Please enter the number for install or remove (1 - 3): '
-options=("install" "remove" "back to app installer")
+options=("user password" "root password" "back to main menu")
 select opt in "${options[@]}"
 do
     case $opt in
 
 
 
-        "install")
+        "user password")
 
-sudo apt update || error "Failed to update repos (not critical)."
-sudo apt install -y kdenlive || error "Failed to install kdenlive!"
+passwd || error "error occured! couldn't complete operation"
 
             break
             ;;
    
-   "remove")  
+   "root password")  
    
-sudo apt purge -y kdenlive || error "failed to remove kdenlive!"
+echo "you can use the same password as your user account if you wish"
+sudo passwd || error "error occured! couldn't complete operation"
    
             break
             ;;
 
-"back to app installer")
+"back to main menu")
    
-$APPS/appinstaller.sh
+$DIRECTORY/main.sh
 
             break
             ;;

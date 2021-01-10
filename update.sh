@@ -1,21 +1,28 @@
 #!/bin/bash  
 
+#variables
+#DIRECTORY="$HOME/Pi-Assistant"
+#APPS="$HOME/Pi-Assistant/apps"
+DIRECTORY="$HOME/Documents/github/Pi-Assistant(test)" #for testing purposes only
+APPS="$HOME/Documents/github/Pi-Assistant(test)/apps" #for testing purposes only
+
+
 function error {
   echo -e "\\e[91m$1\\e[39m"
 }
 
-sudo apt update || error "error occured! are you connected to the internet?"
+sudo apt update --fix-missing || error "failed to update repos!"
+sudo apt upgrade -y || error "error occured are you connected to the internet?"
+echo -en && sudo apt install -f && sudo dpkg --configure -a
 sleep 2
 clear
-
-sudo apt upgrade -y || error "error occured are you connected to the internet?"
-sleep 2
 
 if [ ! -f /usr/bin/snap ];then
   echo " "
 else
-  echo "updating snap-store"
+  echo "updating snap-store and snap core"
   sudo snap refresh snap-store || error "Failed to update snap-store!"
+  sudo snap refresh core || error "Failed to update snap core!"
 fi
 
 sleep 1
