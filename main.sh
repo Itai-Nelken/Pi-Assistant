@@ -12,7 +12,10 @@ function error {
   echo -e "\e[91m$1\e[39m"
 }
 
+#set INTERNETCHECK variable to 0 (check)
+INTERNETCHECK=0
 
+#flags
 if  [[ $1 = "--version" ]]; then
     clear
     echo -e "
@@ -32,6 +35,8 @@ elif [[ $1 = "--secret" ]]; then
     sleep 10
     clear
     read -p "[Ctrl+C] to exit"
+elif [[ $1 = "-ni" ]]; then
+    INTERNETCHECK=1
 elif [[ $1 = "--help" ]]; then
     echo -e "
     $(tput setaf 6)$(tput bold)usage:$(tput sgr 0)
@@ -47,12 +52,19 @@ elif [[ $1 = "--help" ]]; then
    "
 fi
 
+if [ ! "$INTERNETCHECK" = 1 ]; then
+        PINGOUTPUT=$(ping -c 1 8.8.8.8 >/dev/null && echo '...')
+        if [ ! "$PINGOUTPUT" = '...' ]; then
+            echo -e "Internet connection required but not detected.\nthis could be caused by:\n * a weak wifi signal\n * no internet connection.\nTry the don't check for internet flag (-ni) usage: piassist -ni\n"
+            read -p "Press [Enter] to exit..."
+            exit
+        fi
+fi
 
 #variables
 DIRECTORY="$HOME/Pi-Assistant"
 APPS="$HOME/Pi-Assistant/apps"
 
-#cd $HOME/Pi-Assistant
 cd "$HOME/Pi-Assistant"
 #variables containing the command for each option
 main="$DIRECTORY/main.sh" 
