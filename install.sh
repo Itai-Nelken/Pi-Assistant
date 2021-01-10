@@ -55,7 +55,7 @@ elif [[ $1 = "--secret" ]]; then
     xdg-open ~/Pi-Assistant/icons/ascii-art.html
     sleep 10
     clear
-    read -p "[Ctrl+C] to exit"
+    read -p "[ENTER] to continue"
 elif [[ $1 = "-ni" ]]; then
     INTERNETCHECK=1
 elif [[ $1 = "--help" ]]; then
