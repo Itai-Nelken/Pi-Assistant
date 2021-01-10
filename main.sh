@@ -17,6 +17,9 @@ if [ ! "$INTERNETCHECK" = 1 ]; then
 INTERNETCHECK=0
 fi
 
+#print a "loading screen"
+echo "$(tput setaf 2)$(tput bold)LOADING...$(tpu sgr 0)"
+
 #flags
 if  [[ $1 = "--version" ]]; then
     clear
