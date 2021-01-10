@@ -6,9 +6,7 @@ function error {
 
 cd $HOME
 echo "cloning repo..."
-#git clone https://github.com/Itai-Nelken/Pi-Assistant.git
-#for testing purposes only. comment the line bellow and uncoment the line above for main branch
-git clone --single-branch --branch  dialog-gui-testing https://github.com/Itai-Nelken/Pi-Assistant.git
+git clone https://github.com/Itai-Nelken/Pi-Assistant.git
 
 #variables for the main app folders. DIRECTORY is the main folder, APP is the apps folder ($DIRECTORY/apps)
 DIRECTORY="$HOME/Pi-Assistant"
@@ -28,7 +26,7 @@ Name=Pi-Assistant
 Exec="$HOME/Pi-Assistant/main.sh"
 Icon="$HOME/Pi-Assistant/icons/pi-assistant-logopng.png"
 Categories=Utility;
-Comment="Pi-Assistant v1.2 rc1"" > ~/.local/share/applications/piassist.desktop
+Comment="Pi-Assistant v1.2-RC1"" > ~/.local/share/applications/piassist.desktop
 
 #add startup from terminal using 'piassist'
 echo "creating /usr/local/bin/piassist"
