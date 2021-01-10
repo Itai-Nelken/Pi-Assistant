@@ -10,11 +10,10 @@ Pi-Assistant is a simple terminal app that makes updating the system, installing
 
 ## Installation 
 
-to install Pi-Assistant beta, just type the following into terminal:
+to install Pi-Assistant, just copy the following into terminal:
 ```
-$ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/dialog-gui-testing/install.sh | bash
+$ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/install.sh | bash
 ```
-if you want the current stable version, go to [here](https://github.com/Itai-Nelken/Pi-Assistant#installation).
 
 ## Run Pi-Assistant
 
@@ -25,9 +24,9 @@ To run Pi-Assistant, use the menu or Desktop shortcuts. alternatively you can ty
 To update, start Pi-Assistant and go to `other>update-this-tool`
 
 ## removal
-Pi-Assistant v1.1.1 and later has a removal script in `other>remove` if you have an earlier version or need to manually remove, open terminal and type: 
+Pi-Assistant v1.1.1 and later has a removal script in `other>remove` if you have an earlier version or need to manually remove, open terminal and copy: 
 ```sh-session
-$ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/dialog-gui-testing/uninstall.sh | bash
+$ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/uninstall.sh | bash
 ```
 
 ## Screenshots
@@ -50,7 +49,8 @@ $ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/dialog-gu
  * 15/11/2020 - UPDATE: v1.1.4: added Zoom with box86
  * 16/11/2020 - added box86 app, fixed bug with install2.sh
  * 25/11/2020 - UPDATE: v1.1.5: bug fixes, updated box86 installer.
- * 9/1/2021 - started working on v1.2 - adding a dialog gui. check out [the branch](https://github.com/Itai-Nelken/Pi-Assistant/tree/dialog-gui-testing) if you want to test it.
+ * 9/1/2021 - started working on v1.2 - adding a dialog gui. ~~check out [the branch](https://github.com/Itai-Nelken/Pi-Assistant/tree/dialog-gui-testing) if you want to test it.~~ edit: the branch is nonexistent, I merged it.
+ * 10/1/2021 - GIANT UPDATE: finished rewriting everything for the 2nd time (:tired_face:) then figured out how to merge a conflicting branch (gave up so I downloaded the test branch and deleted it along with everything in the main branch, then I uploaded all the scripts again). at least now everything should work!
   
 ## Known issues and bugs
 * if you installed when the name was system-tools, then after updating to the version after the rename the icons won't change. 
@@ -73,10 +73,10 @@ $ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/dialog-gu
 - [ ] add speedtest-cli
 - [ ] add browsh
 - [ ] add box86 install script for 64bit OS's
+- [x] add dialog GUI
+- [ ] change whole gui to use YAD
 
 
 ## FAQ
 
-### why is the main script called system-tools-v.1.1.1.sh?
-* because before I split the script, I changed the name every release. but now changing the name would mean finding all the places where the name appears and changing it, I might do it in the future. 
-
+nothing here yet :upside_down_face:
