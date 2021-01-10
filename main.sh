@@ -61,7 +61,7 @@ case $CHOICE in
             $systools; $main
             ;;
         5)
-            $other; $main
+            $other; $main2>/dev/null
             ;;
         
         6) $exit
