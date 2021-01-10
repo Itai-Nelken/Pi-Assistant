@@ -36,6 +36,7 @@ cp ~/.local/share/applications/piassist.desktop ~/Desktop/
 #add startup from terminal using 'piassist'
 echo "creating /usr/local/bin/piassist"
 echo '#!/bin/bash
+#flags
 if  [[ $1 = "--version" ]]; then
     clear
     echo -e "
@@ -55,15 +56,18 @@ elif [[ $1 = "--secret" ]]; then
     sleep 10
     clear
     read -p "[Ctrl+C] to exit"
+elif [[ $1 = "-ni" ]]; then
+    INTERNETCHECK=1
 elif [[ $1 = "--help" ]]; then
     echo -e "
     $(tput setaf 6)$(tput bold)usage:$(tput sgr 0)
     piassist [flag]
 
    $(tput setaf 6)$(tput bold)available flags:$(tput sgr 0)
-   --version
-   --secret
-   --help
+   -ni - dont check for internet connection on startup .
+   --version - show version (in ascii art text).
+   --secret - secret easter egg.
+   --help - show this help info.
 
    $(tput setaf 6)$(tput bold)example:$(tput sgr 0)
    piassist --secret

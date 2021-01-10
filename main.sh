@@ -13,7 +13,9 @@ function error {
 }
 
 #set INTERNETCHECK variable to 0 (check)
+if [ ! "$INTERNETCHECK" = 1 ]; then
 INTERNETCHECK=0
+fi
 
 #flags
 if  [[ $1 = "--version" ]]; then
@@ -43,15 +45,17 @@ elif [[ $1 = "--help" ]]; then
     piassist [flag]
 
    $(tput setaf 6)$(tput bold)available flags:$(tput sgr 0)
-   --version
-   --secret
-   --help
+   -ni - dont check for internet connection on startup .
+   --version - show version (in ascii art text).
+   --secret - secret easter egg.
+   --help - show this help info.
 
    $(tput setaf 6)$(tput bold)example:$(tput sgr 0)
    piassist --secret
    "
 fi
 
+#check for internet connection (disable with -ni flag)
 if [ ! "$INTERNETCHECK" = 1 ]; then
         PINGOUTPUT=$(ping -c 1 8.8.8.8 >/dev/null && echo '...')
         if [ ! "$PINGOUTPUT" = '...' ]; then
