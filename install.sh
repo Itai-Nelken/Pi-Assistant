@@ -72,6 +72,7 @@ elif [[ $1 = "--help" ]]; then
    $(tput setaf 6)$(tput bold)example:$(tput sgr 0)
    piassist --secret
    "
+   read -p "press any key to continue..."
 fi
 clear && $HOME/Pi-Assistant/main.sh' > ~/Downloads/piassist
 sudo mv ~/Downloads/piassist /usr/local/bin/

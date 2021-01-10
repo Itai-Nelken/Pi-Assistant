@@ -56,6 +56,8 @@ elif [[ $1 = "--help" ]]; then
    $(tput setaf 6)$(tput bold)example:$(tput sgr 0)
    piassist --secret
    "
+   read -p "press any key to continue...
+   "
 fi
 
 #check for internet connection (disable with -ni flag)
