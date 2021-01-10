@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "this script will help you do something"
 PS3='Please enter the number above for operation you would like to perform (1 - 5): '
 options=("operation 1" "operation 2" "operation 3" "operation 4" "operation 5")
