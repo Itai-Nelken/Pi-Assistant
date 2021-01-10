@@ -1,6 +1,6 @@
 # Pi-Assistant
 
-Pi-Assistant is a simple terminal app that makes updating the system, installing apps and more, easier and faster, especially if you are new to the Linux command line or you forget the commands.
+Pi-Assistant is a simple terminal app made for the Raspberry Pi that makes updating the system, installing apps and more, easier and faster, especially if you are new to the Linux command line or you forget the commands.
 
 ## links
 
