@@ -33,8 +33,8 @@ if  [[ $1 = "--version" ]]; then
  |_) \/   _|_ |_ (_| |   | \| (/_ | |< (/_ | | 
      /                                         
 "
-sleep 10
-read -p "[Ctrl+C] to exit"
+sleep 5
+read -p "[ENTER] to continue"
 elif [[ $1 = "--secret" ]]; then
     xdg-open ~/Pi-Assistant/icons/ascii-art.html
     sleep 10
