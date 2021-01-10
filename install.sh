@@ -22,10 +22,7 @@ sudo cp ~/Pi-Assistant/system-tools.desktop /usr/share/applications || error "fa
 #add startup from terminal using 'piassist'
 echo "creating /usr/local/bin/piassist"
 echo "#!/bin/bash
-#variables
-DIRECTORY=$HOME/Pi-Assistant
-APPS=$HOME/Pi-Assistant/apps
-clear && $DIRECTORY/main.sh" > ~/Downloads/piassist
+clear && $HOME/Pi-Assistant/main.sh" > ~/Downloads/piassist
 sudo mv ~/Downloads/piassist /usr/local/bin/
 cd /usr/local/bin
 sudo chmod +x piassist
