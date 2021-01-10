@@ -49,6 +49,7 @@ $ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/unin
  * 16/11/2020 - added box86 app, fixed bug with install2.sh
  * 25/11/2020 - UPDATE: v1.1.5: bug fixes, updated box86 installer.
  * 9/1/2021 - started working on v1.2 - adding a dialog gui. check out [the branch](https://github.com/Itai-Nelken/Pi-Assistant/tree/dialog-gui-testing) if you want to test it.
+ * 10/1/2021 - GIANT MILESTONE: finished rewriting every script to work better and look nicer with the new dialog gui!
   
 ## Known issues and bugs
 * if you installed when the name was system-tools, then after updating to the version after the rename the icons won't change. 
