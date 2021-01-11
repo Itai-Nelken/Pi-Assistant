@@ -14,6 +14,9 @@ echo -e '
 #########################################################################################
 
 '
+sleep 5
+read -p "press any key to exit..."
+exit
 fi
 
 function error {
