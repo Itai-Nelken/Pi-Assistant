@@ -79,10 +79,7 @@ added flags to piassist (and main.sh), run `piassist --help` to see all of them.
 - [ ] make updater script to run on startup
 - [x] add zoom & box86
 - [x] add box86 as standalone app 
-- [x] add etcher (newest version, the one with 'Flash from URL' and 'clone drive'). (added as of v1.1.3, installs 32 or 64 bit             version depending on your system architecture)
-- [ ] add USBImager
-- [ ] add speedtest-cli
-- [ ] add browsh
+- [x] add etcher (newest version, the one with 'Flash from URL' and 'clone drive'). (added as of v1.1.3, installs 32 or 64 bit version depending on your system architecture)
 - [ ] add box86 install script for 64bit OS's
 - [x] add dialog GUI
 - [ ] change whole gui to use YAD
