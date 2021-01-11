@@ -27,24 +27,9 @@ echo "$(tput setaf 2)$(tput bold)LOADING...$(tput sgr 0)"
 #flags
 if  [[ $1 = "--version" ]]; then
     clear
-    echo -e '
-  __             __   __     __  ___           ___         
-|__) | __  /\  /__` /__` | /__`  |   /\  |\ |  |          
-|    |    /~~\ .__/ .__/ | .__/  |  /~~\ | \|  |          
-                                                          
-          __   __                                         
-\  /  __ |__) /  `                                        
- \/  .   |  \ \__,                                        
-                                                          
- __           ___                 ___            ___      
-|__) \ /    |  |   /\  |    |\ | |__  |    |__/ |__  |\ | 
-|__)  |     |  |  /~~\ |    | \| |___ |___ |  \ |___ | \| 
-                                                                                
-'
-
-sleep 5
-read -p "any key to exit..."
-exit
+    echo -e "$(tput bold)$(tput setaf 4)Pi-Assistant\nv1.2-RC 2\nby Itai Nelken$(tput sgr 0)"
+    read -p "any key to exit..."
+    exit
 elif [[ $1 = "--secret" ]]; then
     xdg-open ~/Pi-Assistant/icons/ascii-art.html
     sleep 10
