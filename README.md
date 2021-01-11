@@ -25,6 +25,8 @@ when running with `piassist` you can add flags, to see a list off all flags run 
 `--version` - show version.<br>
 `--secret` - a secret easter egg :upside_down_face:<br>
 
+## if you have any questions, check the [FAQ](https://github.com/Itai-Nelken/Pi-Assistant#faq) before opening a issue please.
+
 ## Updates
 
 To update, start Pi-Assistant and go to `other>update-this-tool`
@@ -43,7 +45,7 @@ $ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/unin
 
 ![piassist-mainmenu.png](screenshots/piassist-mainmenu.png)
 ![spiassist-appmenu.png](screenshots/piassist-appmenu.png)
-![piassist-demo.mp4](screenshots/piassist-demo.mp4)
+![piassist-demo.gif](screenshots/piassist-demo.gif)
 
 
 ## CHANGELOG (dd/mm/yy)
@@ -87,4 +89,8 @@ added flags to piassist (and main.sh), run `piassist --help` to see all of them.
 
 ## FAQ
 
-nothing here yet :upside_down_face:
+**Q:**<br>
+>How can I start Pi-Assistant without a internet connection?
+
+**A:**<br>
+run Pi-Assistant from terminal with this command: `piassist --no-internet`
