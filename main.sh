@@ -78,7 +78,7 @@ passwd="$DIRECTORY/passwd.sh"
 apps="$APPS/appinstaller.sh" #apps variable used for my testing.
 systools="$DIRECTORY/systools.sh"
 other="$DIRECTORY/other.sh"
-exit="exit"
+exit="exit 1"
 
 #change to $DIRECTORY (for $COMMIT to work)
 cd $DIRECTORY
