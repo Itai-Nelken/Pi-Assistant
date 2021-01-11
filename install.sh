@@ -27,7 +27,7 @@ Terminal=true
 Type=Application
 Name=Pi-Assistant
 Exec="$HOME/Pi-Assistant/main.sh"
-Icon="$HOME/Pi-Assistant/icons/logo-64.png"
+Icon="$HOME/Pi-Assistant/icons/64x64/logo-64.png"
 Categories=Utility;
 Comment="Pi-Assistant v1.2-RC1"" > ~/.local/share/applications/piassist.desktop
 #copy menu shortcut to desktop

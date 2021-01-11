@@ -140,17 +140,17 @@ echo "Restarting systemd-binfmt service..."
 sudo systemctl restart systemd-binfmt || error "Failed to restart systemd-binfmt service! please reboot before running zoom"
 
 echo "Creating Menu shortcut..."
-echo "[Desktop Entry]
+echo '[Desktop Entry]
 Name=Zoom
 Exec="$HOME/zoom/startzoom.sh"
-Icon=${DIRECTORY}/icons/zoom-64.png
-Path=${HOME}/zoom/
+Icon="${DIRECTORY}/icons/64x64/zoom-64.png"
+Path="${HOME}/zoom/"
 Type=Application
 Terminal=true
 StartupNotify=true
 Comment="Linux x86 version of Zoom clud meetings client using Box86"
 Categories=Network;
-StartupNotify=true" > ~/.local/share/applications/zoom.desktop
+StartupNotify=true' > ~/.local/share/applications/zoom.desktop
 
 read -p "Do you want to create a shortcut on your Desktop (y/n)?" choice
 case "$choice" in 
