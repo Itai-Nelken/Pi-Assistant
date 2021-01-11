@@ -52,7 +52,7 @@ elif [[ $1 = "--help" ]]; then
    $(tput setaf 6)$(tput bold)example:$(tput sgr 0)
    piassist --secret
    "
-   read -p "press any key to exit..."
+   #read -p "press any key to exit..."
    exit
 fi
 
