@@ -99,7 +99,7 @@ SPACER="_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\
 TITLE="Main Menu"
 MENU="Choose one of the following options:"
 
-OPTIONS=(1 "Update"
+OPTIONS=(1 "Update OS"
          2 "Change password"
          3 "Application installer"
          4 "System tools"
