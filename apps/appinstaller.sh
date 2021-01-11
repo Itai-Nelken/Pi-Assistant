@@ -4,6 +4,9 @@ function error {
   echo -e "\e[91m$1\e[39m"
 }
 
+#version variable (change --version ascii art (main.sh and piassist) and $APPVER in main.sh as well)
+APPVER="v1.2-RC 2"
+
 #variables
 DIRECTORY="$HOME/Pi-Assistant"
 APPS="$HOME/Pi-Assistant/apps"
@@ -31,7 +34,7 @@ main="$DIRECTORY/main.sh"
 HEIGHT=18
 WIDTH=130
 CHOICE_HEIGHT=20
-BACKTITLE="Pi-Assistant v1.2-beta 1:::Itai Nelken:::"
+BACKTITLE="Pi-Assistant $APPVER:::Itai Nelken:::"
 TITLE="Application Installer"
 MENU="Choose one of the following apps to install/uninstall:"
 

@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [[ $1 = "--youfoundmysecretasciiart"]]; then
+
+echo -e "
+
 #########################################################################################
 #██████╗░██╗░░░░░░░█████╗░░██████╗░██████╗██╗░██████╗████████╗░█████╗░███╗░░██╗████████╗#
 #██╔══██╗██║░░░░░░██╔══██╗██╔════╝██╔════╝██║██╔════╝╚══██╔══╝██╔══██╗████╗░██║╚══██╔══╝#
@@ -8,9 +12,16 @@
 #██║░░░░░██║░░░░░░██║░░██║██████╔╝██████╔╝██║██████╔╝░░░██║░░░██║░░██║██║░╚███║░░░██║░░░#
 #╚═╝░░░░░╚═╝░░░░░░╚═╝░░╚═╝╚═════╝░╚═════╝░╚═╝╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚══╝░░░╚═╝░░░#
 #########################################################################################
+
+"
+fi
+
 function error {
   echo -e "\e[91m$1\e[39m"
 }
+
+#version variable (change --version ascii art (main.sh and piassist) and $APPVER in appinstaller.sh as well)
+APPVER="v1.2-RC 2"
 
 #set INTERNETCHECK variable to 0 (check)
 if [ ! "$INTERNETCHECK" = 1 ]; then
@@ -91,7 +102,7 @@ cd $DIRECTORY
 HEIGHT=15
 WIDTH=40
 CHOICE_HEIGHT=6
-BACKTITLE="Pi-Assistant v1.2-RC 1,"
+BACKTITLE="Pi-Assistant $APPVER,"
 COMMIT="`git log -1 | grep commit* | cut -c1-14`::::::Itai Nelken::::::"
 #CPU="CPU `lscpu | grep "Model name*"`"
 #MODEL="`cat /proc/cpuinfo | grep "Raspberry*"`"
