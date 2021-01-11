@@ -66,6 +66,9 @@ if [ ! "$INTERNETCHECK" = 1 ]; then
         fi
 fi
 
+#set $NOINTERNETCHECK to 0 so next time you run it will be the default 0
+NOINTERNETCHECK=0
+
 #variables
 DIRECTORY="$HOME/Pi-Assistant"
 APPS="$HOME/Pi-Assistant/apps"

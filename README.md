@@ -21,7 +21,8 @@ To run Pi-Assistant, use the menu or Desktop shortcuts. alternatively you can ty
 when running with `piassist` you can add flags, to see a list off all flags run `piassist --help`.
 ### Flags
 `--help` - show all flags and how to use them.<br>
-`--version` - show version (in ascii art text)<br>
+`--no-internet` - run pi-assistant without internet.<br>
+`--version` - show version.<br>
 `--secret` - a secret easter egg :upside_down_face:<br>
 
 ## Updates
@@ -38,11 +39,11 @@ Pi-Assistant v1.1.1 and later has a removal script in `other>remove` if you have
 $ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/uninstall.sh | bash
 ```
 
-## Screenshots (old screenshots, the app doesn't look like this anymore)
+## Screenshots
 
-![pi-assistant2.png](screenshots/pi-assistant2.png)
-![system-tools2a.png](screenshots/system-tools-2a.png)
-![pi-assistant.gif](screenshots/pi-assistant.gif)
+![piassist-mainmenu.png](screenshots/piassist-mainmenu.png)
+![spiassist-appmenu.png](screenshots/piassist-appmenu.png)
+![piassist-demo.mp4](screenshots/piassist-demo.mp4)
 
 
 ## CHANGELOG (dd/mm/yy)
@@ -78,10 +79,7 @@ added flags to piassist (and main.sh), run `piassist --help` to see all of them.
 - [ ] make updater script to run on startup
 - [x] add zoom & box86
 - [x] add box86 as standalone app 
-- [x] add etcher (newest version, the one with 'Flash from URL' and 'clone drive'). (added as of v1.1.3, installs 32 or 64 bit             version depending on your system architecture)
-- [ ] add USBImager
-- [ ] add speedtest-cli
-- [ ] add browsh
+- [x] add etcher (newest version, the one with 'Flash from URL' and 'clone drive'). (added as of v1.1.3, installs 32 or 64 bit version depending on your system architecture)
 - [ ] add box86 install script for 64bit OS's
 - [x] add dialog GUI
 - [ ] change whole gui to use YAD
