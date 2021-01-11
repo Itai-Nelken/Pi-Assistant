@@ -39,8 +39,9 @@ elif [[ $1 = "--secret" ]]; then
     xdg-open ~/Pi-Assistant/icons/ascii-art.html
     sleep 10
     clear
-    read -p "[ENTER] to continue"
-elif [[ $1 = "-ni" ]]; then
+    read -p "any key to exit"
+    exit
+elif [[ $1 = "--no-internet" ]]; then    
     INTERNETCHECK=1
 elif [[ $1 = "--help" ]]; then
     echo -e "
@@ -48,16 +49,16 @@ elif [[ $1 = "--help" ]]; then
     piassist [flag]
 
    $(tput setaf 6)$(tput bold)available flags:$(tput sgr 0)
-   -ni - dont check for internet connection on startup .
-   --version - show version (in ascii art text).
+   --no-internet - dont check for internet connection on startup .
+   --version - show version (in ascii art text) and exit.
    --secret - secret easter egg.
-   --help - show this help info.
+   --help - show this help info and exit.
 
    $(tput setaf 6)$(tput bold)example:$(tput sgr 0)
    piassist --secret
    "
-   read -p "press any key to continue...
-   "
+   read -p "press any key to exit..."
+   exit
 fi
 
 #check for internet connection (disable with -ni flag)
