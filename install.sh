@@ -32,6 +32,7 @@ Categories=Utility;
 Comment="Pi-Assistant v1.2-RC1"" > ~/.local/share/applications/piassist.desktop
 #copy menu shortcut to desktop
 cp ~/.local/share/applications/piassist.desktop ~/Desktop/
+sudo chmod +x ~/Desktop/piassist.desktop
 
 #add startup from terminal using 'piassist'
 echo "creating /usr/local/bin/piassist"
