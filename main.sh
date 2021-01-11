@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ $1 = "--secretasciiart"]]; then
+if [[ $1 = "--secretasciiart" ]]; then
 
 echo -e '
 
