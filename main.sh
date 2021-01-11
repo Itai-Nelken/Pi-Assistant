@@ -60,7 +60,7 @@ fi
 if [ ! "$INTERNETCHECK" = 1 ]; then
         PINGOUTPUT=$(ping -c 1 8.8.8.8 >/dev/null && echo '...')
         if [ ! "$PINGOUTPUT" = '...' ]; then
-            echo -e "Internet connection required but not detected.\nthis could be caused by:\n * a weak wifi signal\n * no internet connection.\nTry the don't check for internet flag (-ni) usage: piassist -ni\n"
+            echo -e "Internet connection required but not detected.\nthis could be caused by:\n * a weak wifi signal\n * no internet connection.\nTry the don't check for internet flag (--no-internet) usage: piassist --no-internet\n"
             read -p "Press [Enter] to exit..."
             exit
         fi
