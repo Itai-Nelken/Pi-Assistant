@@ -16,9 +16,9 @@ function error {
 #version variable (change --version ascii art (main.sh and piassist) and $APPVER in appinstaller.sh as well)
 APPVER="v1.2-RC 2"
 
-#set INTERNETCHECK variable to 0 (check)
-if [ ! "$INTERNETCHECK" = 1 ]; then
-INTERNETCHECK=0
+#set NOINTERNETCHECK variable to 0 (check)
+if [ ! "$NOINTERNETCHECK" = 1 ]; then
+NOINTERNETCHECK=0
 fi
 
 #print a "loading screen"
@@ -57,7 +57,7 @@ elif [[ $1 = "--help" ]]; then
 fi
 
 #check for internet connection (disable with -ni flag)
-if [ ! "$INTERNETCHECK" = 1 ]; then
+if [ ! "$NOINTERNETCHECK" = 1 ]; then
         PINGOUTPUT=$(ping -c 1 8.8.8.8 >/dev/null && echo '...')
         if [ ! "$PINGOUTPUT" = '...' ]; then
             echo -e "Internet connection required but not detected.\nthis could be caused by:\n * a weak wifi signal\n * no internet connection.\nTry the don't check for internet flag (--no-internet) usage: piassist --no-internet\n"
@@ -66,8 +66,22 @@ if [ ! "$INTERNETCHECK" = 1 ]; then
         fi
 fi
 
-#set $NOINTERNETCHECK to 0 so next time you run it will be the default 0
+#check for updates and update if update available
+if [ ! "$NOINTERNETCHECK" = 1]; then
+    cd $DIRECTORY
+    localhash="$(git rev-parse HEAD)"
+    latesthash="$(git ls-remote https://github.com/Itai-Nelken/Pi-Assistant HEAD | awk '{print $1}')"
+    if [ "$localhash" != "$latesthash" ] && [ ! -z "$latesthash" ] && [ ! -z "$localhash" ];then
+        git pull https://github.com/Itai-Nelken/Pi-Assistant.git HEAD || error 'Unable to update! please check your internet connection.'
+    fi
+else
+    echo "can't check fo updates, no internet!"
+fi
+
+#set NOINTERNETCHECK variable to 0 (check)
+if [ ! "$NOINTERNETCHECK" = 1 ]; then
 NOINTERNETCHECK=0
+fi
 
 #variables
 DIRECTORY="$HOME/Pi-Assistant"

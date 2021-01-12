@@ -5,12 +5,22 @@ APPS="$HOME/Pi-Assistant/apps"
 
 echo "$(tput setaf 3)updating...$(tput sgr 0)"
 sleep 1
+#cd $DIRECTORY
+#git fetch origin main
+##git reset --hard
+#git checkout HEAD^ $DIRECTORY/*
+#git checkout HEAD^ $APPS/*
+#git pull origin main
+echo "Checking for updates..."
 cd $DIRECTORY
-git fetch origin main
-#git reset --hard
-git checkout HEAD^ $DIRECTORY/*
-git checkout HEAD^ $APPS/*
-git pull origin main
+localhash="$(git rev-parse HEAD)"
+latesthash="$(git ls-remote https://github.com/Itai-Nelken/Pi-Assistant HEAD | awk '{print $1}')"
+if [ "$localhash" != "$latesthash" ] && [ ! -z "$latesthash" ] && [ ! -z "$localhash" ];then
+echo "Out of date, updating now..."
+git pull https://github.com/Itai-Nelken/Pi-Assistant.git HEAD || error 'Unable to update, please check your internet connection'
+else
+  echo "Up to date."
+fi
 sudo chmod +x main.sh
 sudo chmod +x passwd.sh
 sudo chmod +x systools.sh
@@ -34,4 +44,4 @@ sudo chmod +x apps/flatpak.sh
 sudo chmod +x apps/etcher.sh
 sudo chmod +x apps/zoom.sh
 sudo chmod +x apps/box86.sh
-echo "$(tput setaf 3)finished...$(tput sgr 0)"
+#echo "$(tput setaf 3)finished...$(tput sgr 0)"
