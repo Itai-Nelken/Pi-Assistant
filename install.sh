@@ -41,13 +41,13 @@ echo '#!/bin/bash
 if  [[ $1 = "--version" ]]; then
     clear
     echo -e "$(tput bold)$(tput setaf 4)Pi-Assistant\nv1.2-RC 2\nby Itai Nelken$(tput sgr 0)"
-    read -p "any key to exit..."
+    read -p "press [ENTER] to exit..."
     exit
 elif [[ $1 = "--secret" ]]; then
     xdg-open ~/Pi-Assistant/icons/ascii-art.html
     sleep 10
     clear
-    read -p "any key to exit"
+    read -p "press [ENTER] to exit"
     exit
 elif [[ $1 = "--no-internet" ]]; then    
     export INTERNETCHECK=1
@@ -65,7 +65,7 @@ elif [[ $1 = "--help" ]]; then
    $(tput setaf 6)$(tput bold)example:$(tput sgr 0)
    piassist --secret
    "
-   #read -p "press any key to exit..."
+   #read -p "press [ENTER] to exit..."
    exit
 fi
 clear && $HOME/Pi-Assistant/main.sh' > ~/Downloads/piassist
