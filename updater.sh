@@ -7,8 +7,10 @@ echo "$(tput setaf 3)updating...$(tput sgr 0)"
 sleep 1
 cd $DIRECTORY
 git fetch origin main
-git reset --hard
-git pull 
+#git reset --hard
+git checkout HEAD^ $DIRECTORY/*
+git checkout HEAD^ $APPS/*
+git pull origin main
 sudo chmod +x main.sh
 sudo chmod +x passwd.sh
 sudo chmod +x systools.sh
