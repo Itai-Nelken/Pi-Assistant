@@ -13,8 +13,11 @@ function error {
   echo -e "\e[91m$1\e[39m"
 }
 
-#version variable (change --version ascii art (main.sh and piassist) and $APPVER in appinstaller.sh as well)
+#version variable (change --version text (main.sh and piassist) and $APPVER in appinstaller.sh as well)
 APPVER="v1.2-RC 2"
+
+#check for updates variable
+UPDATE=1
 
 #set NOINTERNETCHECK variable to 0 (check)
 if [ ! "$NOINTERNETCHECK" = 1 ]; then
@@ -60,6 +63,7 @@ fi
 if [ ! "$NOINTERNETCHECK" = 1 ]; then
         PINGOUTPUT=$(ping -c 1 8.8.8.8 >/dev/null && echo '...')
         if [ ! "$PINGOUTPUT" = '...' ]; then
+            UPDATE=0
             echo -e "Internet connection required but not detected.\nthis could be caused by:\n * a weak wifi signal\n * no internet connection.\nTry the don't check for internet flag (--no-internet) usage: piassist --no-internet\n"
             read -p "Press [Enter] to exit..."
             exit
@@ -67,13 +71,9 @@ if [ ! "$NOINTERNETCHECK" = 1 ]; then
 fi
 
 #check for updates and update if update available
-if [ ! "$NOINTERNETCHECK" = 1]; then
+if [ "$UPDATE" == 1]; then
     cd $DIRECTORY
-    localhash="$(git rev-parse HEAD)"
-    latesthash="$(git ls-remote https://github.com/Itai-Nelken/Pi-Assistant HEAD | awk '{print $1}')"
-    if [ "$localhash" != "$latesthash" ] && [ ! -z "$latesthash" ] && [ ! -z "$localhash" ];then
-        git pull https://github.com/Itai-Nelken/Pi-Assistant.git HEAD || error 'Unable to update! please check your internet connection.'
-    fi
+    ./updater.sh
 else
     echo "can't check fo updates, no internet!"
 fi
