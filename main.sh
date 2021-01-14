@@ -66,6 +66,7 @@ if [ ! "$NOINTERNETCHECK" = 1 ]; then
             UPDATE=0
             echo -e "Internet connection required but not detected.\nthis could be caused by:\n * a weak wifi signal\n * no internet connection.\nTry the don't check for internet flag (--no-internet) usage: piassist --no-internet\n"
             read -p "Press [Enter] to exit..."
+            NOINTERNETCHECK=0
             exit
         fi
 fi

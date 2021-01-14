@@ -36,7 +36,7 @@ function update-no-output {
 if [[ $1 = "--no-output" ]]; then
   update-no-output
 else
-
+  update
 fi
 
 #echo "$(tput setaf 3)updating...$(tput sgr 0)"
