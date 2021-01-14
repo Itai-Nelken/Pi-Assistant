@@ -19,10 +19,13 @@ APPS="$HOME/Pi-Assistant/apps"
 echo "installing dependencies..."
 if [[ -a "/usr/bin/yad" ]]; then
     yad=1
+    echo "yad is installed..."
 elif [[ -a "/usr/bin/dialog" ]]; then
     dialog=1
+    echo "dialog is installed..."
 elif [[ -a "/usr/bin/xdg-open" ]]; then
     xdg=1
+    echo "sdg-utils are installed..."
 fi
 
 if [[ $yad == "1" ]]; then
