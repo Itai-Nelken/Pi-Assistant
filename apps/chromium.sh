@@ -8,7 +8,7 @@ function error {
 DIRECTORY="$HOME/Pi-Assistant"
 APPS="$HOME/Pi-Assistant/apps"
 
-echo "this script will help you install or remove chromium."
+echo "this script will help you install or remove the special optimize chromium version for the rpi."
 PS3='Please enter the number for install/remove (1 - 3): '
 options=("install" "remove" "back to app installer")
 select opt in "${options[@]}"
@@ -18,7 +18,7 @@ do
 "install")
            
 sudo apt update || error "Failed to update repos (not critical)."
-sudo apt install -y chromium-browser || error "Failed to install chromium!"
+sudo apt install -y chromium-browser chromium-chromedriver chromium-codecs-ffmpeg-extra rpi-chromium-mods || error "Failed to install chromium!"
 sleep 2
 
             break
