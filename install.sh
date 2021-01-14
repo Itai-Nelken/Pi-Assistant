@@ -17,26 +17,26 @@ APPS="$HOME/Pi-Assistant/apps"
 
 #install dependencies for main menu windows and pop-up windows
 echo "installing dependencies..."
-if [[ -a "/usr/bin/yad" ]]; then
-    yad=1
-    echo "yad is installed..."
-elif [[ -a "/usr/bin/dialog" ]]; then
-    dialog=1
-    echo "dialog is installed..."
-elif [[ -a "/usr/bin/xdg-open" ]]; then
-    xdg=1
-    echo "sdg-utils are installed..."
-fi
+#if [[ -a "/usr/bin/yad" ]]; then
+#    yad=1
+#    echo "yad is installed..."
+#elif [[ -a "/usr/bin/dialog" ]]; then
+#    dialog=1
+#    echo "dialog is installed..."
+#elif [[ -a "/usr/bin/xdg-open" ]]; then
+#    xdg=1
+#    echo "xdg-utils are installed..."
+#fi
 
-if [[ $yad == "1" ]]; then
+#if [[ $yad == "1" ]]; then
     sudo apt install -y yad
-elif [[ $dialog == "1" ]]; then
+#elif [[ $dialog == "1" ]]; then
     sudo apt install -y dialog
-elif [[ $xdg == "1" ]]; then
+#elif [[ $xdg == "1" ]]; then
     sudo apt install -y xdg-utils
-else
+#else
     echo "dependencies installed..."
-fi
+#fi
 
 #create menu shortcut
 echo "[Desktop Entry]
