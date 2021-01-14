@@ -80,7 +80,7 @@ else
 fi
 
 #set NOINTERNETCHECK variable to 0 (check)
-if [ ! "$NOINTERNETCHECK" = 1 ]; then
+if [ $NOINTERNETCHECK == "1" ]; then
 NOINTERNETCHECK=0
 fi
 
@@ -142,7 +142,7 @@ case $CHOICE in
             $systools; $main
             ;;
         5)
-            $other; $main2>/dev/null
+            $other; $main>/dev/null
             ;;
         
         6) $exit
