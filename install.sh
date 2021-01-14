@@ -58,7 +58,7 @@ echo '#!/bin/bash
 #flags
 if  [[ $1 = "--version" ]]; then
     clear
-    echo -e "$(tput bold)$(tput setaf 4)Pi-Assistant\nv1.2-RC 2\nby Itai Nelken$(tput sgr 0)"
+    echo -e "$(tput bold)$(tput setaf 4)Pi-Assistant\nv1.2-RC 3\nby Itai Nelken$(tput sgr 0)"
     read -p "press [ENTER] to exit..."
     exit
 elif [[ $1 = "--secret" ]]; then
