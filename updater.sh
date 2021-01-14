@@ -34,13 +34,13 @@ function update-no-output {
 }
 
 if [[ $1 = "--no-output" ]]; then
-
+  update-no-output
 else
 
 fi
 
-echo "$(tput setaf 3)updating...$(tput sgr 0)"
-sleep 1
+#echo "$(tput setaf 3)updating...$(tput sgr 0)"
+#sleep 1
 #cd $DIRECTORY
 #git fetch origin main
 ##git reset --hard
