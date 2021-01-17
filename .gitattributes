@@ -1,3 +1,2 @@
 #make Programing language bar show only shell (without it shows ~70% HTML because of the 'ascii-art.html' file
-* linguist-vendored
 *.sh linguist-vendored=false
