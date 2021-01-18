@@ -1,8 +1,11 @@
 #!/bin/bash
 
+function error {
+  echo -e "\e[91m$1\e[39m"
+}
+
 DIRECTORY="$HOME/Pi-Assistant"
 APPS="$HOME/Pi-Assistant/apps"
-
 
 #update function
 function update {
@@ -12,6 +15,7 @@ function update {
    latesthash="$(git ls-remote https://github.com/Itai-Nelken/Pi-Assistant HEAD | awk '{print $1}')"
    if [ "$localhash" != "$latesthash" ] && [ ! -z "$latesthash" ] && [ ! -z "$localhash" ];then
      echo "Out of date, updating now..."
+     git checkout $latesthash
      git pull https://github.com/Itai-Nelken/Pi-Assistant.git HEAD || error 'Unable to update, please check your internet connection'
    else
      echo "Up to date."
