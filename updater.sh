@@ -102,14 +102,14 @@ elif [[ $1 = "--secret" ]]; then
     read -p "press [ENTER] to exit"
     exit
 elif [[ $1 = "--no-internet" ]]; then    
-    export INTERNETCHECK=1
+    INTERNETCHECK=1
 elif [[ $1 = "--help" ]]; then
     echo -e "
     $(tput setaf 6)$(tput bold)usage:$(tput sgr 0)
     piassist [flag]
    $(tput setaf 6)$(tput bold)available flags:$(tput sgr 0)
    --no-internet - dont check for internet connection on startup .
-   --version - show version (in ascii art text) and exit.
+   --version - show version and exit.
    --secret - secret easter egg.
    --help - show this help info and exit.
    $(tput setaf 6)$(tput bold)example:$(tput sgr 0)
