@@ -23,10 +23,8 @@ $DIRECTORY/updater.sh
 sleep 1
 clear
 echo "$(tput setaf 6)you need to relaunch Pi-Assistant to apply the update. $(tput sgr 0)"
-read -p "press any [ENTER] to exit"
-#export exit=1
-exit
-exit
+read -p "press [ctrl+C] to exit"
+
 
             break
             ;;
