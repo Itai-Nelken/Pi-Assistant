@@ -46,15 +46,6 @@ else
   update
 fi
 
-#echo "$(tput setaf 3)updating...$(tput sgr 0)"
-#sleep 1
-#cd $DIRECTORY
-#git fetch origin main
-##git reset --hard
-#git checkout HEAD^ $DIRECTORY/*
-#git checkout HEAD^ $APPS/*
-#git pull origin main
-
 sudo chmod +x main.sh
 sudo chmod +x passwd.sh
 sudo chmod +x systools.sh
@@ -79,4 +70,20 @@ sudo chmod +x apps/flatpak.sh
 sudo chmod +x apps/etcher.sh
 sudo chmod +x apps/zoom.sh
 sudo chmod +x apps/box86.sh
+
+rm ~/.local/share/applications/piassist.desktop
+rm ~/Desktop/piassist.desktop
+
+#update menu shortcut
+echo "[Desktop Entry]
+StartupNotify=true
+Terminal=true
+Type=Application
+Name=Pi-Assistant
+Exec="$HOME/Pi-Assistant/main.sh"
+Icon="$HOME/Pi-Assistant/icons/64x64/logo-64.png"
+Categories=Utility;
+Comment="Pi-Assistant v1.2"" > ~/.local/share/applications/piassist.desktop
+cp ~/.local/share/applications/piassist.desktop ~/Desktop/piassist.desktop
+
 #echo "$(tput setaf 3)finished...$(tput sgr 0)"
