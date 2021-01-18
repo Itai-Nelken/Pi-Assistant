@@ -29,6 +29,8 @@ function update-no-output {
    localhash="$(git rev-parse HEAD)"
    latesthash="$(git ls-remote https://github.com/Itai-Nelken/Pi-Assistant HEAD | awk '{print $1}')"
    if [ "$localhash" != "$latesthash" ] && [ ! -z "$latesthash" ] && [ ! -z "$localhash" ];then
+     git clean -fd
+     git reset --hard
      git pull https://github.com/Itai-Nelken/Pi-Assistant.git HEAD || error 'Unable to update, please check your internet connection'
    else
      clear

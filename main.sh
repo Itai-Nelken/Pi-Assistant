@@ -72,12 +72,14 @@ if [ ! "$NOINTERNETCHECK" = 1 ]; then
 fi
 
 #check for updates and update if update available
-if [ "$UPDATE" == 1]; then
-    cd $DIRECTORY
-    ./updater.sh
-else
-    echo "can't check fo updates, no internet!"
-fi
+#if [ "$UPDATE" == 1]; then
+#    cd $DIRECTORY
+#    ./updater.sh
+#else
+#    echo "can't check fo updates, no internet!"
+#fi
+cd $DIRECTORY
+./updater.sh --no-output
 
 #set NOINTERNETCHECK variable to 0 (check)
 if [ $NOINTERNETCHECK == "1" ]; then
