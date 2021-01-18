@@ -40,7 +40,7 @@ Name=Pi-Assistant
 Exec="$HOME/Pi-Assistant/main.sh"
 Icon="$HOME/Pi-Assistant/icons/64x64/logo-64.png"
 Categories=Utility;
-Comment="Pi-Assistant v1.2-RC4"" > ~/.local/share/applications/piassist.desktop
+Comment="Pi-Assistant v1.2"" > ~/.local/share/applications/piassist.desktop
 #copy menu shortcut to desktop
 cp ~/.local/share/applications/piassist.desktop ~/Desktop/
 sudo chmod +x ~/Desktop/piassist.desktop
@@ -51,7 +51,7 @@ echo '#!/bin/bash
 #flags
 if  [[ $1 = "--version" ]]; then
     clear
-    echo -e "$(tput bold)$(tput setaf 4)Pi-Assistant\nv1.2-RC 4\nby Itai Nelken$(tput sgr 0)"
+    echo -e "$(tput bold)$(tput setaf 4)Pi-Assistant\nv1.2\nby Itai Nelken$(tput sgr 0)"
     read -p "press [ENTER] to exit..."
     exit
 elif [[ $1 = "--secret" ]]; then

@@ -14,7 +14,7 @@ function error {
 }
 
 #version variable (change --version text (main.sh and piassist/install.sh) and $APPVER in appinstaller.sh and desktop shortcut/install.sh as well)
-APPVER="v1.2-RC 4"
+APPVER="v1.2"
 
 #check for updates variable
 UPDATE=1
@@ -30,7 +30,7 @@ echo "$(tput setaf 2)$(tput bold)LOADING...$(tput sgr 0)"
 #flags
 if  [[ $1 = "--version" ]]; then
     clear
-    echo -e "$(tput bold)$(tput setaf 4)Pi-Assistant\nv1.2-RC 4\nby Itai Nelken$(tput sgr 0)"
+    echo -e "$(tput bold)$(tput setaf 4)Pi-Assistant\nv1.2\nby Itai Nelken$(tput sgr 0)"
     read -p "press [ENTER] to exit..."
     exit
 elif [[ $1 = "--secret" ]]; then
