@@ -18,4 +18,4 @@ rm -rf ~/Pi-Assistant || error "failed to remove Pi-Assistant folder!"
 echo -e "${bold}Pi-Assistant removed:(${normal}"
 echo  -e "${bold}if Pi-Assistant didn't work for you${normal} \033[33;5;7mPLEASE\033[0m ${bold}submit a bug report here:${normal}"
 echo -e "\e[96mhttps://github.com/Itai-Nelken/Pi-Assistant/issues/new\e[39m"
-read -n 1 -s -r -p "Press any key to exit"
+read -n 1 -s -r -p "Press any key to exit">/dev/null

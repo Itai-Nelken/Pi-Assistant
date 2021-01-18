@@ -40,7 +40,7 @@ Name=Pi-Assistant
 Exec="$HOME/Pi-Assistant/main.sh"
 Icon="$HOME/Pi-Assistant/icons/64x64/logo-64.png"
 Categories=Utility;
-Comment="Pi-Assistant v1.2-RC2"" > ~/.local/share/applications/piassist.desktop
+Comment="Pi-Assistant v1.2-RC3"" > ~/.local/share/applications/piassist.desktop
 #copy menu shortcut to desktop
 cp ~/.local/share/applications/piassist.desktop ~/Desktop/
 sudo chmod +x ~/Desktop/piassist.desktop
