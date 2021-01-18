@@ -97,6 +97,7 @@ update="$DIRECTORY/update.sh"
 passwd="$DIRECTORY/passwd.sh"
 apps="$APPS/appinstaller.sh" #apps variable used for my testing.
 systools="$DIRECTORY/systools.sh"
+sysinfo="$DIRECTORY/sys-info.sh"
 other="$DIRECTORY/other.sh"
 exit="exit 1"
 
@@ -105,7 +106,7 @@ cd $DIRECTORY
 #dialog variables
 HEIGHT=15
 WIDTH=40
-CHOICE_HEIGHT=6
+CHOICE_HEIGHT=7
 BACKTITLE="Pi-Assistant $APPVER,"
 COMMIT="`git log -1 | grep commit* | cut -c1-14`::::::Itai Nelken::::::"
 #CPU="CPU `lscpu | grep "Model name*"`"
@@ -118,8 +119,9 @@ OPTIONS=(1 "Update OS"
          2 "Change password"
          3 "Application installer"
          4 "System tools"
-         5 "Other"
-         6 "exit Pi-Assistant")
+         5 "System Information"
+         6 "Other"
+         7 "exit Pi-Assistant")
 
 CHOICE=$(dialog --clear \
                 --backtitle "$BACKTITLE $COMMIT $SPACER" \
@@ -144,9 +146,13 @@ case $CHOICE in
             $systools; $main
             ;;
         5)
+            $sysinfo; $main
+            ;;
+        
+        6)
             $other; $main>/dev/null
             ;;
         
-        6) $exit
+        7) $exit
            ;;
 esac
