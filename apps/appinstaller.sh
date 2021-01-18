@@ -5,7 +5,7 @@ function error {
 }
 
 #version variable (change --version ascii art (main.sh and piassist) and $APPVER in main.sh as well)
-APPVER="v1.2-RC 2"
+APPVER="v1.2-RC 4"
 
 #variables
 DIRECTORY="$HOME/Pi-Assistant"
