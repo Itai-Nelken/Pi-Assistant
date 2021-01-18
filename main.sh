@@ -106,7 +106,7 @@ cd $DIRECTORY
 #dialog variables
 HEIGHT=15
 WIDTH=40
-CHOICE_HEIGHT=6
+CHOICE_HEIGHT=7
 BACKTITLE="Pi-Assistant $APPVER,"
 COMMIT="`git log -1 | grep commit* | cut -c1-14`::::::Itai Nelken::::::"
 #CPU="CPU `lscpu | grep "Model name*"`"
