@@ -86,4 +86,40 @@ Categories=Utility;
 Comment="Pi-Assistant v1.2"" > ~/.local/share/applications/piassist.desktop
 cp ~/.local/share/applications/piassist.desktop ~/Desktop/piassist.desktop
 
+sudo rm /usr/local/bin/piassist
+#update startup from terminal using 'piassist'
+echo '#!/bin/bash
+#flags
+if  [[ $1 = "--version" ]]; then
+    clear
+    echo -e "$(tput bold)$(tput setaf 4)Pi-Assistant\nv1.2\nby Itai Nelken$(tput sgr 0)"
+    read -p "press [ENTER] to exit..."
+    exit
+elif [[ $1 = "--secret" ]]; then
+    xdg-open ~/Pi-Assistant/icons/ascii-art.html
+    sleep 10
+    clear
+    read -p "press [ENTER] to exit"
+    exit
+elif [[ $1 = "--no-internet" ]]; then    
+    export INTERNETCHECK=1
+elif [[ $1 = "--help" ]]; then
+    echo -e "
+    $(tput setaf 6)$(tput bold)usage:$(tput sgr 0)
+    piassist [flag]
+   $(tput setaf 6)$(tput bold)available flags:$(tput sgr 0)
+   --no-internet - dont check for internet connection on startup .
+   --version - show version (in ascii art text) and exit.
+   --secret - secret easter egg.
+   --help - show this help info and exit.
+   $(tput setaf 6)$(tput bold)example:$(tput sgr 0)
+   piassist --secret
+   "
+   #read -p "press [ENTER] to exit..."
+   exit
+fi
+clear && $HOME/Pi-Assistant/main.sh' > ~/Downloads/piassist
+sudo mv ~/Downloads/piassist /usr/local/bin/
+sudo chmod +x /usr/local/bin/piassist
+
 #echo "$(tput setaf 3)finished...$(tput sgr 0)"
