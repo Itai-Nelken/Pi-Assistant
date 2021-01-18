@@ -78,5 +78,5 @@ fi
 echo -e "----------------------------"
 
 #display "press any key to exit"
-read -n 1 -s -r -p "Press any key to exit"
+read -n 1 -s -r -p "Press any key to go back to main menu"
 echo -e "\n"
