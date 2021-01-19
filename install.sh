@@ -78,6 +78,8 @@ elif [[ $1 = "--help" ]]; then
    "
    #read -p "press [ENTER] to exit..."
    exit
+elif [[ $1 = "--no-update" ]]; then
+    export UPDATE=0
 fi
 clear && $HOME/Pi-Assistant/main.sh' > ~/Downloads/piassist
 sudo mv ~/Downloads/piassist /usr/local/bin/

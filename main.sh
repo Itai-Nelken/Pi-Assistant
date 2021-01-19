@@ -59,8 +59,9 @@ elif [[ $1 = "--help" ]]; then
    $(tput setaf 6)$(tput bold)example:$(tput sgr 0)
    piassist --secret
    "
-   #read -p "press [ENTER] to exit..."
-   exit
+    exit
+elif [[ $1 = "--no-update" ]]; then
+    UPDATE=0
 fi
 
 #check for internet connection (disable with -ni flag)
@@ -76,14 +77,10 @@ if [ ! "$NOINTERNETCHECK" = 1 ]; then
 fi
 
 #check for updates and update if update available
-#if [ "$UPDATE" == 1]; then
-#    cd $DIRECTORY
-#    ./updater.sh
-#else
-#    echo "can't check fo updates, no internet!"
-#fi
-cd $DIRECTORY
-./updater.sh --no-output
+if [ "$UPDATE" == 1]; then
+    cd $DIRECTORY
+    ./updater.sh --no-output
+fi
 
 #set NOINTERNETCHECK variable to 0 (check)
 if [ $NOINTERNETCHECK == "1" ]; then
