@@ -96,7 +96,7 @@ echo -e " "
 
 printf "$(tput bold)\\e[3;4;37mHardware information:\\n\\e[0m$(tput sgr 0)"
 #display CPU info
-echo "System on Chip (SOC) name is: $SOC, Revision $SOCREV"
+echo "System on Chip (SOC): $SOC, Revision $SOCREV"
 echo "Number of CPU cores is: $CORES"
 echo "Processor (CPU) core/s name is: ${CPU:21}"
 echo "Processor maximum clock speed is: $CSPEED mhz"
@@ -145,4 +145,3 @@ echo -e "----------------------------"
 echo -e "$(tput setaf 6)you can scroll up and down using the mouse or scrollbar (if present).$(tput sgr 0)"
 read -n 1 -s -r -p "Press any key to exit"
 echo -e "\n"
-
