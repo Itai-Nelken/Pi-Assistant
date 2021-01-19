@@ -85,6 +85,7 @@ Icon="$HOME/Pi-Assistant/icons/64x64/logo-64.png"
 Categories=Utility;
 Comment="Pi-Assistant v1.2"" > ~/.local/share/applications/piassist.desktop
 cp ~/.local/share/applications/piassist.desktop ~/Desktop/piassist.desktop
+sudo chmod +x ~/Desktop/piassist.desktop
 
 sudo rm /usr/local/bin/piassist
 #update startup from terminal using 'piassist'
