@@ -1,6 +1,6 @@
 # <img src="/icons/pi-assistant-logopng.png" alt="logo" width="60"/> Pi-Assistant
 
-PPi-Assistant is a simple terminal app made for the Raspberry Pi that makes updating the system, installing apps, viewing system information, and more easier and faster, especially if you are new to the Linux command line or you forget the commands.
+Pi-Assistant is a simple terminal app made for the Raspberry Pi that makes updating the system, installing apps, viewing system information, and more easier and faster, especially if you are new to the Linux command line or you forget the commands.
 
 ## links
 
@@ -46,6 +46,7 @@ $ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/unin
 ![piassist-mainmenu.png](screenshots/piassist-mainmenu.png)
 ![spiassist-appmenu.png](screenshots/piassist-appmenu.png)
 ![piassist-demo.gif](screenshots/piassist-demo.gif)
+![piassist-sys-tools.png](screenshots/piassist-sys-info.png)
 
 
 ## CHANGELOG (dd/mm/yy)
