@@ -55,7 +55,7 @@ else
 fi
 
 
-### DISPLAY EVERYTHING ###
+########### DISPLAY EVERYTHING ##############
 
 printf "$(tput bold)\\e[3;4;37mBasic information:\\n\\e[0m$(tput sgr 0)"
 
