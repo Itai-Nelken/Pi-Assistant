@@ -3,6 +3,29 @@
 #clear the screen
 clear
 
+#print "loading screen"
+echo -e "$(tput setaf 2)$(tput bold)GETTING INFO...$(tput sgr0)"
+
+#loading bar
+echo '  '
+echo -ne '(0%)|#                         |(100%)\r'
+sleep 0.1
+echo -ne '(0%)|###                       |(100%)\r'
+sleep 0.1
+echo -ne '(0%)|#####                     |(100%)\r'
+sleep 0.1
+echo -ne '(0%)|########                  |(100%)\r'
+sleep 0.1
+echo -ne '(0%)|##############            |(100%)\r'
+sleep 0.1
+echo -ne '(0%)|####################      |(100%)\r'
+sleep 0.1
+echo -ne '(0%)|##########################|(100%)\r'
+echo -ne '\n'
+
+#clear the screen again
+clear
+
 #variables
 DE="`env | grep DESKTOP_SESSION`"
 USER="`env | grep USER`"
