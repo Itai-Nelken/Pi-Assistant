@@ -10,7 +10,7 @@ APPS="$HOME/Pi-Assistant/apps"
 
 
 echo "this script will help you update or uninstall Pi-Assistant."
-PS3='Please enter the number above for operation you would like to perform (1 - 5): '
+PS3='Please enter the number above for operation you would like to perform (1 - 3): '
 options=("update Pi-Assistant" "uninstall Pi-Assistant" "back to main menu")
 select opt in "${options[@]}"
 do
@@ -23,7 +23,8 @@ $DIRECTORY/updater.sh
 sleep 1
 clear
 echo "$(tput setaf 6)you need to relaunch Pi-Assistant to apply the update. $(tput sgr 0)"
-read -p "press any key to exit"
+read -p "press [ctrl+C] to exit"
+
 
             break
             ;;

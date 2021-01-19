@@ -13,8 +13,11 @@ function error {
   echo -e "\e[91m$1\e[39m"
 }
 
-#version variable (change --version ascii art (main.sh and piassist) and $APPVER in appinstaller.sh as well)
-APPVER="v1.2-RC 2"
+#version variable (change --version text (main.sh and piassist/install.sh) and $APPVER in appinstaller.sh and desktop shortcut/install.sh and menu shortcut, piassist in updater.sh as well)
+APPVER="v1.2"
+
+#check for updates variable
+UPDATE=1
 
 #set NOINTERNETCHECK variable to 0 (check)
 if [ ! "$NOINTERNETCHECK" = 1 ]; then
@@ -27,7 +30,7 @@ echo "$(tput setaf 2)$(tput bold)LOADING...$(tput sgr 0)"
 #flags
 if  [[ $1 = "--version" ]]; then
     clear
-    echo -e "$(tput bold)$(tput setaf 4)Pi-Assistant\nv1.2-RC 2\nby Itai Nelken$(tput sgr 0)"
+    echo -e "$(tput bold)$(tput setaf 4)Pi-Assistant\nv1.2\nby Itai Nelken$(tput sgr 0)"
     read -p "press [ENTER] to exit..."
     exit
 elif [[ $1 = "--secret" ]]; then
@@ -60,26 +63,26 @@ fi
 if [ ! "$NOINTERNETCHECK" = 1 ]; then
         PINGOUTPUT=$(ping -c 1 8.8.8.8 >/dev/null && echo '...')
         if [ ! "$PINGOUTPUT" = '...' ]; then
+            UPDATE=0
             echo -e "Internet connection required but not detected.\nthis could be caused by:\n * a weak wifi signal\n * no internet connection.\nTry the don't check for internet flag (--no-internet) usage: piassist --no-internet\n"
             read -p "Press [Enter] to exit..."
+            NOINTERNETCHECK=0
             exit
         fi
 fi
 
 #check for updates and update if update available
-if [ ! "$NOINTERNETCHECK" = 1]; then
-    cd $DIRECTORY
-    localhash="$(git rev-parse HEAD)"
-    latesthash="$(git ls-remote https://github.com/Itai-Nelken/Pi-Assistant HEAD | awk '{print $1}')"
-    if [ "$localhash" != "$latesthash" ] && [ ! -z "$latesthash" ] && [ ! -z "$localhash" ];then
-        git pull https://github.com/Itai-Nelken/Pi-Assistant.git HEAD || error 'Unable to update! please check your internet connection.'
-    fi
-else
-    echo "can't check fo updates, no internet!"
-fi
+#if [ "$UPDATE" == 1]; then
+#    cd $DIRECTORY
+#    ./updater.sh
+#else
+#    echo "can't check fo updates, no internet!"
+#fi
+cd $DIRECTORY
+./updater.sh --no-output
 
 #set NOINTERNETCHECK variable to 0 (check)
-if [ ! "$NOINTERNETCHECK" = 1 ]; then
+if [ $NOINTERNETCHECK == "1" ]; then
 NOINTERNETCHECK=0
 fi
 
@@ -94,6 +97,7 @@ update="$DIRECTORY/update.sh"
 passwd="$DIRECTORY/passwd.sh"
 apps="$APPS/appinstaller.sh" #apps variable used for my testing.
 systools="$DIRECTORY/systools.sh"
+sysinfo="$DIRECTORY/sys-info.sh"
 other="$DIRECTORY/other.sh"
 exit="exit 1"
 
@@ -102,7 +106,7 @@ cd $DIRECTORY
 #dialog variables
 HEIGHT=15
 WIDTH=40
-CHOICE_HEIGHT=6
+CHOICE_HEIGHT=7
 BACKTITLE="Pi-Assistant $APPVER,"
 COMMIT="`git log -1 | grep commit* | cut -c1-14`::::::Itai Nelken::::::"
 #CPU="CPU `lscpu | grep "Model name*"`"
@@ -115,8 +119,9 @@ OPTIONS=(1 "Update OS"
          2 "Change password"
          3 "Application installer"
          4 "System tools"
-         5 "Other"
-         6 "exit Pi-Assistant")
+         5 "System Information"
+         6 "Other"
+         7 "exit Pi-Assistant")
 
 CHOICE=$(dialog --clear \
                 --backtitle "$BACKTITLE $COMMIT $SPACER" \
@@ -141,9 +146,13 @@ case $CHOICE in
             $systools; $main
             ;;
         5)
-            $other; $main2>/dev/null
+            $sysinfo; $main
             ;;
         
-        6) $exit
+        6)
+            $other; $main>/dev/null
+            ;;
+        
+        7) $exit
            ;;
 esac

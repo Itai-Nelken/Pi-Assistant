@@ -17,8 +17,19 @@ APPS="$HOME/Pi-Assistant/apps"
 
 #install dependencies for main menu windows and pop-up windows
 echo "installing dependencies..."
-sudo apt update; sudo apt install dialog yad xdg-utils -y
-
+if ! which yad > /dev/null; then
+   sudo apt install -y yad
+   #echo "installed">~/Pi-Assistant/data/yad
+elif ! which dialog > /dev/null; then
+   sudo apt install -y dialog
+   #echo "installed">~/Pi-Assistant/data/dialog
+elif ! which xdg-open > /dev/null; then
+   sudo apt install -y xdg-utils
+   #echo "installed">~/Pi-Assistant/data/xdg
+else
+    echo "dependencies already installed..."
+fi
+echo "dependencies installed..."
 
 #create menu shortcut
 echo "[Desktop Entry]
@@ -29,7 +40,7 @@ Name=Pi-Assistant
 Exec="$HOME/Pi-Assistant/main.sh"
 Icon="$HOME/Pi-Assistant/icons/64x64/logo-64.png"
 Categories=Utility;
-Comment="Pi-Assistant v1.2-RC2"" > ~/.local/share/applications/piassist.desktop
+Comment="Pi-Assistant v1.2"" > ~/.local/share/applications/piassist.desktop
 #copy menu shortcut to desktop
 cp ~/.local/share/applications/piassist.desktop ~/Desktop/
 sudo chmod +x ~/Desktop/piassist.desktop
@@ -40,7 +51,7 @@ echo '#!/bin/bash
 #flags
 if  [[ $1 = "--version" ]]; then
     clear
-    echo -e "$(tput bold)$(tput setaf 4)Pi-Assistant\nv1.2-RC 2\nby Itai Nelken$(tput sgr 0)"
+    echo -e "$(tput bold)$(tput setaf 4)Pi-Assistant\nv1.2\nby Itai Nelken$(tput sgr 0)"
     read -p "press [ENTER] to exit..."
     exit
 elif [[ $1 = "--secret" ]]; then
@@ -83,6 +94,7 @@ sudo chmod +x install.sh
 sudo chmod +x update.sh
 sudo chmod +x updater.sh
 sudo chmod +x uninstall.sh
+sudo chmod +x sys-info.sh
 sudo chmod +x apps/appinstaller.sh
 sudo chmod +x apps/gparted.sh
 sudo chmod +x apps/chromium.sh
