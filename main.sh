@@ -81,7 +81,7 @@ fi
 if [[ "$UPDATE" == 1 ]]; then
     cd $DIRECTORY
     ./updater.sh --no-output
-elif [[ "$UPDATE" == 0 ]]
+elif [[ "$UPDATE" == 0 ]]; then
     echo " "
 fi
 
