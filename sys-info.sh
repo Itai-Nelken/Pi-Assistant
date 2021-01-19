@@ -21,11 +21,12 @@ SOCREV="`cat /proc/cpuinfo | grep Revision | cut -c12-18`"
 IP="`hostname -I | awk '{print $1}'`"
 
 #determine if OS is TwisterOS or not
-if [[ -f "usr/local/bin/twistver" ]]; then
-        TWISTER=0
+if [ ! -f "/usr/local/bin/twistver" ]; then
+    TWISTER=0
 else
-        TWISTER=1
+    TWISTER=1
 fi
+
 
 #determine GPU model
 if [[ "$MODEL" == *"Raspberry Pi 4"* ]]; then
@@ -45,6 +46,14 @@ else
 	GPUSPEED=0
 fi
 
+#get GPU memory
+if [ -f "/opt/vc/bin/vcgencmd" ]; then
+    GPUMEM="`vcgencmd get_mem gpu`"
+else
+	GPUMEM=0
+fi
+
+
 #determine if host system is 64 bit arm64 or 32 bit armhf
 if [ ! -z "$(file "$(readlink -f "/sbin/init")" | grep 64)" ];then
   OSARCH=64
@@ -55,18 +64,18 @@ else
 fi
 
 
-########### DISPLAY EVERYTHING ##############
+############## DISPLAY EVERYTHING ################
 
 printf "$(tput bold)\\e[3;4;37mBasic information:\\n\\e[0m$(tput sgr 0)"
 
 #display username
-echo "username is: ${USER:5}"
+echo "Username is: ${USER:5}"
 #display model name
 echo "Device model name is: ${MODEL:9}"
 #display network name
-echo "device network name is: $NETNAME"
+echo "Device network name is: $NETNAME"
 #display IP address
-echo "your IP address is $IP"
+echo "Your IP address is: $IP"
 
 
 echo -e " "
@@ -78,28 +87,31 @@ if [[ "$OSARCH" == 32 ]]; then
 elif [[ "$OSARCH" == 64 ]]; then
 	echo "OS architecture is: 64bit ARM"
 elif [[ "$OSARCH" == e ]]; then
-	echo "can't detect OS architecture, something is very very wrong!"
+	echo "Can't detect OS architecture, something is very very wrong!"
 fi
 #display kernel arch
-echo "kernel architecture is: $KARCH"
+echo "Kernel architecture is: $KARCH"
 
 echo -e " "
 
 printf "$(tput bold)\\e[3;4;37mHardware information:\\n\\e[0m$(tput sgr 0)"
 #display CPU info
-echo "System on Chip (SOC) name is: $SOC, Revision $SOCREV"
+echo "System on Chip (SOC): $SOC, Revision $SOCREV"
 echo "Number of CPU cores is: $CORES"
 echo "Processor (CPU) core/s name is: ${CPU:21}"
 echo "Processor maximum clock speed is: $CSPEED mhz"
 #display GPU info
 if [[ "$GPU" != 0 ]]; then
-echo "GPU model is: $GPU"
+	echo "GPU model is: $GPU"
 fi
 if [[ "$GPUSPEED" != 0 ]]; then
-echo "current GPU clock speed is: $GPUSPEED mhz"
+	echo "Current GPU clock speed is: $GPUSPEED mhz"
 fi
-#display memory
-echo "memory (RAM) size is $MEM mb"
+#display memory info
+if [[ "$GPUMEM" != 0 ]]; then
+	echo "GPU memory is: ${GPUMEM:4}"
+fi
+echo "Memory (RAM) size is $MEM mb"
 
 echo " "
 
@@ -113,7 +125,7 @@ if [[ "$TWISTER" == 1 ]]; then
 fi
 printf "\\e[3;4;37mKernel:\\n\\e[0m"
 #display kernel
-echo "kernel: $KERNEL, release: $KRELEASE"
+echo "Kernel: $KERNEL, release: $KRELEASE"
 
 echo "                        "
 #display DE
@@ -130,6 +142,6 @@ fi
 echo -e "----------------------------"
 
 #display "press any key to exit"
-echo -e "$(tput setaf 6)you can scroll up and down using the mouse$(tput sgr 0)"
+echo -e "$(tput setaf 6)you can scroll up and down using the mouse or scrollbar (if present).$(tput sgr 0)"
 read -n 1 -s -r -p "Press any key to exit"
 echo -e "\n"

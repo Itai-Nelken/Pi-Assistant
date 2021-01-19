@@ -24,6 +24,10 @@ if [ ! "$NOINTERNETCHECK" = 1 ]; then
 NOINTERNETCHECK=0
 fi
 
+#variables
+DIRECTORY="$HOME/Pi-Assistant"
+APPS="$HOME/Pi-Assistant/apps"
+
 #print a "loading screen"
 echo "$(tput setaf 2)$(tput bold)LOADING...$(tput sgr 0)"
 
@@ -86,9 +90,6 @@ if [ $NOINTERNETCHECK == "1" ]; then
 NOINTERNETCHECK=0
 fi
 
-#variables
-DIRECTORY="$HOME/Pi-Assistant"
-APPS="$HOME/Pi-Assistant/apps"
 
 cd "$HOME/Pi-Assistant"
 #variables containing the command for each option
