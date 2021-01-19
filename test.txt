@@ -3,3 +3,4 @@ this test commit is for testing the new and improved updater.
 testing updater again
 I think I fixed it!
 now I really fixed it! the error was that the $DIRECTORY variable was defind after it was needed.
+and I needed to fix some typos in the code.
