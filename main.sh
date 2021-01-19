@@ -81,6 +81,8 @@ fi
 if [[ "$UPDATE" == 1 ]]; then
     cd $DIRECTORY
     ./updater.sh --no-output
+elif [[ "$UPDATE" == 0 ]]
+    echo " "
 fi
 
 #set NOINTERNETCHECK variable to 0 (check)
