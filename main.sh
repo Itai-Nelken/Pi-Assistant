@@ -77,7 +77,7 @@ if [ ! "$NOINTERNETCHECK" = 1 ]; then
 fi
 
 #check for updates and update if update available
-if [ "$UPDATE" == 1]; then
+if [[] "$UPDATE" == 1 ]]; then
     cd $DIRECTORY
     ./updater.sh --no-output
 fi
