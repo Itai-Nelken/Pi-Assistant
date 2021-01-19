@@ -44,7 +44,8 @@ elif [[ $1 = "--secret" ]]; then
     read -p "press [ENTER] to exit"
     exit
 elif [[ $1 = "--no-internet" ]]; then    
-    INTERNETCHECK=1
+    NOINTERNETCHECK=1
+    UPDATE=0
 elif [[ $1 = "--help" ]]; then
     echo -e "
     $(tput setaf 6)$(tput bold)usage:$(tput sgr 0)
@@ -65,7 +66,7 @@ elif [[ $1 = "--no-update" ]]; then
 fi
 
 #check for internet connection (disable with -ni flag)
-if [ ! "$NOINTERNETCHECK" = 1 ]; then
+if [[ "$NOINTERNETCHECK" == 1 ]]; then
         PINGOUTPUT=$(ping -c 1 8.8.8.8 >/dev/null && echo '...')
         if [ ! "$PINGOUTPUT" = '...' ]; then
             UPDATE=0
@@ -80,6 +81,8 @@ fi
 if [[ "$UPDATE" == 1 ]]; then
     cd $DIRECTORY
     ./updater.sh --no-output
+elif [[ "$UPDATE" == 0 ]]; then
+    echo " "
 fi
 
 #set NOINTERNETCHECK variable to 0 (check)
