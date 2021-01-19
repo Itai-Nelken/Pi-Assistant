@@ -21,6 +21,7 @@ sleep 0.1
 echo -ne '(0%)|####################      |(100%)\r'
 sleep 0.1
 echo -ne '(0%)|##########################|(100%)\r'
+sleep 0.5
 echo -ne '\n'
 
 #clear the screen again
