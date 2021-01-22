@@ -3,6 +3,30 @@
 #clear the screen
 clear
 
+#print "loading screen"
+echo -e "$(tput setaf 2)$(tput bold)GETTING INFO...$(tput sgr0)"
+
+#loading bar
+echo '  '
+echo -ne '(0%)|#                         |(100%)\r'
+sleep 0.1
+echo -ne '(0%)|###                       |(100%)\r'
+sleep 0.1
+echo -ne '(0%)|#####                     |(100%)\r'
+sleep 0.1
+echo -ne '(0%)|########                  |(100%)\r'
+sleep 0.1
+echo -ne '(0%)|##############            |(100%)\r'
+sleep 0.1
+echo -ne '(0%)|####################      |(100%)\r'
+sleep 0.1
+echo -ne '(0%)|##########################|(100%)\r'
+sleep 0.5
+echo -ne '\n'
+
+#clear the screen again
+clear
+
 #variables
 DE="`env | grep DESKTOP_SESSION`"
 USER="`env | grep USER`"
@@ -19,6 +43,7 @@ SOC="`cat /proc/cpuinfo | grep Hardware | cut -c12-18`"
 CORES="`nproc`"
 SOCREV="`cat /proc/cpuinfo | grep Revision | cut -c12-18`"
 IP="`hostname -I | awk '{print $1}'`"
+FREEMEM="`free -h -m --si| awk '{ print $7}'|sed '/^$/d'`"
 
 #determine if OS is TwisterOS or not
 if [ ! -f "/usr/local/bin/twistver" ]; then
@@ -64,7 +89,7 @@ else
 fi
 
 
-############## DISPLAY EVERYTHING ################
+############### DISPLAY EVERYTHING ################
 
 printf "$(tput bold)\\e[3;4;37mBasic information:\\n\\e[0m$(tput sgr 0)"
 
@@ -112,6 +137,7 @@ if [[ "$GPUMEM" != 0 ]]; then
 	echo "GPU memory is: ${GPUMEM:4}"
 fi
 echo "Memory (RAM) size is $MEM mb"
+echo "amount of free Memory: $FREEMEM"
 
 echo " "
 
