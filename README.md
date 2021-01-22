@@ -22,6 +22,7 @@ when running with `piassist` you can add flags, to see a list off all flags run 
 ### Flags
 `--help` - show all flags and how to use them.<br>
 `--no-internet` - run pi-assistant without internet.<br>
+`--no-update` - don't update on startup (donesn't work yet)<br>
 `--version` - show version.<br>
 `--secret` - a secret easter egg :upside_down_face:<br>
 
