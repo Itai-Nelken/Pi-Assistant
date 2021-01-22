@@ -8,24 +8,27 @@ echo -e "$(tput setaf 2)$(tput bold)GETTING INFO...$(tput sgr0)"
 
 #loading bar
 echo '  '
-echo -ne '(0%)|#                         |(100%)\r'
+echo -ne '(0%)[#                         ](100%)\r'
 sleep 0.1
-echo -ne '(0%)|###                       |(100%)\r'
+echo -ne '(0%)[###                       ](100%)\r'
 sleep 0.1
-echo -ne '(0%)|#####                     |(100%)\r'
+echo -ne '(0%)[#####                     ](100%)\r'
 sleep 0.1
-echo -ne '(0%)|########                  |(100%)\r'
+echo -ne '(0%)[########                  ](100%)\r'
 sleep 0.1
-echo -ne '(0%)|##############            |(100%)\r'
+echo -ne '(0%)[##############            ](100%)\r'
 sleep 0.1
-echo -ne '(0%)|####################      |(100%)\r'
+echo -ne '(0%)[####################      ](100%)\r'
 sleep 0.1
-echo -ne '(0%)|##########################|(100%)\r'
+echo -ne '(0%)[##########################](100%)\r'
 sleep 0.5
 echo -ne '\n'
 
 #clear the screen again
-clear
+#clear
+
+#print another message
+#echo -e "$(tput setaf 2)FORMATING INFO...$(tput sgr 0)"
 
 #variables
 DE="`env | grep DESKTOP_SESSION`"
@@ -44,6 +47,8 @@ CORES="`nproc`"
 SOCREV="`cat /proc/cpuinfo | grep Revision | cut -c12-18`"
 IP="`hostname -I | awk '{print $1}'`"
 FREEMEM="`free -h -m --si| awk '{ print $7}'|sed '/^$/d'`"
+DRES="`neofetch | grep Resolution | cut -c50-70 | cut -c4-21`"
+CPUTEMP="`cat /sys/class/thermal/thermal_zone*/temp | cut -c1-2`"
 
 #determine if OS is TwisterOS or not
 if [ ! -f "/usr/local/bin/twistver" ]; then
@@ -88,6 +93,8 @@ else
   OSARCH=e
 fi
 
+#clear screen again
+clear
 
 ############### DISPLAY EVERYTHING ################
 
@@ -121,11 +128,14 @@ echo -e " "
 
 printf "$(tput bold)\\e[3;4;37mHardware information:\\n\\e[0m$(tput sgr 0)"
 #display CPU info
+printf "\\e[3;4;37mCPU:\\n\\e[0m"
 echo "System on Chip (SOC): $SOC, Revision $SOCREV"
 echo "Number of CPU cores is: $CORES"
 echo "Processor (CPU) core/s name is: ${CPU:21}"
 echo "Processor maximum clock speed is: $CSPEED mhz"
+echo "CPU temperature is: $CPUTEMP °C"
 #display GPU info
+printf "\\e[3;4;37mGPU:\\n\\e[0m"
 if [[ "$GPU" != 0 ]]; then
 	echo "GPU model is: $GPU"
 fi
@@ -138,6 +148,7 @@ if [[ "$GPUMEM" != 0 ]]; then
 fi
 echo "Memory (RAM) size is $MEM mb"
 echo "amount of free Memory: $FREEMEM"
+echo "Display resolution and refresh rate: $DRES"
 
 echo " "
 
