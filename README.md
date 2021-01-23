@@ -71,7 +71,6 @@ added flags to piassist (and main.sh), run `piassist --help` to see all of them.
 ## Known issues and bugs
 * if you installed when the name was system-tools, then after updating to the version after the rename the icons won't change. 
 * zoom menu icon doesn't work for some reason.
-* Updater on startup always runs
 
 ### Fixed temporarily
 - zoom installer is broken because it can't download zoom for some reason
