@@ -67,6 +67,7 @@ $ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/unin
  * 10/1/2021 - GIANT UPDATE: finished rewriting everything for the 2nd time (:tired_face:) then figured out how to merge a conflicting branch (gave up so I downloaded the test branch and deleted it along with everything in the main branch, then I uploaded all the scripts again). at least now everything should work!<br>
 added flags to piassist (and main.sh), run `piassist --help` to see all of them.
 * 19/1/2021 - UPDATE: v1.2 final, added system info script, fixed a few bugs, fixed updater al last!
+* 23/1/2021 - UPDATE: v1.2.1 - fixed `--no-internet` and `--no-update` flags don't work when launching using `piassist`, made startup time after option completes way shorter using the `--no-internet flag` (that make Pi-Assistant not check for internet and updates, so makes startup time way faster).
   
 ## Known issues and bugs
 * if you installed when the name was system-tools, then after updating to the version after the rename the icons won't change. 
