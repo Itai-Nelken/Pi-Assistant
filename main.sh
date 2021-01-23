@@ -151,7 +151,7 @@ case $CHOICE in
             ;;
         
         6)
-            $other; $main>/dev/null
+            $other; $main>/dev/null #send output to dev/null because after uninstalling you will get a "forectory not found" error.
             ;;
         
         7) $exit
