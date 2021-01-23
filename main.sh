@@ -13,8 +13,8 @@ function error {
   echo -e "\e[91m$1\e[39m"
 }
 
-#version variable (change --version text (main.sh and piassist/install.sh) and $APPVER in appinstaller.sh and desktop shortcut/install.sh and menu shortcut, piassist in updater.sh as well)
-APPVER="v1.2"
+#version variable (change --version text (main.sh and flag and piassist/install.sh) and $APPVER in appinstaller.sh and desktop shortcut/install.sh and menu shortcut, piassist in updater.sh as well)
+APPVER="v1.2.1"
 
 #check for updates variable
 UPDATE=1
@@ -34,7 +34,7 @@ echo "$(tput setaf 2)$(tput bold)LOADING...$(tput sgr 0)"
 #flags
 if  [[ $1 = "--version" ]]; then
     clear
-    echo -e "$(tput bold)$(tput setaf 4)Pi-Assistant\nv1.2\nby Itai Nelken$(tput sgr 0)"
+    echo -e "$(tput bold)$(tput setaf 4)Pi-Assistant\nv1.2.1\nby Itai Nelken$(tput sgr 0)"
     read -p "press [ENTER] to exit..."
     exit
 elif [[ $1 = "--secret" ]]; then
@@ -93,7 +93,7 @@ fi
 
 cd "$HOME/Pi-Assistant"
 #variables containing the command for each option
-main="$DIRECTORY/main.sh" 
+main="$DIRECTORY/main.sh --no-internet" 
 update="$DIRECTORY/update.sh"
 passwd="$DIRECTORY/passwd.sh"
 apps="$APPS/appinstaller.sh" #apps variable used for my testing.

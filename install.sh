@@ -40,7 +40,7 @@ Name=Pi-Assistant
 Exec="$HOME/Pi-Assistant/main.sh"
 Icon="$HOME/Pi-Assistant/icons/64x64/logo-64.png"
 Categories=Utility;
-Comment="Pi-Assistant v1.2"" > ~/.local/share/applications/piassist.desktop
+Comment="Pi-Assistant v1.2.1"" > ~/.local/share/applications/piassist.desktop
 #copy menu shortcut to desktop
 cp ~/.local/share/applications/piassist.desktop ~/Desktop/
 sudo chmod +x ~/Desktop/piassist.desktop
@@ -48,10 +48,11 @@ sudo chmod +x ~/Desktop/piassist.desktop
 #add startup from terminal using 'piassist'
 echo "creating /usr/local/bin/piassist"
 echo '#!/bin/bash
+cd ~/Pi-Assistant
 #flags
 if  [[ $1 = "--version" ]]; then
     clear
-    echo -e "$(tput bold)$(tput setaf 4)Pi-Assistant\nv1.2\nby Itai Nelken$(tput sgr 0)"
+    echo -e "$(tput bold)$(tput setaf 4)Pi-Assistant\nv1.2.1\nby Itai Nelken$(tput sgr 0)"
     read -p "press [ENTER] to exit..."
     exit
 elif [[ $1 = "--secret" ]]; then
@@ -61,28 +62,14 @@ elif [[ $1 = "--secret" ]]; then
     read -p "press [ENTER] to exit"
     exit
 elif [[ $1 = "--no-internet" ]]; then    
-    export NOINTERNETCHECK=1
-    export UPDATE=0
+    ./main.sh --no-internet
 elif [[ $1 = "--help" ]]; then
-    echo -e "
-    $(tput setaf 6)$(tput bold)usage:$(tput sgr 0)
-    piassist [flag]
-
-   $(tput setaf 6)$(tput bold)available flags:$(tput sgr 0)
-   --no-internet - dont check for internet connection on startup .
-   --version - show version (in ascii art text) and exit.
-   --secret - secret easter egg.
-   --help - show this help info and exit.
-
-   $(tput setaf 6)$(tput bold)example:$(tput sgr 0)
-   piassist --secret
-   "
-   #read -p "press [ENTER] to exit..."
-   exit
+    ./main.sh --help
 elif [[ $1 = "--no-update" ]]; then
-    export UPDATE=0
-fi
-clear && $HOME/Pi-Assistant/main.sh' > ~/Downloads/piassist
+    ./main.sh --no-update
+else
+    clear && $HOME/Pi-Assistant/main.sh
+fi' > ~/Downloads/piassist
 sudo mv ~/Downloads/piassist /usr/local/bin/
 sudo chmod +x /usr/local/bin/piassist
 
