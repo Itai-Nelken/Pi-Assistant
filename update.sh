@@ -25,3 +25,5 @@ fi
 sleep 1
 clear
 echo "system updated"
+sleep 2
+clear
