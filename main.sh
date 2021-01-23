@@ -93,7 +93,7 @@ fi
 
 cd "$HOME/Pi-Assistant"
 #variables containing the command for each option
-main="$DIRECTORY/main.sh" 
+main="$DIRECTORY/main.sh --no-internet" 
 update="$DIRECTORY/update.sh"
 passwd="$DIRECTORY/passwd.sh"
 apps="$APPS/appinstaller.sh" #apps variable used for my testing.
