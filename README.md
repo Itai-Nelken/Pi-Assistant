@@ -82,7 +82,7 @@ added flags to piassist (and main.sh), run `piassist --help` to see all of them.
 - [x] return to main menu instead of exiting when executed command finishes
 - [x] add uninstall script
 - [x] add updater script 
-- [ ] make updater script to run on startup
+- [x] make updater script to run on startup (disable by using the `--no-update` flag. the `--no-internet` flag disables updates as well.)
 - [x] add zoom & box86
 - [x] add box86 as standalone app 
 - [x] add etcher (newest version, the one with 'Flash from URL' and 'clone drive'). (added as of v1.1.3, installs 32 or 64 bit version depending on your system architecture)
@@ -98,3 +98,9 @@ added flags to piassist (and main.sh), run `piassist --help` to see all of them.
 
 **A:**<br>
 run Pi-Assistant from terminal with this command: `piassist --no-internet`
+
+**Q:**<br>
+>How can I disable update on startup?
+
+**A:**<br>
+run Pi-Assistant from terminal with the `--no-update` flag like this: `piassist --no-update`
