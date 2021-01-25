@@ -27,7 +27,7 @@ flatpak="$APPS/flatpak.sh"
 etcher="$APPS/etcher.sh"
 zoom="$APPS/zoom.sh"
 box86="$APPS/box86.sh"
-main="$DIRECTORY/main.sh"
+main="$DIRECTORY/main.sh --no-internet"
 
 
 #dialog variables
@@ -58,6 +58,7 @@ CHOICE=$(dialog --clear \
                 --backtitle "$BACKTITLE" \
                 --title "$TITLE" \
                 --menu "$MENU" \
+                --no-cancel \
                 $HEIGHT $WIDTH $CHOICE_HEIGHT \
                 "${OPTIONS[@]}" \
                 2>&1 >/dev/tty)
