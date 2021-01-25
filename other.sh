@@ -42,7 +42,7 @@ $DIRECTORY/uninstall.sh
  
         "back to main menu")
 
-$DIRECTORY/main.sh
+$DIRECTORY/main.sh --no-internet
 
             break
             ;;
