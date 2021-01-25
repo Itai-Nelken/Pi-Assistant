@@ -38,7 +38,7 @@ sudo passwd || error "error occured! couldn't complete operation"
  
         "back to main menu")
 
-$DIRECTORY/main.sh
+$DIRECTORY/main.sh --no-internet
 
             break
             ;;
