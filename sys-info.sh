@@ -8,21 +8,6 @@ echo -e "$(tput setaf 2)$(tput bold)GETTING INFO...$(tput sgr0)"
 
 #loading bar
 echo '  '
-echo -ne '(0%)[#                         ](100%)\r'
-sleep 0.1
-echo -ne '(0%)[###                       ](100%)\r'
-sleep 0.1
-echo -ne '(0%)[#####                     ](100%)\r'
-sleep 0.1
-echo -ne '(0%)[########                  ](100%)\r'
-sleep 0.1
-echo -ne '(0%)[##############            ](100%)\r'
-sleep 0.1
-echo -ne '(0%)[####################      ](100%)\r'
-sleep 0.1
-echo -ne '(0%)[##########################](100%)\r'
-sleep 0.5
-echo -ne '\n'
 
 #clear the screen again
 #clear
@@ -37,18 +22,33 @@ KERNEL="`uname -r`"
 KARCH="`uname -m`"
 NETNAME="`uname -n`"
 KRELEASE="`uname -v`"
+sleep 0.1
+echo -ne '(0%)[###                       ](100%)\r'
 CPU="`lscpu | grep "Model name:"`"
 MEM="`echo $(($(getconf _PHYS_PAGES) * $(getconf PAGE_SIZE) / (1024 * 1024)))`"
 MODEL="`cat /proc/cpuinfo | grep Model`"
+sleep 0.1
+echo -ne '(0%)[#####                     ](100%)\r'
 CSPEED="`lscpu | grep "CPU max" | cut -c22-25`"
 OS="`cat /etc/*-release | grep PRETTY | cut -c14-43`"
+sleep 0.1
+echo -ne '(0%)[########                  ](100%)\r'
 SOC="`cat /proc/cpuinfo | grep Hardware | cut -c12-18`"
 CORES="`nproc`"
 SOCREV="`cat /proc/cpuinfo | grep Revision | cut -c12-18`"
-IP="`hostname -I | awk '{print $1}'`"
+sleep 0.1
+echo -ne '(0%)[##############            ](100%)\r'
+LOCALIP="`hostname -I | awk '{print $1}'`"
+PUBLICIP="`wget -qO- ipinfo.io/ip`"
 FREEMEM="`free -h -m --si| awk '{ print $7}'|sed '/^$/d'`"
+sleep 0.1
+echo -ne '(0%)[####################      ](100%)\r'
 DRES="`neofetch | grep Resolution | cut -c50-70 | cut -c4-21`"
 CPUTEMP="`cat /sys/class/thermal/thermal_zone*/temp | cut -c1-2`"
+sleep 0.1
+echo -ne '(0%)[##########################](100%)\r'
+sleep 0.5
+echo -ne '\n'
 
 #determine if OS is TwisterOS or not
 if [ ! -f "/usr/local/bin/twistver" ]; then
@@ -107,7 +107,8 @@ echo "Device model name is: ${MODEL:9}"
 #display network name
 echo "Device network name is: $NETNAME"
 #display IP address
-echo "Your IP address is: $IP"
+echo "Your local IP address is: $LOCALIP"
+echo "Your public IP address is: $PUBLICIP"
 
 
 echo -e " "
