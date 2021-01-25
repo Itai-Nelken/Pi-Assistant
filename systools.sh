@@ -65,7 +65,7 @@ echo "$(tput setaf 2)operation complete.$(tput sgr 0)"
 
      "back to main menu")
 
-$DIRECTORY/main.sh
+$DIRECTORY/main.sh --no-internet
 
             break
             ;;
