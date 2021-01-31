@@ -26,7 +26,7 @@ when running with `piassist` you can add flags, to see a list off all flags run 
 `--version` - show version.<br>
 `--secret` - a secret easter egg :upside_down_face:<br>
 
-## if you have any questions, check the [FAQ](https://github.com/Itai-Nelken/Pi-Assistant#faq) before opening a issue please.
+### if you have any questions, check the [FAQ](https://github.com/Itai-Nelken/Pi-Assistant#faq) before opening a issue please.
 
 ## Updates
 
