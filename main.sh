@@ -33,7 +33,6 @@ echo "$(tput setaf 2)$(tput bold)LOADING...$(tput sgr 0)"
 
 #flags
 if  [[ $1 = "--version" ]]; then
-    clear
     echo -e "$(tput bold)$(tput setaf 4)Pi-Assistant\nv1.2.1\nby Itai Nelken$(tput sgr 0)"
     read -p "press [ENTER] to exit..."
     exit
