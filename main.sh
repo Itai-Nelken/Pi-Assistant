@@ -34,8 +34,7 @@ echo "$(tput setaf 2)$(tput bold)LOADING...$(tput sgr 0)"
 #flags
 if  [[ $1 = "--version" ]]; then
     echo -e "$(tput bold)$(tput setaf 4)Pi-Assistant\nv1.2.1\nby Itai Nelken$(tput sgr 0)"
-    read -p "press [ENTER] to exit..."
-    exit
+    exit 1
 elif [[ $1 = "--secret" ]]; then
     xdg-open ~/Pi-Assistant/icons/ascii-art.html
     sleep 10
