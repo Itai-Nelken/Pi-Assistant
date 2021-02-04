@@ -35,7 +35,8 @@ when running with `piassist` you can add flags, to see a list off all flags run 
 
 ## Updates
 
-To update, start Pi-Assistant and go to `other>update-this-tool`
+Pi-Assistant checks for updates and if there are installs them automatically on startup.<br>
+To update manually, start Pi-Assistant and go to `other>update-this-tool`
 if that doesn't work, or you think something is broken with the scripts, run this command:
 ```sh-seesion
 $ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/updater.sh | bash
