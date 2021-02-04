@@ -14,6 +14,11 @@ to install Pi-Assistant, just copy the following into terminal:
 ```
 $ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/install.sh | bash
 ```
+### Install beta version (not a;ways available)
+1) go to the beta branch
+2) download the specific beta scripts you want
+3) replace the "stable" scripts with the "beta" scripts you just downloaded
+**Don't update Pi-Assistant or the beta scripts will be replaced with the stable ones**
 
 ## Run Pi-Assistant
 
