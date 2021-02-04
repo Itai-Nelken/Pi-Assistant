@@ -14,10 +14,10 @@ to install Pi-Assistant, just copy the following into terminal:
 ```
 $ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/install.sh | bash
 ```
-### Install beta version (not a;ways available)
+### Install beta version (not always available)
 1) go to the beta branch
 2) download the specific beta scripts you want
-3) replace the "stable" scripts with the "beta" scripts you just downloaded
+3) replace the "stable" scripts with the "beta" scripts you just downloaded<br>
 **Don't update Pi-Assistant or the beta scripts will be replaced with the stable ones**
 
 ## Run Pi-Assistant
@@ -75,6 +75,7 @@ added flags to piassist (and main.sh), run `piassist --help` to see all of them.
 * 23/1/2021 - UPDATE: v1.2.1 - fixed `--no-internet` and `--no-update` flags don't work when launching using `piassist`, made startup time after option completes way shorter using the `--no-internet flag` (that make Pi-Assistant not check for internet and updates, so makes startup time way faster).
   
 ## Known issues and bugs
+* The updater always runs on startup for some reason.
 * if you installed when the name was system-tools, then after updating to the version after the rename the icons won't change. 
 * zoom menu icon doesn't work for some reason.
 
@@ -93,7 +94,7 @@ added flags to piassist (and main.sh), run `piassist --help` to see all of them.
 - [x] add etcher (newest version, the one with 'Flash from URL' and 'clone drive'). (added as of v1.1.3, installs 32 or 64 bit version depending on your system architecture)
 - [ ] add box86 install script for 64bit OS's
 - [x] add dialog GUI
-- [ ] change whole gui to use YAD
+- [ ] maybe change whole gui to use YAD?
 
 
 ## FAQ
