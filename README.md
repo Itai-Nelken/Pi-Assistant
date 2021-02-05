@@ -83,7 +83,16 @@ added flags to piassist (and main.sh), run `piassist --help` to see all of them.
 ### Fixed temporarily
 - zoom installer is broken because it can't download zoom for some reason
 
- 
+## Internal stuff (commands used by the scripts)
+### Updater flags (meant for the internal use of the scripts)
+**Usage of the updater:**<br>
+
+`~/Pi-Assistant/updater.sh --flag` but change `--flag` with a real falg or remove it to run the default.
+`--no-output` - update with no extra output (for example don't print 'checking for updates'). used when Pi-Assistant is starting.
+`--no-ask-exit-output` - don't ask to exit and don't print any extra output (has no use as of writing).
+`--output-no-ask-exit` - print extra output but don't ask to exit (has no use as of writing).
+the default is to print extra output and ask to exit, the flags that have no use are there just to have all options.
+
 ## To do:
 
 - [x] return to main menu instead of exiting when executed command finishes

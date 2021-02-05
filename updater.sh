@@ -7,7 +7,7 @@ function error() {
 DIRECTORY="$HOME/Pi-Assistant"
 APPS="$HOME/Pi-Assistant/apps"
 
-#update function
+#update function with ask to exit
 function update() {
    echo "Checking for updates..."
    cd $DIRECTORY
@@ -17,9 +17,28 @@ function update() {
      echo "Out of date, updating now..."
      git clean -fd
      git reset --hard
-     git pull https://github.com/Itai-Nelken/Pi-Assistant.git HEAD || error 'Unable to update, please check your internet connection'
-     make-all-executable
-     refresh-shortcuts
+     git pull https://github.com/Itai-Nelken/Pi-Assistant.git HEAD || error 'Unable to update, please check your internet connection!'
+     make-all-executable || error "Unable to mark all scripts as executables! Pi-Assistant won't work properly! please report this error."
+     refresh-shortcuts || error "Failed to refresh menu and desktop shortcuts!"
+     ask-exit
+   else
+     echo "Up to date."
+   fi
+} 
+
+#update function without ask to exit
+function update-no-ask-exit() {
+   echo "Checking for updates..."
+   cd $DIRECTORY
+   localhash="$(git rev-parse HEAD)"
+   latesthash="$(git ls-remote https://github.com/Itai-Nelken/Pi-Assistant HEAD | awk '{print $1}')"
+   if [ "$localhash" != "$latesthash" ] && [ ! -z "$latesthash" ] && [ ! -z "$localhash" ];then
+     echo "Out of date, updating now..."
+     git clean -fd
+     git reset --hard
+     git pull https://github.com/Itai-Nelken/Pi-Assistant.git HEAD || error 'Unable to update, please check your internet connection!'
+     make-all-executable || error "Unable to mark all scripts as executables! Pi-Assistant won't work properly! please report this error."
+     refresh-shortcuts || error "Failed to refresh menu and desktop shortcuts!"
    else
      echo "Up to date."
    fi
@@ -34,16 +53,27 @@ function update-no-output() {
      git clean -fd
      git reset --hard
      git pull https://github.com/Itai-Nelken/Pi-Assistant.git HEAD || error 'Unable to update, please check your internet connection'
-     make-all-executable
-     refresh-shortcuts
-   else
-     clear
-     #print a "loading screen"
-     echo "$(tput setaf 2)$(tput bold)LOADING...$(tput sgr 0)"
+     make-all-executable || error "Unable to mark all scripts as executables! Pi-Assistant won't work properly! please report this error."
+     refresh-shortcuts || error "Failed to refresh menu and desktop shortcuts!"
+     ask-exit
    fi
-
 }
 
+#update function with no extra output or ask to exit
+function update-no-output-ask-exit() {
+   cd $DIRECTORY
+   localhash="$(git rev-parse HEAD)"
+   latesthash="$(git ls-remote https://github.com/Itai-Nelken/Pi-Assistant HEAD | awk '{print $1}')"
+   if [ "$localhash" != "$latesthash" ] && [ ! -z "$latesthash" ] && [ ! -z "$localhash" ];then
+     git clean -fd
+     git reset --hard
+     git pull https://github.com/Itai-Nelken/Pi-Assistant.git HEAD || error 'Unable to update, please check your internet connection'
+     make-all-executable || error "Unable to mark all scripts as executables! Pi-Assistant won't work properly! please report this error."
+     refresh-shortcuts || error "Failed to refresh menu and desktop shortcuts!"
+   fi
+}
+
+#make all scripts executable function
 function make-all-executable() {
   sudo chmod +x main.sh
   sudo chmod +x passwd.sh
@@ -71,6 +101,7 @@ function make-all-executable() {
   sudo chmod +x apps/box86.sh
 }
 
+#refresh menu and desktop shortcuts function
 function refresh-shortcuts() {
   rm ~/.local/share/applications/piassist.desktop
   rm ~/Desktop/piassist.desktop
@@ -115,10 +146,20 @@ function refresh-shortcuts() {
   sudo chmod +x /usr/local/bin/piassist
 }
 
+#ask to restart Pi-Assistant to apply update, press enter to exit function.
+function ask-exit() {
+  echo "You have to restart Pi-Assistant to apply the Update."
+  read -p "press [ENTER] to exit."
+  exit 1
+}
 
-
+# flags. default is to update with extra output and ask to exit.
 if [[ "$1" == "--no-output" ]]; then
   update-no-output
+elif [[ "$1" == "--no-ask-exit-output" ]]; then
+  update-no-output-ask-exit
+elif [[ "$1" == "--output-no-ask-exit" ]]; then
+  update-no-ask-exit
 else
   update
 fi
