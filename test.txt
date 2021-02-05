@@ -6,3 +6,4 @@ now I really fixed it! the error was that the $DIRECTORY variable was defind aft
 and I needed to fix some typos in the code.
 stupid updater
 I finally fixed the updater, for real this time and I really mean it!
+I'm now improving the look and feel of the updaters output.
