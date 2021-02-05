@@ -28,9 +28,6 @@ fi
 DIRECTORY="$HOME/Pi-Assistant"
 APPS="$HOME/Pi-Assistant/apps"
 
-#print a "loading screen"
-echo "$(tput setaf 2)$(tput bold)LOADING...$(tput sgr 0)"
-
 #flags
 if  [[ $1 = "--version" ]]; then
     echo -e "$(tput bold)$(tput setaf 4)Pi-Assistant\nv1.2.1\nby Itai Nelken$(tput sgr 0)"
@@ -63,8 +60,11 @@ elif [[ $1 = "--no-update" ]]; then
     UPDATE=0
 fi
 
+#print a "loading screen"
+echo "$(tput setaf 2)$(tput bold)LOADING...$(tput sgr 0)"
+
 #check for internet connection (disable with -ni flag)
-if [[ "$NOINTERNETCHECK" == 1 ]]; then
+if [[ "$NOINTERNETCHECK" != 1 ]]; then
         PINGOUTPUT=$(ping -c 1 8.8.8.8 >/dev/null && echo '...')
         if [ ! "$PINGOUTPUT" = '...' ]; then
             UPDATE=0
