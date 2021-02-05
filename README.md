@@ -14,15 +14,20 @@ to install Pi-Assistant, just copy the following into terminal:
 ```
 $ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/install.sh | bash
 ```
+### Install beta version (not always available)
+1) go to the beta branch
+2) download the specific beta scripts you want
+3) replace the "stable" scripts with the "beta" scripts you just downloaded<br>
+**Don't update Pi-Assistant or the beta scripts will be replaced with the stable ones**
 
-## Run Pi-Assistant
-
+## Use Pi-Assistant
+### Run Pi-Assistant
 To run Pi-Assistant, use the menu or Desktop shortcuts. alternatively you can type in terminal (from anywhere) `piassist`<br>
-when running with `piassist` you can add flags, to see a list off all flags run `piassist --help`.
+when running with `piassist` you can add flags, to see a list off all flags run `piassist --help` or see the list bellow.
 ### Flags
 `--help` - show all flags and how to use them.<br>
 `--no-internet` - run pi-assistant without internet.<br>
-`--no-update` - don't update on startup (donesn't work yet)<br>
+`--no-update` - don't update on startup (doesn't work yet, but fixed in the beta version!)<br>
 `--version` - show version.<br>
 `--secret` - a secret easter egg :upside_down_face:<br>
 
@@ -30,7 +35,8 @@ when running with `piassist` you can add flags, to see a list off all flags run 
 
 ## Updates
 
-To update, start Pi-Assistant and go to `other>update-this-tool`
+Pi-Assistant checks for updates and if there are installs them automatically on startup.<br>
+To update manually, start Pi-Assistant and go to `other>update-this-tool`
 if that doesn't work, or you think something is broken with the scripts, run this command:
 ```sh-seesion
 $ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/updater.sh | bash
@@ -70,6 +76,7 @@ added flags to piassist (and main.sh), run `piassist --help` to see all of them.
 * 23/1/2021 - UPDATE: v1.2.1 - fixed `--no-internet` and `--no-update` flags don't work when launching using `piassist`, made startup time after option completes way shorter using the `--no-internet flag` (that make Pi-Assistant not check for internet and updates, so makes startup time way faster).
   
 ## Known issues and bugs
+* The updater always runs on startup for some reason.
 * if you installed when the name was system-tools, then after updating to the version after the rename the icons won't change. 
 * zoom menu icon doesn't work for some reason.
 
@@ -88,7 +95,7 @@ added flags to piassist (and main.sh), run `piassist --help` to see all of them.
 - [x] add etcher (newest version, the one with 'Flash from URL' and 'clone drive'). (added as of v1.1.3, installs 32 or 64 bit version depending on your system architecture)
 - [ ] add box86 install script for 64bit OS's
 - [x] add dialog GUI
-- [ ] change whole gui to use YAD
+- [ ] maybe change whole gui to use YAD?
 
 
 ## FAQ
