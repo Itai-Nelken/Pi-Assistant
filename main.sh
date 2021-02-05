@@ -83,7 +83,7 @@ fi
 #check for updates and update if update available
 if [[ "$UPDATE" == 1 ]]; then
     cd $DIRECTORY
-    ./updater.sh --no-output
+    . ./updater.sh --no-output
 elif [[ "$UPDATE" == 0 ]]; then
     echo " "
 fi
