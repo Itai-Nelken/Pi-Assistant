@@ -10,3 +10,4 @@ I'm now improving the look and feel of the updaters output.
 testing updater really exits fix.
 it works!
 it doesn't exit for some reason.
+I found out why the updater doesn't exit everything: https://unix.stackexchange.com/questions/632890/how-to-pass-variables-between-2-bash-scripts-export-doesnt-work
