@@ -44,6 +44,7 @@ function update-no-output() {
 
 }
 
+#make all scripts executable function
 function make-all-executable() {
   sudo chmod +x main.sh
   sudo chmod +x passwd.sh
@@ -71,6 +72,7 @@ function make-all-executable() {
   sudo chmod +x apps/box86.sh
 }
 
+#refresh menu and desktop shortcuts function
 function refresh-shortcuts() {
   rm ~/.local/share/applications/piassist.desktop
   rm ~/Desktop/piassist.desktop
@@ -115,12 +117,24 @@ function refresh-shortcuts() {
   sudo chmod +x /usr/local/bin/piassist
 }
 
+#ask to restart Pi-Assistant to apply update, press enter to exit function.
+function ask-exit() {
+  echo "You have to restart Pi-Assistant to apply the Update."
+  read -p "press [ENTER] to exit."
+  exit 1
+}
 
-
+#"-2" = 2 arguments
 if [[ "$1" == "--no-output" ]]; then
   update-no-output
+  ask-exit
+elif [[ "$1" == "--no-ask-exit-output" ]]; then
+  update-no-output
+elif [[ "$1" == "--output-no-ask-exit" ]]; then
+  update
 else
   update
+  ask-exit
 fi
 
 
