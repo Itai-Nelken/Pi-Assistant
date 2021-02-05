@@ -60,6 +60,11 @@ elif [[ $1 = "--no-update" ]]; then
     UPDATE=0
 fi
 
+#check if exit variable equals 1, if yes exit
+if [[ "$exit" == 1 ]]; then
+    exit 0
+fi
+
 #print a "loading screen"
 echo "$(tput setaf 2)$(tput bold)LOADING...$(tput sgr 0)"
 
