@@ -81,7 +81,7 @@ function refresh-shortcuts() {
   Exec="$HOME/Pi-Assistant/main.sh"
   Icon="$HOME/Pi-Assistant/icons/64x64/logo-64.png"
   Categories=Utility;
-  Comment="Pi-Assistant v1.2.1"" > ~/.local/share/applications/piassist.desktop
+  Comment="Pi-Assistant v1.3.0"" > ~/.local/share/applications/piassist.desktop
   cp ~/.local/share/applications/piassist.desktop ~/Desktop/piassist.desktop
   sudo chmod +x ~/Desktop/piassist.desktop
 
@@ -91,7 +91,7 @@ function refresh-shortcuts() {
   cd ~/Pi-Assistant
   #flags
   if  [[ $1 = "--version" ]]; then
-      echo -e "$(tput bold)$(tput setaf 4)Pi-Assistant\nv1.2.1\nby Itai Nelken$(tput sgr 0)"
+      echo -e "$(tput bold)$(tput setaf 4)Pi-Assistant\nv1.3.0\nby Itai Nelken$(tput sgr 0)"
       exit
   elif [[ $1 = "--secret" ]]; then
       xdg-open ~/Pi-Assistant/icons/ascii-art.html
