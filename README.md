@@ -20,14 +20,14 @@ $ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/inst
 3) replace the "stable" scripts with the "beta" scripts you just downloaded<br>
 **Don't update Pi-Assistant or the beta scripts will be replaced with the stable ones**
 
-## Run Pi-Assistant
-
+## Use Pi-Assistant
+### Run Pi-Assistant
 To run Pi-Assistant, use the menu or Desktop shortcuts. alternatively you can type in terminal (from anywhere) `piassist`<br>
-when running with `piassist` you can add flags, to see a list off all flags run `piassist --help`.
+when running with `piassist` you can add flags, to see a list off all flags run `piassist --help` or see the list bellow.
 ### Flags
 `--help` - show all flags and how to use them.<br>
 `--no-internet` - run pi-assistant without internet.<br>
-`--no-update` - don't update on startup (donesn't work yet)<br>
+`--no-update` - don't update on startup (doesn't work yet, but fixed in the beta version!)<br>
 `--version` - show version.<br>
 `--secret` - a secret easter egg :upside_down_face:<br>
 
