@@ -148,7 +148,8 @@ function refresh-shortcuts() {
 
 #ask to restart Pi-Assistant to apply update, press enter to exit function.
 function ask-exit() {
-  echo "You have to restart Pi-Assistant to apply the Update."
+  echo ' '
+  echo -e "$(tput setaf 6)You have to restart Pi-Assistant to apply the Update.$(tput sgr 0)"
   read -p "press [ENTER] to exit."
   exit 1
 }
