@@ -8,7 +8,7 @@ DIRECTORY="$HOME/Pi-Assistant"
 APPS="$HOME/Pi-Assistant/apps"
 
 #update function
-function update)() {
+function update() {
    echo "Checking for updates..."
    cd $DIRECTORY
    localhash="$(git rev-parse HEAD)"
