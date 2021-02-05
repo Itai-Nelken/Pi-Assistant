@@ -17,9 +17,9 @@ function update() {
      echo "Out of date, updating now..."
      git clean -fd
      git reset --hard
-     git pull https://github.com/Itai-Nelken/Pi-Assistant.git HEAD || error 'Unable to update, please check your internet connection'
-     make-all-executable
-     refresh-shortcuts
+     git pull https://github.com/Itai-Nelken/Pi-Assistant.git HEAD || error 'Unable to update, please check your internet connection!'
+     make-all-executable || error "Unable to mark all scripts as executables! Pi-Assistant won't work properly! please report this error."
+     refresh-shortcuts || error "Failed to refresh menu and desktop shortcuts!"
    else
      echo "Up to date."
    fi
@@ -34,14 +34,9 @@ function update-no-output() {
      git clean -fd
      git reset --hard
      git pull https://github.com/Itai-Nelken/Pi-Assistant.git HEAD || error 'Unable to update, please check your internet connection'
-     make-all-executable
-     refresh-shortcuts
-   else
-     clear
-     #print a "loading screen"
-     echo "$(tput setaf 2)$(tput bold)LOADING...$(tput sgr 0)"
+     make-all-executable || error "Unable to mark all scripts as executables! Pi-Assistant won't work properly! please report this error."
+     refresh-shortcuts || error "Failed to refresh menu and desktop shortcuts!"
    fi
-
 }
 
 #make all scripts executable function
@@ -124,7 +119,7 @@ function ask-exit() {
   exit 1
 }
 
-#"-2" = 2 arguments
+# flags. default is to update with extra output and ask to exit.
 if [[ "$1" == "--no-output" ]]; then
   update-no-output
   ask-exit
