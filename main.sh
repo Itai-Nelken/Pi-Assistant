@@ -13,8 +13,8 @@ function error {
   echo -e "\e[91m$1\e[39m"
 }
 
-#version variable (change --version text (main.sh and flag and piassist/install.sh) and $APPVER in appinstaller.sh and desktop shortcut/install.sh and menu shortcut, piassist in updater.sh as well)
-APPVER="v1.2.1"
+#version variable (change --version text (main.sh and flag and piassist/install.sh & piassist/updater.sh) and $APPVER in appinstaller.sh and desktop shortcut/install.sh and menu shortcut, piassist in updater.sh as well)
+APPVER="v1.3.0"
 
 #check for updates variable
 UPDATE=1

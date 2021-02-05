@@ -51,7 +51,7 @@ echo '#!/bin/bash
 cd ~/Pi-Assistant
 #flags
 if  [[ $1 = "--version" ]]; then
-    echo -e "$(tput bold)$(tput setaf 4)Pi-Assistant\nv1.2.1\nby Itai Nelken$(tput sgr 0)"
+    echo -e "$(tput bold)$(tput setaf 4)Pi-Assistant\nv1.3.0\nby Itai Nelken$(tput sgr 0)"
     exit 1
 elif [[ $1 = "--secret" ]]; then
     xdg-open ~/Pi-Assistant/icons/ascii-art.html
