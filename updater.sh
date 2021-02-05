@@ -20,6 +20,7 @@ function update() {
      git pull https://github.com/Itai-Nelken/Pi-Assistant.git HEAD || error 'Unable to update, please check your internet connection!'
      make-all-executable || error "Unable to mark all scripts as executables! Pi-Assistant won't work properly! please report this error."
      refresh-shortcuts || error "Failed to refresh menu and desktop shortcuts!"
+     export exit=1
      ask-exit
    else
      echo "Up to date."
@@ -55,6 +56,7 @@ function update-no-output() {
      git pull https://github.com/Itai-Nelken/Pi-Assistant.git HEAD || error 'Unable to update, please check your internet connection'
      make-all-executable || error "Unable to mark all scripts as executables! Pi-Assistant won't work properly! please report this error."
      refresh-shortcuts || error "Failed to refresh menu and desktop shortcuts!"
+     export exit=1
      ask-exit
    fi
 }
