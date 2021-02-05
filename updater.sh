@@ -7,8 +7,27 @@ function error() {
 DIRECTORY="$HOME/Pi-Assistant"
 APPS="$HOME/Pi-Assistant/apps"
 
-#update function
+#update function with ask to exit
 function update() {
+   echo "Checking for updates..."
+   cd $DIRECTORY
+   localhash="$(git rev-parse HEAD)"
+   latesthash="$(git ls-remote https://github.com/Itai-Nelken/Pi-Assistant HEAD | awk '{print $1}')"
+   if [ "$localhash" != "$latesthash" ] && [ ! -z "$latesthash" ] && [ ! -z "$localhash" ];then
+     echo "Out of date, updating now..."
+     git clean -fd
+     git reset --hard
+     git pull https://github.com/Itai-Nelken/Pi-Assistant.git HEAD || error 'Unable to update, please check your internet connection!'
+     make-all-executable || error "Unable to mark all scripts as executables! Pi-Assistant won't work properly! please report this error."
+     refresh-shortcuts || error "Failed to refresh menu and desktop shortcuts!"
+     ask-exit
+   else
+     echo "Up to date."
+   fi
+} 
+
+#update function without ask to exit
+function update-no-ask-exit() {
    echo "Checking for updates..."
    cd $DIRECTORY
    localhash="$(git rev-parse HEAD)"
@@ -27,6 +46,21 @@ function update() {
 
 #update function with no extra output
 function update-no-output() {
+   cd $DIRECTORY
+   localhash="$(git rev-parse HEAD)"
+   latesthash="$(git ls-remote https://github.com/Itai-Nelken/Pi-Assistant HEAD | awk '{print $1}')"
+   if [ "$localhash" != "$latesthash" ] && [ ! -z "$latesthash" ] && [ ! -z "$localhash" ];then
+     git clean -fd
+     git reset --hard
+     git pull https://github.com/Itai-Nelken/Pi-Assistant.git HEAD || error 'Unable to update, please check your internet connection'
+     make-all-executable || error "Unable to mark all scripts as executables! Pi-Assistant won't work properly! please report this error."
+     refresh-shortcuts || error "Failed to refresh menu and desktop shortcuts!"
+     ask-exit
+   fi
+}
+
+#update function with no extra output or ask to exit
+function update-no-output-ask-exit() {
    cd $DIRECTORY
    localhash="$(git rev-parse HEAD)"
    latesthash="$(git ls-remote https://github.com/Itai-Nelken/Pi-Assistant HEAD | awk '{print $1}')"
@@ -122,14 +156,12 @@ function ask-exit() {
 # flags. default is to update with extra output and ask to exit.
 if [[ "$1" == "--no-output" ]]; then
   update-no-output
-  ask-exit
 elif [[ "$1" == "--no-ask-exit-output" ]]; then
-  update-no-output
+  update-no-output-ask-exit
 elif [[ "$1" == "--output-no-ask-exit" ]]; then
-  update
+  update-no-ask-exit
 else
   update
-  ask-exit
 fi
 
 
