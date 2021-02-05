@@ -64,7 +64,7 @@ fi
 echo "$(tput setaf 2)$(tput bold)LOADING...$(tput sgr 0)"
 
 #check for internet connection (disable with -ni flag)
-if [[ "$NOINTERNETCHECK" == 1 ]]; then
+if [[ "$NOINTERNETCHECK" != 1 ]]; then
         PINGOUTPUT=$(ping -c 1 8.8.8.8 >/dev/null && echo '...')
         if [ ! "$PINGOUTPUT" = '...' ]; then
             UPDATE=0
