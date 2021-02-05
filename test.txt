@@ -8,3 +8,4 @@ stupid updater
 I finally fixed the updater, for real this time and I really mean it!
 I'm now improving the look and feel of the updaters output.
 testing updater really exits fix.
+it works!
