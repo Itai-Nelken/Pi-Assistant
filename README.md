@@ -72,7 +72,7 @@ $ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/unin
 `~/Pi-Assistant/updater.sh --flag` but change `--flag` with a real falg or remove it to run the default.
 `--no-output` - update with no extra output (for example don't print 'checking for updates'). used when Pi-Assistant is starting.
 `--no-ask-exit-output` - don't ask to exit and don't print any extra output (has no use as of writing).
-`--output-no-ask-exit` - print extra output but don't ask to exit (has no use as of writing).
+`--output-no-ask-exit` - print extra output but don't ask to exit (used when manually updating).
 the default is to print extra output and ask to exit, the flags that have no use are there just to have all options.
 
 ## To do:

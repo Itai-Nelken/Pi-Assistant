@@ -18,7 +18,9 @@ do
 
         "update Pi-Assistant")
         
-source $DIRECTORY/updater.sh
+source $DIRECTORY/updater.sh --output-no-ask-exit
+echo "You have to restart Pi-Assistant to apply the update."
+read -p "Press [CTRL+C] to exit."
 
             break
             ;;
