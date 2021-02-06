@@ -11,3 +11,4 @@ testing updater really exits fix.
 it works!
 it doesn't exit for some reason.
 I found out why the updater doesn't exit everything: https://unix.stackexchange.com/questions/632890/how-to-pass-variables-between-2-bash-scripts-export-doesnt-work
+Pi-Assistant is finally in a stage that I would call it almost stable!
