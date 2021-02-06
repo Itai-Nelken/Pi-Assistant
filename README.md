@@ -51,7 +51,6 @@ $ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/unin
 ## Screenshots
 
 ![piassist-mainmenu.png](screenshots/piassist-mainmenu.png)
-![spiassist-appmenu.png](screenshots/piassist-appmenu.png)
 ![piassist-demo.gif](screenshots/piassist-demo.gif)
 ![piassist-sys-tools.png](screenshots/piassist-sys-info.png)
 
