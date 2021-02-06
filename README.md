@@ -49,7 +49,7 @@ $ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/unin
 ```
 
 ## Screenshots
-![piassist-mainmenu.png](https://github.com/Itai-Nelken/Pi-Assistant/raw/main/screenshots/piassist-mainmenu.png)
+![piassist-mainmenu-1.3.0.png](https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/screenshots/piassist-main-menu-1.3.0.png)
 ![piassist-demo.gif](https://github.com/Itai-Nelken/Pi-Assistant/raw/main/screenshots/piassist-demo.gif)
 ![piassist-sys-tools.png](https://github.com/Itai-Nelken/Pi-Assistant/raw/main/screenshots/piassist-sys-info.png)
 ### [More screenshots](https://github.com/Itai-Nelken/Pi-Assistant/blob/main/SCREENSHOTS.md#pi-assistant-screenshots)
