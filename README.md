@@ -1,4 +1,4 @@
-# <img src="https://github.com/Itai-Nelken/Pi-Assistant/blob/main/icons/pi-assistant-logopng.png" alt="logo" width="60"/> Pi-Assistant
+# <img src="https://github.com/Itai-Nelken/Pi-Assistant/raw/main/icons/pi-assistant-logopng.png" alt="logo" width="60"/> Pi-Assistant
 
 Pi-Assistant is a simple terminal app made for the Raspberry Pi that makes updating the system, installing apps, viewing system information, and more easier and faster, especially if you are new to the Linux command line or you forget the commands.
 
@@ -49,9 +49,9 @@ $ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/unin
 ```
 
 ## Screenshots
-![piassist-mainmenu.png](screenshots/piassist-mainmenu.png)
-![piassist-demo.gif](screenshots/piassist-demo.gif)
-![piassist-sys-tools.png](screenshots/piassist-sys-info.png)
+![piassist-mainmenu.png](https://github.com/Itai-Nelken/Pi-Assistant/raw/main/screenshots/piassist-mainmenu.png)
+![piassist-demo.gif](https://github.com/Itai-Nelken/Pi-Assistant/raw/main/screenshots/piassist-demo.gif)
+![piassist-sys-tools.png](https://github.com/Itai-Nelken/Pi-Assistant/raw/main/screenshots/piassist-sys-info.png)
 ### [More screenshots](https://github.com/Itai-Nelken/Pi-Assistant/blob/main/SCREENSHOTS.md#pi-assistant-screenshots)
 
 # [CHANGELOG](https://github.com/Itai-Nelken/Pi-Assistant/blob/main/CHANGELOG.md#pi-assistants-changelog)
