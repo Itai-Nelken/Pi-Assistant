@@ -8,7 +8,6 @@ function error {
 DIRECTORY="$HOME/Pi-Assistant"
 APPS="$HOME/Pi-Assistant/apps"
 
-
 echo "this script will help you update or uninstall Pi-Assistant."
 PS3='Please enter the number above for operation you would like to perform (1 - 3): '
 options=("update Pi-Assistant" "uninstall Pi-Assistant" "back to main menu")
@@ -19,7 +18,7 @@ do
 
         "update Pi-Assistant")
         
-$DIRECTORY/updater.sh
+source $DIRECTORY/updater.sh
 
             break
             ;;
