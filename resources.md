@@ -14,3 +14,17 @@ https://unix.stackexchange.com/questions/630716/how-to-cross-compile-qemu-for-ar
 ## other unrelated links
 https://raspberrypi.stackexchange.com/questions/120833/pi4-crashes-when-running-any-qt-apps-like-rpi-imager-vlc-obs<br>
 https://www.raspberrypi.org/forums/viewtopic.php?f=28&t=302170&p=1811670<br>
+
+## Some scripts
+### do something if command succeeds/fails
+```bash
+#!/bin/bash
+
+$1 &> /dev/null
+RESULT=$?
+if [ $RESULT == 0 ]; then
+  echo success
+else
+  echo failed
+fi
+```

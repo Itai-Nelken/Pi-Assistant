@@ -15,7 +15,7 @@ sleep 2
 clear
 
 if [ ! -f /usr/bin/snap ];then
-  echo " "
+  sleep 0.001
 else
   echo "updating snap-store and snap core"
   sudo snap refresh snap-store || error "Failed to update snap-store!"
