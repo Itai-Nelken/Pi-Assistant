@@ -22,11 +22,12 @@ EXAMPLE: `./script.sh "echo test"
 ```bash
 #!/bin/bash
 
-$1 &> /dev/null
+$1 2> /dev/null
 RESULT=$?
 if [ $RESULT == 0 ]; then
-  echo success
+  echo "command '$1' is a ran successfuly"
 else
-  echo failed
+  echo "command '$1' failed"
 fi
+
 ```
