@@ -13,8 +13,8 @@ function error {
   echo -e "\e[91m$1\e[39m"
 }
 
-#version variable (change --version text (main.sh and flag and piassist/install.sh) and $APPVER in appinstaller.sh and desktop shortcut/install.sh and menu shortcut, piassist in updater.sh as well)
-APPVER="v1.2.1"
+#version variable (change --version text (main.sh and flag and piassist/install.sh & piassist/updater.sh) and $APPVER in appinstaller.sh and desktop shortcut/install.sh and menu shortcut,)
+APPVER="v1.3.0"
 
 #check for updates variable
 UPDATE=1
@@ -27,9 +27,6 @@ fi
 #variables
 DIRECTORY="$HOME/Pi-Assistant"
 APPS="$HOME/Pi-Assistant/apps"
-
-#print a "loading screen"
-echo "$(tput setaf 2)$(tput bold)LOADING...$(tput sgr 0)"
 
 #flags
 if  [[ $1 = "--version" ]]; then
@@ -63,8 +60,16 @@ elif [[ $1 = "--no-update" ]]; then
     UPDATE=0
 fi
 
+#check if exit variable equals 1, if yes exit
+if [[ "$exit" == 1 ]]; then
+    exit 0
+fi
+
+#print a "loading screen"
+echo "$(tput setaf 2)$(tput bold)LOADING...$(tput sgr 0)"
+
 #check for internet connection (disable with -ni flag)
-if [[ "$NOINTERNETCHECK" == 1 ]]; then
+if [[ "$NOINTERNETCHECK" != 1 ]]; then
         PINGOUTPUT=$(ping -c 1 8.8.8.8 >/dev/null && echo '...')
         if [ ! "$PINGOUTPUT" = '...' ]; then
             UPDATE=0
@@ -78,7 +83,7 @@ fi
 #check for updates and update if update available
 if [[ "$UPDATE" == 1 ]]; then
     cd $DIRECTORY
-    ./updater.sh --no-output
+    . ./updater.sh --no-output
 elif [[ "$UPDATE" == 0 ]]; then
     echo " "
 fi
