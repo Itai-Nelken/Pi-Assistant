@@ -46,21 +46,27 @@ sudo apt -f install || error "error occured!"
 
         "clear swap")
 
-echo "clearing swap..."
-sudo systemctl restart dphys-swapfile
-echo -ne '(0%)[##                        ](100%)\r'
-sleep 0.1
-echo -ne '(0%)[######                    ](100%)\r'
-sleep 0.5
-echo -ne '(0%)[###############           ](100%)\r'
-sleep 0.3
-echo -ne '(0%)[########################  ](100%)\r'
-sleep 0.1
-echo -ne '(0%)[##########################](100%)\r'
-sleep 0.8
-clear
-echo -e "$(tput bold)DONE!$(tput sgr 0)"
-
+echo -e "$(tput setaf 3)$(tput bold)WARNING: clearing swap isn't recommended!$(tput sgr 0)"
+echo "Do you want to continue? [y/n]"
+read answer
+if [[ "$answer" == y ]]; then
+    echo "clearing swap..."
+    sudo systemctl restart dphys-swapfile
+    echo -ne '(0%)[##                        ](100%)\r'
+    sleep 0.1
+    echo -ne '(0%)[######                    ](100%)\r'
+    sleep 0.5
+    echo -ne '(0%)[###############           ](100%)\r'
+    sleep 0.3
+    echo -ne '(0%)[########################  ](100%)\r'
+    sleep 0.1
+    echo -ne '(0%)[##########################](100%)\r'
+    sleep 0.8
+    clear
+    echo -e "$(tput bold)DONE!$(tput sgr 0)"
+else
+    $DIRECTORY/main.sh --no-internet
+fi
 
             break
             ;;
