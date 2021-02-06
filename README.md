@@ -69,10 +69,10 @@ $ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/unin
 ### Updater flags (meant for the internal use of the scripts)
 **Usage of the updater:**<br>
 
-`~/Pi-Assistant/updater.sh --flag` but change `--flag` with a real falg or remove it to run the default.
-`--no-output` - update with no extra output (for example don't print 'checking for updates'). used when Pi-Assistant is starting.
-`--no-ask-exit-output` - don't ask to exit and don't print any extra output (has no use as of writing).
-`--output-no-ask-exit` - print extra output but don't ask to exit (used when manually updating).
+`~/Pi-Assistant/updater.sh --flag` but change `--flag` with a real flag or remove it to run the default update commands.<br>
+`--no-output` - update with no extra output (for example don't print 'checking for updates'). used when Pi-Assistant is starting.<br>
+`--no-ask-exit-output` - don't ask to exit and don't print any extra output (has no use as of writing).<br>
+`--output-no-ask-exit` - print extra output but don't ask to exit (used when manually updating).<br>
 the default is to print extra output and ask to exit, the flags that have no use are there just to have all options.
 
 ## To do:
@@ -81,11 +81,9 @@ the default is to print extra output and ask to exit, the flags that have no use
 - [x] add uninstall script
 - [x] add updater script 
 - [x] make updater script to run on startup (disable by using the `--no-update` flag. the `--no-internet` flag disables updates as well.)
-- [x] add zoom & box86
-- [x] add box86 as standalone app 
-- [x] add etcher (newest version, the one with 'Flash from URL' and 'clone drive'). (added as of v1.1.3, installs 32 or 64 bit version depending on your system architecture)
-- [ ] add box86 install script for 64bit OS's
+- [x] add etcher (newest version, the one with 'Flash from URL' and 'clone drive'). (added as of v1.1.3, installs 32 or 64 bit version depending on your system architecture).
 - [x] add dialog GUI
+- [ ] add box86 install script for 64bit OS's
 - [ ] maybe change whole gui to use YAD?
 
 
@@ -102,3 +100,7 @@ run Pi-Assistant from terminal with this command: `piassist --no-internet`
 
 **A:**<br>
 run Pi-Assistant from terminal with the `--no-update` flag like this: `piassist --no-update`
+
+
+## Notes
+- For checking the public ip address, an [external service](https://ipinfo.io/) is used. Link used in the scripts: http://ipinfo.io/ip/
