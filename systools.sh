@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function error {
+function error() {
   echo -e "\e[91m$1\e[39m"
 }
 
@@ -37,7 +37,7 @@ sudo apt clean || error "error occured!"
  
         "fix broken install")
 
-sudo apt install -f || error "error occured!"
+sudo apt -f install || error "error occured!"
 
             break
             ;;
@@ -46,17 +46,21 @@ sudo apt install -f || error "error occured!"
 
         "clear swap")
 
-echo checking space used.
-free -m || error "error occured!"
+echo "clearing swap..."
+sudo systemctl restart dphys-swapfile
+echo -ne '(0%)[##                        ](100%)\r'
+sleep 0.1
+echo -ne '(0%)[######                    ](100%)\r'
+sleep 0.5
+echo -ne '(0%)[###############           ](100%)\r'
+sleep 0.3
+echo -ne '(0%)[########################  ](100%)\r'
+sleep 0.1
+echo -ne '(0%)[##########################](100%)\r'
+sleep 0.8
+clear
+echo -e "$(tput bold)DONE!$(tput sgr 0)"
 
-read -p "is there enough free space in ram to move swap contents to it (y/n)?" choice
-case "$choice" in 
-  y|Y ) echo "clearing swap..."; sudo swapoff -a; sudo chmod 600 /var/swap; sudo mkswap /var/swap; sudo swapon -a;;
-  n|N ) echo "$(tput setaf 1)aborting.$(tput sgr 0)"   ;;
-  * ) echo "invalid";;
-esac
-
-echo "$(tput setaf 2)operation complete.$(tput sgr 0)" 
 
             break
             ;;
