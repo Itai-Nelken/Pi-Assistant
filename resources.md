@@ -17,6 +17,8 @@ https://www.raspberrypi.org/forums/viewtopic.php?f=28&t=302170&p=1811670<br>
 
 ## Some scripts
 ### do something if command succeeds/fails
+**Usage:** `./script.sh command` but change `script.sh` with the scripts name and `command` with a command.<br>
+EXAMPLE: `./script.sh "echo test"
 ```bash
 #!/bin/bash
 
