@@ -100,3 +100,6 @@ run Pi-Assistant from terminal with this command: `piassist --no-internet`
 
 **A:**<br>
 run Pi-Assistant from terminal with the `--no-update` flag like this: `piassist --no-update`
+
+## Notes
+Checking the public ip address for the system-information, an [external service](http://ipinfo.io) is used. the exact link the script uses: http://ipinfo.io/ip/
