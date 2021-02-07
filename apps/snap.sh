@@ -26,7 +26,7 @@ sudo snap install snap-store || error "Failed to install snap-store!"
 button=$?
 yad --width=300 --height=60 --button=skip:0 --button=Reboot:1 --title "installing snap..." --text="You need to reboot to complete installation of snap." --text="do you want to reboot now?" --center --on-top
 if [[ $button -eq 1 ]]; then
- yad --timeout=5 --timeout-indicator=top --no-buttons --on-top --center --title="Rebooting..." --text="<b>rebooting in 5 seconds</b>" 
+ yad --timeout=15 --timeout-indicator=top --no-buttons --on-top --center --title="Rebooting..." --text="<b>rebooting in 5 seconds</b>" 
 
 elif [[ $button -eq 0 ]]; then
  yad --timeout=15 --timeout-indicator=top --no-buttons --on-top --center --title="installing snap" --text="<b>please reboot later or menu shortcuts won't appear</b>"

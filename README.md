@@ -49,7 +49,7 @@ $ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/unin
 ```
 
 ## Screenshots
-![piassist-mainmenu-1.3.0.png](https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/screenshots/piassist-main-menu-1.3.0.png)
+![piassist-mainmenu.png](https://github.com/Itai-Nelken/Pi-Assistant/raw/main/screenshots/piassist-mainmenu.png)
 ![piassist-demo.gif](https://github.com/Itai-Nelken/Pi-Assistant/raw/main/screenshots/piassist-demo.gif)
 ![piassist-sys-tools.png](https://github.com/Itai-Nelken/Pi-Assistant/raw/main/screenshots/piassist-sys-info.png)
 ### [More screenshots](https://github.com/Itai-Nelken/Pi-Assistant/blob/main/SCREENSHOTS.md#pi-assistant-screenshots)
@@ -81,11 +81,9 @@ the default is to print extra output and ask to exit, the flags that have no use
 - [x] add uninstall script
 - [x] add updater script 
 - [x] make updater script to run on startup (disable by using the `--no-update` flag. the `--no-internet` flag disables updates as well.)
-- [x] add zoom & box86
-- [x] add box86 as standalone app 
-- [x] add etcher (newest version, the one with 'Flash from URL' and 'clone drive'). (added as of v1.1.3, installs 32 or 64 bit version depending on your system architecture)
-- [ ] add box86 install script for 64bit OS's
 - [x] add dialog GUI
+- [ ] add my QEMU debs.
+- [ ] add box86 install script for 64bit OS's
 - [ ] maybe change whole gui to use YAD?
 
 
