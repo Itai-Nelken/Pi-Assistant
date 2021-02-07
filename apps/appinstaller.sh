@@ -27,7 +27,7 @@ flatpak="$APPS/flatpak.sh"
 etcher="$APPS/etcher.sh"
 zoom="$APPS/zoom.sh"
 box86="$APPS/box86.sh"
-main="$DIRECTORY/main.sh --no-internet"
+main="sleep 0.00001"
 
 
 #dialog variables

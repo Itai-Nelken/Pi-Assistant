@@ -38,7 +38,7 @@ $DIRECTORY/uninstall.sh
  
         "back to main menu")
 
-$DIRECTORY/main.sh --no-internet
+sleep 0.0001
 
             break
             ;;
