@@ -21,14 +21,15 @@ do
 
 cd $HOME
 
-if $(uname -m | grep '64'); then
-
+#determine if host system is 64 bit arm64 or 32 bit armhf
+if [ ! -z "$(file "$(readlink -f "/sbin/init")" | grep 64)" ];then
   #64 bit
-  echo "unfortunately 64bit support isn't here yet, I'm still working on it." && sleep 5 && $DIRECTORY/main.sh
-
-else
+  echo "unfortunately 64bit support isn't here yet, I'm still working on it." && sleep 5 && $DIRECTORY/main.sh --no-internet
+elif [ ! -z "$(file "$(readlink -f "/sbin/init")" | grep 32)" ];then
   #32 bit 
   echo "OS is 32bit"
+else
+  error "Failed to detect OS CPU architecture! Something is very wrong." && sleep 5 && $DIRECTORY/main.sh --no-internet
 fi
 
 sudo apt update || error "Failed to update repos (not critical)."
@@ -118,7 +119,7 @@ sleep 1
 #start zoom with box86
 pulseaudio --start
 box86 zoom || error "can't start zoom!"
-echo "$(tput setaf 2)exiting in 5 seconds:($(tput sgr 0)"
+echo "$(tput setaf 2)exiting in 5 seconds.($(tput sgr 0)"
 sleep 5' > "${HOME}/zoom/startzoom.sh"
 sudo chmod +x "${HOME}/zoom/startzoom.sh"
 

@@ -153,7 +153,7 @@ function ask-exit() {
   echo ' '
   echo -e "$(tput setaf 6)You have to restart Pi-Assistant to apply the Update.$(tput sgr 0)"
   read -p "press [ENTER] to exit."
-  exit 1
+  exit
 }
 
 # flags. default is to update with extra output and ask to exit.
