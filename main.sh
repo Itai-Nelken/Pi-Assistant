@@ -57,8 +57,8 @@ elif [[ $1 = "--help" ]] || [[ $1 == "-h" ]]; then
     piassist [flag]
 
     $(tput setaf 6)$(tput bold)available flags:$(tput sgr 0)
-    --no-internet - dont check for internet connection and updates on startup.
-    --no-update - don't check for updates.
+    --no-internet - dont check for internet connection and updates on startup (of the app).
+    --no-update - don't check for updates on startup (of the app).
     --version - show version (in ascii art text) and exit.
     --secret - secret easter egg.
     --help - show this help info and exit.
