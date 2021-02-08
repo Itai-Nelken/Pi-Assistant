@@ -39,7 +39,7 @@ DIRECTORY="$HOME/Pi-Assistant"
 APPS="$HOME/Pi-Assistant/apps"
 
 #flags
-if  [[ $1 = "--version" ]]; then
+if  [[ $1 = "--version" ]] || [[ $1 == "-v" ]]; then
     echo -e "$(tput bold)$(tput setaf 4)Pi-Assistant\nv1.2.1\nby Itai Nelken$(tput sgr 0)"
     exit 0
 elif [[ $1 = "--secret" ]]; then
@@ -47,27 +47,34 @@ elif [[ $1 = "--secret" ]]; then
     sleep 10
     clear
     read -p "press [ENTER] to exit"
-    exit
-elif [[ $1 = "--no-internet" ]]; then    
+    exit 0
+elif [[ $1 = "--no-internet" ]] || [[ $1 == "-ni" ]]; then    
     NOINTERNETCHECK=1
     UPDATE=0
-elif [[ $1 = "--help" ]]; then
+elif [[ $1 = "--help" ]] || [[ $1 == "-h" ]]; then
     echo -e "
     $(tput setaf 6)$(tput bold)usage:$(tput sgr 0)
     piassist [flag]
 
-   $(tput setaf 6)$(tput bold)available flags:$(tput sgr 0)
-   --no-internet - dont check for internet connection and updates on startup.
-   --no-update - don't check for updates.
-   --version - show version (in ascii art text) and exit.
-   --secret - secret easter egg.
-   --help - show this help info and exit.
+    $(tput setaf 6)$(tput bold)available flags:$(tput sgr 0)
+    --no-internet - dont check for internet connection and updates on startup.
+    --no-update - don't check for updates.
+    --version - show version (in ascii art text) and exit.
+    --secret - secret easter egg.
+    --help - show this help info and exit.
 
-   $(tput setaf 6)$(tput bold)example:$(tput sgr 0)
-   piassist --secret
-   "
+    $(tput setaf 6)$(tput bold)some of the flags also have shorter versions:$(tput sgr 0)
+    -ni = --no-internet
+    -nu = --no-update
+    -v = --version
+    -h = --help
+
+    $(tput setaf 6)$(tput bold)examples:$(tput sgr 0)
+    piassist --secret
+    piassist -h
+    "
     exit
-elif [[ $1 = "--no-update" ]]; then
+elif [[ $1 = "--no-update" ]] || [[ $1 == "-nu" ]]; then
     UPDATE=0
 fi
 
