@@ -40,7 +40,7 @@ APPS="$HOME/Pi-Assistant/apps"
 
 #flags
 if  [[ $1 = "--version" ]] || [[ $1 == "-v" ]]; then
-    echo -e "$(tput bold)$(tput setaf 4)Pi-Assistant\nv1.2.1\nby Itai Nelken$(tput sgr 0)"
+    echo -e "$(tput bold)$(tput setaf 4)Pi-Assistant\n$APPVER\nby Itai Nelken$(tput sgr 0)"
     exit 0
 elif [[ $1 = "--secret" ]]; then
     xdg-open ~/Pi-Assistant/icons/ascii-art.html
