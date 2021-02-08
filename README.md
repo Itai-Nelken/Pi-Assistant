@@ -50,9 +50,18 @@ $ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/unin
 
 ## Screenshots
 ![piassist-mainmenu.png](https://github.com/Itai-Nelken/Pi-Assistant/raw/main/screenshots/piassist-mainmenu.png)
+<details>
+<summary> More screenshots </summary>
+
+### The system information option
+![piassist-sys-tools.png](https://github.com/Itai-Nelken/Pi-Assistant/raw/main/screenshots/piassist-sys-info-1.3.0.png)
+### Demo (the output of some of the commands is outdated)
 ![piassist-demo.gif](https://github.com/Itai-Nelken/Pi-Assistant/raw/main/screenshots/piassist-demo.gif)
-![piassist-sys-tools.png](https://github.com/Itai-Nelken/Pi-Assistant/raw/main/screenshots/piassist-sys-info.png)
-### [More screenshots](https://github.com/Itai-Nelken/Pi-Assistant/blob/main/SCREENSHOTS.md#pi-assistant-screenshots)
+
+### [More screenshots page](https://github.com/Itai-Nelken/Pi-Assistant/blob/main/SCREENSHOTS.md#pi-assistant-screenshots)
+
+</details>
+
 
 # [CHANGELOG](https://github.com/Itai-Nelken/Pi-Assistant/blob/main/CHANGELOG.md#pi-assistants-changelog)
 
