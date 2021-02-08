@@ -30,6 +30,11 @@ when running with `piassist` you can add flags, to see a list off all flags run 
 `--no-update` - don't update on startup (doesn't work yet, but fixed in the beta version!)<br>
 `--version` - show version.<br>
 `--secret` - a secret easter egg :upside_down_face:<br>
+#### Some flags have shorter versions
+`-h` = `--help`<br>
+`-ni` = `--no-internet`<br>
+`-nu` = `--no-update`
+`-v` = `--version`
 
 ### if you have any questions, check the [FAQ](https://github.com/Itai-Nelken/Pi-Assistant#faq) before opening a issue please.
 
@@ -67,22 +72,17 @@ $ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/unin
 
   
 ## Known issues and bugs
-* The updater always runs on startup for some reason.
-* if you installed when the name was system-tools, then after updating to the version after the rename the icons won't change. 
 * zoom menu icon doesn't work for some reason.
-
-### Fixed temporarily
-- zoom installer is broken because it can't download zoom for some reason
 
 ## Internal stuff (commands used by the scripts)
 ### Updater flags (meant for the internal use of the scripts)
 **Usage of the updater:**<br>
 
-`~/Pi-Assistant/updater.sh --flag` but change `--flag` with a real falg or remove it to run the default.
-`--no-output` - update with no extra output (for example don't print 'checking for updates'). used when Pi-Assistant is starting.
-`--no-ask-exit-output` - don't ask to exit and don't print any extra output (has no use as of writing).
-`--output-no-ask-exit` - print extra output but don't ask to exit (used when manually updating).
-the default is to print extra output and ask to exit, the flags that have no use are there just to have all options.
+`~/Pi-Assistant/updater.sh --flag` but change `--flag` with a real flag or remove it to run the default.<br>
+`--no-output` - update with no extra output (for example don't print 'checking for updates'). used when Pi-Assistant is starting.<br>
+`--no-ask-exit-output` - don't ask to exit and don't print any extra output (has no use as of writing).<br>
+`--output-no-ask-exit` - print extra output but don't ask to exit (used when manually updating).<br>
+the default is to print extra output and ask to exit, the flags that have no use are there just to have all options in case I'll need them in the future.
 
 ## To do:
 
@@ -93,7 +93,7 @@ the default is to print extra output and ask to exit, the flags that have no use
 - [x] add dialog GUI
 - [ ] add my QEMU debs.
 - [ ] add box86 install script for 64bit OS's
-- [ ] maybe change whole gui to use YAD?
+- [ ] maybe change whole gui to use YAD? or make a GUI using python? or c?
 
 
 ## FAQ
@@ -111,4 +111,4 @@ run Pi-Assistant from terminal with this command: `piassist --no-internet`
 run Pi-Assistant from terminal with the `--no-update` flag like this: `piassist --no-update`
 
 ## Notes
-Checking the public ip address for the system-information, an [external service](http://ipinfo.io) is used. the exact link the script uses: http://ipinfo.io/ip/
+system-information uses a [external service](http://ipinfo.io) for checking the public IP address. the exact link the script uses is: http://ipinfo.io/ip/
