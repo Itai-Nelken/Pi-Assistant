@@ -62,6 +62,8 @@ $ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/unin
 ![piassist-sys-tools.png](https://github.com/Itai-Nelken/Pi-Assistant/raw/main/screenshots/piassist-sys-info-1.3.0.png)
 ### Demo (the output of some of the commands is outdated)
 ![piassist-demo.gif](https://github.com/Itai-Nelken/Pi-Assistant/raw/main/screenshots/piassist-demo.gif)
+### How a update (on startup) looks like
+![updater.png](https://github.com/Itai-Nelken/Pi-Assistant/raw/main/screenshots/updater.png)
 
 ### [More screenshots page](https://github.com/Itai-Nelken/Pi-Assistant/blob/main/SCREENSHOTS.md#pi-assistant-screenshots)
 
