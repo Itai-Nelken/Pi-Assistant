@@ -124,26 +124,21 @@ function refresh-shortcuts() {
   sudo rm /usr/local/bin/piassist
   #update startup from terminal using 'piassist'
   echo '#!/bin/bash
-  cd ~/Pi-Assistant
-  #flags
-  if  [[ $1 = "--version" ]]; then
-      echo -e "$(tput bold)$(tput setaf 4)Pi-Assistant\nv1.3.0\nby Itai Nelken$(tput sgr 0)"
-      exit
-  elif [[ $1 = "--secret" ]]; then
-      xdg-open ~/Pi-Assistant/icons/ascii-art.html
-      sleep 10
-      clear
-      read -p "press [ENTER] to exit"
-      exit
-  elif [[ $1 = "--no-internet" ]]; then    
-      ./main.sh --no-internet
-  elif [[ $1 = "--help" ]]; then
-      ./main.sh --help
-  elif [[ $1 = "--no-update" ]]; then
-      ./main.sh --no-update
-  else
-      clear && $HOME/Pi-Assistant/main.sh
-  fi' > ~/Downloads/piassist
+cd ~/Pi-Assistant
+#flags
+if  [[ $1 == "--version" ]] || [[ $1 == "-v" ]]; then
+    ./main.sh --version
+elif [[ $1 == "--secret" ]]; then
+    ./main.sh --secret
+elif [[ $1 == "--no-internet" ]] || [[ $1 == "-ni" ]]; then    
+    ./main.sh --no-internet
+elif [[ $1 == "--help" ]] || [[ $1 == "-h" ]]; then
+    ./main.sh --help
+elif [[ $1 == "--no-update" ]] || [[ $1 == "-nu" ]]; then
+    ./main.sh --no-update
+else
+    clear && $HOME/Pi-Assistant/main.sh
+fi' > ~/Downloads/piassist
   sudo mv ~/Downloads/piassist /usr/local/bin/
   sudo chmod +x /usr/local/bin/piassist
 }
