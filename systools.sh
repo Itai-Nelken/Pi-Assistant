@@ -4,6 +4,12 @@ function error() {
   echo -e "\e[91m$1\e[39m"
 }
 
+function error-sleep() {
+  echo -e "\e[91m$1\e[39m"
+  echo "press [CTRL+C] to exit."
+  sleep $2
+}
+
 #variables
 DIRECTORY="$HOME/Pi-Assistant"
 APPS="$HOME/Pi-Assistant/apps"
@@ -18,7 +24,7 @@ do
 
         "autoremove")
         
-sudo apt autoremove -y || error "error occured!"
+sudo apt autoremove -y || error-sleep "error occured!" 10
 
             break
             ;;
@@ -26,7 +32,7 @@ sudo apt autoremove -y || error "error occured!"
 
         "autoclean")
 
-sudo apt autoclean || error "error occured!"
+sudo apt autoclean || error-sleep "error occured!" 10
 sudo apt clean || error "error occured!"
 
             break
@@ -37,7 +43,8 @@ sudo apt clean || error "error occured!"
  
         "fix broken install")
 
-sudo apt -f install || error "error occured!"
+sudo apt -f install || error-sleep "error occured!" 10
+sudo dpkg --configure -a || error "error occured!"
 
             break
             ;;
@@ -51,7 +58,7 @@ echo "Do you want to continue? [y/n]"
 read answer
 if [[ "$answer" == y ]]; then
     echo "clearing swap..."
-    sudo systemctl restart dphys-swapfile
+    sudo systemctl restart dphys-swapfile || error-sleep "Failed to clear swap!" 10
     echo -ne '(0%)[##                        ](100%)\r'
     sleep 0.1
     echo -ne '(0%)[######                    ](100%)\r'

@@ -11,6 +11,7 @@ function error {
 sudo apt update --fix-missing || error "failed to update repos!"
 sudo apt upgrade -y || error "error occured are you connected to the internet?"
 echo -en && sudo apt install -f && sudo dpkg --configure -a
+sudo apt autoremove -y
 sleep 2
 clear
 
