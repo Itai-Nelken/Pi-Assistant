@@ -25,7 +25,7 @@ NOINTERNETCHECK=0
 fi
 
 #check if dialog is installed
-if ! which dialog > /dev/null; then
+if ! command -v dialog > /dev/null; then
     error "dialog isn't installed! Pi-Assistant cannot run without it!"
     echo -e "$(tput setaf 3)$(tput bold)you can install it by running: sudo apt install dialog -y$(tput sgr 0)"
     read -p "Press [ENTER] to exit."
