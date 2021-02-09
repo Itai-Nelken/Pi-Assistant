@@ -13,8 +13,8 @@ function error {
   echo -e "\e[91m$1\e[39m"
 }
 
-#version variable (change $APPVER in main.sh, appinstaller.sh and desktop shortcut/install.sh and menu shortcut,)
-APPVER="v1.3.0"
+#version variable (change $APPVER in main.sh, appinstaller.sh).
+APPVER="v1.3.1"
 
 #check for updates variable
 UPDATE=1
@@ -134,7 +134,7 @@ BACKTITLE="Pi-Assistant $APPVER,"
 COMMIT="`git log -1 | grep commit* | cut -c1-14`::::::Itai Nelken::::::"
 #CPU="CPU `lscpu | grep "Model name*"`"
 #MODEL="`cat /proc/cpuinfo | grep "Raspberry*"`"
-SPACER="_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_"
+SPACER="_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_"
 TITLE="Main Menu"
 MENU="Choose one of the following options:"
 
