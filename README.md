@@ -25,10 +25,10 @@ $ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/inst
 To run Pi-Assistant, use the menu or Desktop shortcuts. alternatively you can type in terminal (from anywhere) `piassist`<br>
 when running with `piassist` you can add flags, to see a list off all flags run `piassist --help` or see the list bellow.
 ### Flags
-`--help` - show all flags and how to use them.<br>
-`--no-internet` - run pi-assistant without internet.<br>
-`--no-update` - don't update on startup (doesn't work yet, but fixed in the beta version!)<br>
-`--version` - show version.<br>
+`--help` - show all flags and how to use them and exit.<br>
+`--no-internet` - run pi-assistant without checking for internet (use when you want to start Pi-Assistant without a internet connection).<br>
+`--no-update` - don't check for updates on startup.<br>
+`--version` - print version and exit.<br>
 `--secret` - a secret easter egg :upside_down_face:<br>
 #### Some flags have shorter versions
 `-h` = `--help`<br>
