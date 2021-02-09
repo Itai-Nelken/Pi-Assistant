@@ -43,13 +43,13 @@ when running with `piassist` you can add flags, to see a list off all flags run 
 Pi-Assistant checks for updates and if there are installs them automatically on startup.<br>
 To update manually, start Pi-Assistant and go to `other>update-this-tool`
 if that doesn't work, or you think something is broken with the scripts, run this command:
-```sh-seesion
+```bash
 $ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/updater.sh | bash
 ```
 
 ## removal
 Pi-Assistant v1.1.1 and later has a removal script in `other>remove` if you have an earlier version or need to manually remove, open terminal and copy: 
-```sh-session
+```bash
 $ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/uninstall.sh | bash
 ```
 
@@ -104,13 +104,13 @@ the default is to print extra output and ask to exit, the flags that have no use
 >How can I start Pi-Assistant without a internet connection?
 
 **A:**<br>
-run Pi-Assistant from terminal with this command: `piassist --no-internet`
+run Pi-Assistant from terminal with this command: `piassist --no-internet` or use the shorter version like this: `piassist -ni`.
 
 **Q:**<br>
 >How can I disable update on startup?
 
 **A:**<br>
-run Pi-Assistant from terminal with the `--no-update` flag like this: `piassist --no-update`
+run Pi-Assistant from terminal with the `--no-update` flag like this: `piassist --no-update` or use the shorter version like this: `piassist -nu`.
 
 ## Notes
-system-information uses a [external service](http://ipinfo.io) for checking the public IP address. the exact link the script uses is: http://ipinfo.io/ip/
+system-information uses a [external service](http://ipinfo.io) for checking the public IP address. the exact link the script uses is: http://ipinfo.io/ip/.
