@@ -13,7 +13,7 @@ function error {
   echo -e "\e[91m$1\e[39m"
 }
 
-#version variable (change --version text (main.sh only) and $APPVER in appinstaller.sh and desktop shortcut/install.sh and menu shortcut,)
+#version variable (change $APPVER in main.sh, appinstaller.sh and desktop shortcut/install.sh and menu shortcut,)
 APPVER="v1.3.0"
 
 #check for updates variable
