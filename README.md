@@ -33,7 +33,7 @@ when running with `piassist` you can add flags, to see a list off all flags run 
 #### Some flags have shorter versions
 `-h` = `--help`<br>
 `-ni` = `--no-internet`<br>
-`-nu` = `--no-update`
+`-nu` = `--no-update`<br>
 `-v` = `--version`
 
 ### if you have any questions, check the [FAQ](https://github.com/Itai-Nelken/Pi-Assistant#faq) before opening a issue please.
