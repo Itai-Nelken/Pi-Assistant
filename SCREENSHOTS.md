@@ -7,5 +7,7 @@
 ![piassist-demo.gif](https://github.com/Itai-Nelken/Pi-Assistant/raw/main/screenshots/piassist-demo.gif)
 ### The system information option
 ![piassist-sys-tools.png](https://github.com/Itai-Nelken/Pi-Assistant/raw/main/screenshots/piassist-sys-info-1.3.0.png)
+### How a update (on startup) looks like
+![updater.png](https://github.com/Itai-Nelken/Pi-Assistant/raw/main/screenshots/updater.png)
 
 # [Back to Readme](https://github.com/Itai-Nelken/Pi-Assistant#screenshots)

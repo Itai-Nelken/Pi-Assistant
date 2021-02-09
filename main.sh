@@ -40,7 +40,7 @@ APPS="$HOME/Pi-Assistant/apps"
 
 #flags
 if  [[ $1 = "--version" ]] || [[ $1 == "-v" ]]; then
-    echo -e "$(tput bold)$(tput setaf 4)Pi-Assistant\nv1.2.1\nby Itai Nelken$(tput sgr 0)"
+    echo -e "$(tput bold)$(tput setaf 4)Pi-Assistant\n$APPVER\nby Itai Nelken$(tput sgr 0)"
     exit 0
 elif [[ $1 = "--secret" ]]; then
     xdg-open ~/Pi-Assistant/icons/ascii-art.html
@@ -57,8 +57,8 @@ elif [[ $1 = "--help" ]] || [[ $1 == "-h" ]]; then
     piassist [flag]
 
     $(tput setaf 6)$(tput bold)available flags:$(tput sgr 0)
-    --no-internet - dont check for internet connection and updates on startup.
-    --no-update - don't check for updates.
+    --no-internet - dont check for internet connection and updates on startup (of the app).
+    --no-update - don't check for updates on startup (of the app).
     --version - show version (in ascii art text) and exit.
     --secret - secret easter egg.
     --help - show this help info and exit.
