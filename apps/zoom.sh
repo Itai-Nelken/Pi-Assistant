@@ -8,7 +8,8 @@ function error {
 DIRECTORY="$HOME/Pi-Assistant"
 APPS="$HOME/Pi-Assistant/apps"
 
-echo "this script will help you install or remove GNOME system monitor."
+echo "this script will help you install or remove zoom Linux x86 client running with box86."
+echo -e "$(tput setaf 3)$(tput bold)Audio input isn't working for some people!$(tput sgr 0)"
 PS3='Please enter the number for install or remove (1 - 3): '
 options=("install" "remove" "back to app installer")
 select opt in "${options[@]}"
