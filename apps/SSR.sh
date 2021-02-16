@@ -15,8 +15,6 @@ select opt in "${options[@]}"
 do
     case $opt in
 
-
-
         "install")
 
 sudo apt update || error "Failed to update repos (not critical)."
@@ -25,14 +23,14 @@ sudo apt install -y simplescreenrecorder || error "Failed to install simplescree
             break
             ;;
    
-   "remove")  
+        "remove")  
    
 sudo apt purge -y simplescreenrecorder || error "failed to remove simplescreenrecorder!"
    
             break
             ;;
 
-"back to app installer")
+        "back to app installer")
    
 $APPS/appinstaller.sh
 
