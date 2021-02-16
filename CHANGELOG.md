@@ -20,7 +20,7 @@ added flags to piassist (and main.sh), run `piassist --help` to see all of them.
 * **23/1/2021** - UPDATE: v1.2.1 - fixed `--no-internet` and `--no-update` flags don't work when launching using `piassist`, made startup time after option completes way shorter using the `--no-internet flag` (that make Pi-Assistant not check for internet and updates, so makes startup time way faster).
 * **5/2/2021** - found out why the updater refreshed the menu and desktop shortcuts even when no updates are available, pushed the fix to the beta branch.<br>Updated etcher install script to always download and install latest release and made it use a better system architecture detection. fixed a few typos in different files.<br>getting ready to merge the beta branch and release v1.3.0!
 * **8/2/2021** - tons of improvements over the last few days, running flags from `piassist` redirects them to `main.sh`, added shorter versions of flags (`-v` = `--versions`).
-* **16/2/2021** - update: 1.3.2 - fixed a bug with the appinstaller script: when installing SimpleScreenRecorder (SSR), it looked for a script called `ssr.sh` but I accidentally named it `SSR.sh`.
+* **16/2/2021** - update: 1.3.2 - fixed a bug with the appinstaller script: when installing SimpleScreenRecorder (SSR), it looked for a script called `ssr.sh` but I accidentally named it `SSR.sh`.<br>update: 1.3.3 - forgot to change `SSR.sh` to `ssr.sh` in the updater script.<br>update: 1.3.4 - forgot to bump the version in the scripts.
 
 
 ## [Back to Readme](https://github.com/Itai-Nelken/Pi-Assistant#-pi-assistant)
