@@ -97,6 +97,7 @@ the default is to print extra output and ask to exit, the flags that have no use
 - [ ] add my QEMU debs.
 - [ ] add box86 install script for 64bit OS's
 - [ ] maybe change whole gui to use YAD? or make a GUI using python? or using c?
+- [ ] implement app "remembering" system - in other words make Pi-Assistant remember every app it installs.
 
 
 ## FAQ
