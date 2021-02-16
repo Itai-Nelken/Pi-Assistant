@@ -14,7 +14,7 @@ function error {
 }
 
 #version variable (change $APPVER in main.sh, appinstaller.sh).
-APPVER="v1.3.1"
+APPVER="v1.3.4"
 
 #check for updates variable
 UPDATE=1

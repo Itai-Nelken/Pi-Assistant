@@ -5,7 +5,7 @@ function error {
 }
 
 #check main.sh $APPVER for a list of everything to change
-APPVER="v1.3.1"
+APPVER="v1.3.3"
 
 #variables
 DIRECTORY="$HOME/Pi-Assistant"
