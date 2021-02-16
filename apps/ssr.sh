@@ -8,7 +8,6 @@ function error {
 DIRECTORY="$HOME/Pi-Assistant"
 APPS="$HOME/Pi-Assistant/apps"
 
-
 echo "this script will help you install or remove simplescreenrecorder."
 PS3='Please enter the number for install or remove (1 - 3): '
 options=("install" "remove" "back to app installer")
