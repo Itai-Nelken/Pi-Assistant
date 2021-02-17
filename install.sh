@@ -26,6 +26,9 @@ elif ! which dialog > /dev/null; then
 elif ! which xdg-open > /dev/null; then
    sudo apt install -y xdg-utils
    #echo "installed">~/Pi-Assistant/data/xdg
+if ! which neofetch > /dev/null; then
+   sudo apt install -y neofetch
+   #echo "installed">~/Pi-Assistant/data/neofetch
 else
     echo "dependencies already installed..."
 fi
