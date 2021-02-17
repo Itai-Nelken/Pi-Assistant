@@ -86,7 +86,7 @@ sudo chmod +x apps/blender.sh
 sudo chmod +x apps/audacity.sh
 sudo chmod +x apps/inkscape.sh
 sudo chmod +x apps/snap.sh
-sudo chmod +x apps/SSR.sh
+sudo chmod +x apps/ssr.sh
 sudo chmod +x apps/kdenlive.sh
 sudo chmod +x apps/gsysmon.sh
 sudo chmod +x apps/flatpak.sh
