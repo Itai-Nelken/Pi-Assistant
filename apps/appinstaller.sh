@@ -28,6 +28,7 @@ etcher="$APPS/etcher.sh"
 zoom="$APPS/zoom.sh"
 box86="$APPS/box86.sh"
 flowblade="$APPS/flowblade.sh"
+back="$APPS/appinstaller.sh"
 main="sleep 0.00001"
 
 
@@ -70,48 +71,48 @@ case $CHOICE in
             $main
             ;;
         2)
-            $gparted
+            $gparted; $back
             ;;
         3)
-            $chromium
+            $chromium; $back
             ;;
         4)
-            $firefox
+            $firefox; $back
             ;;
         5)
-            $blender
+            $blender; $back
             ;;
         6)
-            $audacity
+            $audacity; $back
             ;;
         7)
-            $snap
+            $snap; $back
             ;;
         8)
-            $inkscape
+            $inkscape; $back
             ;;
         9)
-            $ssr
+            $ssr; $back
             ;;
         10) 
-            $kdenlive
+            $kdenlive; $back
             ;;
         11)
-            $flowblade
+            $flowblade; $back
             ;;
         12)
-            $gsysmon
+            $gsysmon; $back
             ;;
         13)
-            $flatpak
+            $flatpak; $back
             ;;
         14)
-            $etcher
+            $etcher; $back
             ;;
         15)
-            $zoom
+            $zoom; $back
             ;;
         16)
-            $box86
+            $box86; $back
             ;;
 esac
