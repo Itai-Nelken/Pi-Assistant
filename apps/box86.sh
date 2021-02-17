@@ -22,14 +22,13 @@ do
 
 cd $HOME
 
-if $(uname -m | grep '64'); then
-
-  #64 bit
+if [ ! -z "$(file "$(readlink -f "/sbin/init")" | grep 64)" ];then
+echo "Installing arm64 etcher..."
   echo "unfortunately 64bit support isn't here yet, I'm still working on it." && sleep 5 && $DIRECTORY/main.sh
-
+elif [ ! -z "$(file "$(readlink -f "/sbin/init")" | grep 32)" ];then
+  echo "OS is 32bit..."
 else
-  #32 bit 
-  echo "OS is 32bit."
+  error "Failed to detect OS CPU architecture! Something is very wrong."
 fi
 
 sudo apt update || error "Failed to update repos (not critical)."

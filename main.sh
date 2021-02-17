@@ -173,7 +173,7 @@ case $CHOICE in
             ;;
         
         6)
-            $other; $main>/dev/null #send output to dev/null because after uninstalling you will get a "directory not found" error.
+            $other; $main 2> /dev/null #send output to /dev/null because after uninstalling you will get a "directory not found" error.
             ;;
         
         7) $exit

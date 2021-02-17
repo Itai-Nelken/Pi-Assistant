@@ -101,6 +101,7 @@ function make-all-executable() {
   sudo chmod +x apps/etcher.sh
   sudo chmod +x apps/zoom.sh
   sudo chmod +x apps/box86.sh
+  sudo chmod +x apps/flowblade.sh
 }
 
 #refresh menu and desktop shortcuts function
@@ -158,6 +159,8 @@ elif [[ "$1" == "--no-ask-exit-output" ]]; then
   update-no-output-ask-exit
 elif [[ "$1" == "--output-no-ask-exit" ]]; then
   update-no-ask-exit
+elif [[ "$1" == "--all-executable" ]]; then
+  make-all-executable
 else
   update
 fi

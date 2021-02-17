@@ -169,7 +169,7 @@ echo "                        "
 #display DE
 if [[ $DE == *"xfce"* ]]; then
 	echo "Desktop Environment is: XFCE"
-elif [[ $DE == *"lxde"* ]]; then
+elif [[ $DE == *"LXDE"* ]]; then
 	echo "Desktop Environment is: LXDE"
 elif [[ $DE == *"gnome"* ]]; then
 	echo "Desktop Environment is: GNOME"

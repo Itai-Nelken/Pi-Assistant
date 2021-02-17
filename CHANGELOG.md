@@ -21,6 +21,8 @@ added flags to piassist (and main.sh), run `piassist --help` to see all of them.
 * **5/2/2021** - found out why the updater refreshed the menu and desktop shortcuts even when no updates are available, pushed the fix to the beta branch.<br>Updated etcher install script to always download and install latest release and made it use a better system architecture detection. fixed a few typos in different files.<br>getting ready to merge the beta branch and release v1.3.0!
 * **8/2/2021** - tons of improvements over the last few days, running flags from `piassist` redirects them to `main.sh`, added shorter versions of flags (`-v` = `--versions`).
 * **16/2/2021** - update: 1.3.2 - fixed a bug with the appinstaller script: when installing SimpleScreenRecorder (SSR), it looked for a script called `ssr.sh` but I accidentally named it `SSR.sh`.<br>update: 1.3.3 - forgot to change `SSR.sh` to `ssr.sh` in the updater script.<br>update: 1.3.4 - forgot to bump the version in the scripts.
+* **16/2/2021** - opened 'beta' branch again and added flowblade video editor to the app installer.
+* **17/2/2021** - added neofetch as a dependency (for system information), after installing a app, return to app installer and not the main menu, system information: detect LXDE on RPiOS correctly (on RPiOS lxde is called LXDE-pi).
 
 
 ## [Back to Readme](https://github.com/Itai-Nelken/Pi-Assistant#-pi-assistant)

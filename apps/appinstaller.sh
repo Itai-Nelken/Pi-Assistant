@@ -27,6 +27,8 @@ flatpak="$APPS/flatpak.sh"
 etcher="$APPS/etcher.sh"
 zoom="$APPS/zoom.sh"
 box86="$APPS/box86.sh"
+flowblade="$APPS/flowblade.sh"
+back="$APPS/appinstaller.sh"
 main="sleep 0.00001"
 
 
@@ -48,11 +50,12 @@ OPTIONS=(1 "back to main menu"
          8 "inkscape - free and open-source vector graphics editor."
          9 "SimpleScreenRecorder - Qt-based screencast software made for Linux."
          10 "Kdenlive - free, open-source, and powerful video editing software"
-         11 "GNOME system monitor - powerful system monitor with an easy-to-use interface."
-         12 "flatpak - app packaging system that runs each app isolated from the rest of the system."
-         13 "Balena Etcher - Flash OS images to SD cards & USB drives, safely and easily. (arm versions compiled by me)"
-         14 "Zoom - the popular video conferencing software. Linux x86 version running with box86."
-         15 "box86 -  Linux Userspace x86 Emulator with a twist.")
+         11 "Flowblade - multitrack non-linear video editor released under GPL3 license. performs slightly better the kdenlive on a pi4"
+         12 "GNOME system monitor - powerful system monitor with an easy-to-use interface."
+         13 "flatpak - app packaging system that runs each app isolated from the rest of the system."
+         14 "Balena Etcher - Flash OS images to SD cards & USB drives, safely and easily. (arm versions compiled by me)"
+         15 "Zoom - the popular video conferencing software. Linux x86 version running with box86."
+         16 "box86 -  Linux Userspace x86 Emulator with a twist.")
 
 CHOICE=$(dialog --clear \
                 --backtitle "$BACKTITLE" \
@@ -68,45 +71,48 @@ case $CHOICE in
             $main
             ;;
         2)
-            $gparted
+            $gparted; $back
             ;;
         3)
-            $chromium
+            $chromium; $back
             ;;
         4)
-            $firefox
+            $firefox; $back
             ;;
         5)
-            $blender
+            $blender; $back
             ;;
         6)
-            $audacity
+            $audacity; $back
             ;;
         7)
-            $snap
+            $snap; $back
             ;;
         8)
-            $inkscape
+            $inkscape; $back
             ;;
         9)
-            $ssr
+            $ssr; $back
             ;;
         10) 
-            $kdenlive
+            $kdenlive; $back
             ;;
         11)
-            $gsysmon
+            $flowblade; $back
             ;;
         12)
-            $flatpak
+            $gsysmon; $back
             ;;
         13)
-            $etcher
+            $flatpak; $back
             ;;
         14)
-            $zoom
+            $etcher; $back
             ;;
         15)
-            $box86
+            $zoom; $back
+            ;;
+        16)
+            $box86; $back
             ;;
 esac
