@@ -15,8 +15,8 @@ DIRECTORY="$HOME/Pi-Assistant"
 APPS="$HOME/Pi-Assistant/apps"
 
 echo "this script will help you execute system maintenance tasks"
-PS3='Please enter the number above for task you would like to perform (1 - 5): '
-options=("autoremove" "autoclean" "fix broken install" "clear swap" "back to main menu")
+PS3='Please enter the number above for task you would like to perform (1 - 6): '
+options=("autoremove" "autoclean" "fix broken install" "clear swap" "fix duplicates in sources.list" "back to main menu")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -78,6 +78,25 @@ fi
             break
             ;;
 
+     "fix duplicates in sources.list")
+echo -ne '(0%)[#                         ](100%)\r'
+sudo rm -f ~/sources.list /etc/apt/sources.list.bak
+sleep 0.3
+awk '/^$/ {print; next} {if ($1 in a) next; a[$1]=$0; print}' /etc/apt/sources.list > ~/sources.list
+echo -ne '(0%)[#########                 ](100%)\r'
+sleep 0.2
+sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak
+echo -ne '(0%)[###################       ](100%)\r'
+sleep 0.1
+sudo mv ~/sources.list /etc/apt/sources.list
+echo -ne '(0%)[########################  ](100%)\r'
+sleep 0.1
+echo -ne '(0%)[######################### ](100%)\r'
+sleep 0.1
+echo -ne '(0%)[##########################](100%)\r'
+sleep 0.7
+echo -e "$(tput bold)DONE!$(tput sgr 0)"
+echo "there is a backup of your previous sources.list in $(tput bold)/etc/apt/sources.list.bak$(tput sgr 0)"
 
 
      "back to main menu")
