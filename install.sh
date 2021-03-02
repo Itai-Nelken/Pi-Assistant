@@ -17,16 +17,16 @@ APPS="$HOME/Pi-Assistant/apps"
 
 #install dependencies for main menu windows and pop-up windows
 echo "installing dependencies..."
-if ! which yad >/dev/null; then
+if ! which yad >/dev/null ; then
    sudo apt install -y yad
    #echo "installed">~/Pi-Assistant/data/yad
-elif ! which dialog >/dev/null; then
+elif ! which dialog >/dev/null ; then
    sudo apt install -y dialog
    #echo "installed">~/Pi-Assistant/data/dialog
-elif ! which xdg-open >/dev/null; then
+elif ! which xdg-open >/dev/null ; then
    sudo apt install -y xdg-utils
    #echo "installed">~/Pi-Assistant/data/xdg
-if ! which neofetch >/dev/null; then
+elif ! which neofetch >/dev/null ; then
    sudo apt install -y neofetch
    #echo "installed">~/Pi-Assistant/data/neofetch
 else
