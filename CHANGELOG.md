@@ -22,6 +22,7 @@ added flags to piassist (and main.sh), run `piassist --help` to see all of them.
 * **8/2/2021** - tons of improvements over the last few days, running flags from `piassist` redirects them to `main.sh`, added shorter versions of flags (`-v` = `--versions`).
 * **16/2/2021** - update: 1.3.2 - fixed a bug with the appinstaller script: when installing SimpleScreenRecorder (SSR), it looked for a script called `ssr.sh` but I accidentally named it `SSR.sh`.<br>update: 1.3.3 - forgot to change `SSR.sh` to `ssr.sh` in the updater script.<br>update: 1.3.4 - forgot to bump the version in the scripts.
 * **16/2/2021** - opened 'beta' branch again and added flowblade video editor to the app installer.
+* **17/2/2021** - added neofetch as a dependency (for system information), after installing a app, return to app installer and not the main menu, system information: detect LXDE on RPiOS correctly (on RPiOS lxde is called LXDE-pi).<br>merged branch 'beta' into 'main': all changes from 16 - 17/2/2021 are now available.
 * **22/2/2021** added a option to fix duplicates in `/etc/apt/sources.list` in system tools option.
 
 ## [Back to Readme](https://github.com/Itai-Nelken/Pi-Assistant#-pi-assistant)
