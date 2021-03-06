@@ -109,7 +109,7 @@ fi
 
 #set NOINTERNETCHECK variable to 0 (check)
 if [ $NOINTERNETCHECK == "1" ]; then
-NOINTERNETCHECK=0
+    NOINTERNETCHECK=0
 fi
 
 
@@ -132,7 +132,7 @@ WIDTH=40
 CHOICE_HEIGHT=7
 BACKTITLE="Pi-Assistant $APPVER,"
 COMMIT="$(git log -1 | grep commit* | cut -c1-14)::::::Itai Nelken::::::"
-TAG="$(curl --silent https://api.github.com/repos/Itai-Nelken/Pi-Assistant/releases/latest | grep -Po '"tag_name": "\K.*?(?=")')"
+#TAG="$(curl --silent https://api.github.com/repos/Itai-Nelken/Pi-Assistant/releases/latest | grep -Po '"tag_name": "\K.*?(?=")')" #same as $APPVER
 #CPU="CPU `lscpu | grep "Model name*"`"
 #MODEL="`cat /proc/cpuinfo | grep "Raspberry*"`"
 SPACER="_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_/\_"
@@ -148,7 +148,7 @@ OPTIONS=(1 "Update OS"
          7 "exit Pi-Assistant")
 
 CHOICE=$(dialog --clear \
-                --backtitle "$BACKTITLE $TAG, $COMMIT $SPACER" \
+                --backtitle "$BACKTITLE $COMMIT $SPACER" \
                 --title "$TITLE" \
                 --menu "$MENU" \
                 $HEIGHT $WIDTH $CHOICE_HEIGHT \
