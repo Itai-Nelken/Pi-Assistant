@@ -24,7 +24,7 @@ added flags to piassist (and main.sh), run `piassist --help` to see all of them.
 * **16/2/2021** - opened 'beta' branch again and added flowblade video editor to the app installer.
 * **17/2/2021** - added neofetch as a dependency (for system information), after installing a app, return to app installer and not the main menu, system information: detect LXDE on RPiOS correctly (on RPiOS lxde is called LXDE-pi).<br>merged branch 'beta' into 'main': all changes from 16 - 17/2/2021 are now available.
 * **22/2/2021** added a option to fix duplicates in `/etc/apt/sources.list` in system tools option.
-* **6/3/2021** UPDATE: v1.4.0 - fixed `systools.sh`, for some very weird version it wasn't working, probably some syntax error.
+* **6/3/2021** UPDATE: v1.4.0 - fixed `systools.sh`, for some very weird version it wasn't working, probably some syntax error, all changes from 16/2 - 6/3/2021.
 
 ## [Back to Readme](https://github.com/Itai-Nelken/Pi-Assistant#-pi-assistant)
 <!--
