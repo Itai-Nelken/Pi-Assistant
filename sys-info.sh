@@ -16,35 +16,35 @@ echo '  '
 #echo -e "$(tput setaf 2)FORMATING INFO...$(tput sgr 0)"
 
 #variables
-DE="`env | grep DESKTOP_SESSION`"
-USER="`env | grep USER`"
-KERNEL="`uname -r`"
-KARCH="`uname -m`"
-NETNAME="`uname -n`"
-KRELEASE="`uname -v`"
+DE="$(env | grep DESKTOP_SESSION)"
+USER="$(env | grep USER)"
+KERNEL="$(uname -r)"
+KARCH="$(uname -m)"
+NETNAME="$(uname -n)"
+KRELEASE="$(uname -v)"
 sleep 0.1
 echo -ne '(0%)[###                       ](100%)\r'
-CPU="`lscpu | grep "Model name:"`"
+CPU="$(lscpu | grep "Model name:")"
 MEM="`echo $(($(getconf _PHYS_PAGES) * $(getconf PAGE_SIZE) / (1024 * 1024)))`"
-MODEL="`cat /proc/cpuinfo | grep Model`"
+MODEL="$(cat /proc/cpuinfo | grep Model)"
 sleep 0.1
 echo -ne '(0%)[#####                     ](100%)\r'
-CSPEED="`lscpu | grep "CPU max" | cut -c22-25`"
-OS="`cat /etc/*-release | grep PRETTY | cut -c14-43`"
+CSPEED="$(lscpu | grep "CPU max" | cut -c22-25)"
+OS="$(cat /etc/*-release | grep PRETTY | cut -c14-43)"
 sleep 0.1
 echo -ne '(0%)[########                  ](100%)\r'
-SOC="`cat /proc/cpuinfo | grep Hardware | cut -c12-18`"
-CORES="`nproc`"
-SOCREV="`cat /proc/cpuinfo | grep Revision | cut -c12-18`"
+SOC="$(cat /proc/cpuinfo | grep Hardware | cut -c12-18)"
+CORES="$(nproc)"
+SOCREV="$(cat /proc/cpuinfo | grep Revision | cut -c12-18)"
 sleep 0.1
 echo -ne '(0%)[##############            ](100%)\r'
-LOCALIP="`hostname -I | awk '{print $1}'`"
-PUBLICIP="`wget -qO- ipinfo.io/ip`"
-FREEMEM="`free -h -m --si| awk '{ print $7}'|sed '/^$/d'`"
+LOCALIP="$(hostname -I | awk '{print $1}')"
+PUBLICIP="$(wget -qO- ipinfo.io/ip)"
+FREEMEM="$(free -h -m --si| awk '{ print $7}'|sed '/^$/d')"
 sleep 0.1
 echo -ne '(0%)[####################      ](100%)\r'
-DRES="`neofetch | grep Resolution | cut -c50-70 | cut -c4-21`"
-CPUTEMP="`cat /sys/class/thermal/thermal_zone*/temp | cut -c1-2`"
+DRES="$(neofetch | grep Resolution | cut -c50-70 | cut -c4-21)"
+CPUTEMP="$(cat /sys/class/thermal/thermal_zone*/temp | cut -c1-2)"
 sleep 0.1
 echo -ne '(0%)[##########################](100%)\r'
 sleep 0.5
@@ -71,14 +71,14 @@ fi
 
 #get gpu 3d block (v3d) clock speed
 if [ -f "/opt/vc/bin/vcgencmd" ]; then
-    GPUSPEED="`/opt/vc/bin/vcgencmd measure_clock v3d | cut -c15-23 | cut -c1-3`"
+    GPUSPEED="$(/opt/vc/bin/vcgencmd measure_clock v3d | cut -c15-23 | cut -c1-3)"
 else
 	GPUSPEED=0
 fi
 
 #get GPU memory
 if [ -f "/opt/vc/bin/vcgencmd" ]; then
-    GPUMEM="`vcgencmd get_mem gpu`"
+    GPUMEM="$(vcgencmd get_mem gpu)"
 else
 	GPUMEM=0
 fi
