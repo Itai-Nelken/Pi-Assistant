@@ -31,7 +31,7 @@ if ! command -v dialog > /dev/null; then
     read -p "Press [ENTER] to exit."
     exit 1
 else
-    sleep 0.0001
+    true
 fi
 
 #variables
@@ -45,7 +45,7 @@ if  [[ $1 = "--version" ]] || [[ $1 == "-v" ]]; then
 elif [[ $1 = "--secret" ]]; then
     xdg-open ~/Pi-Assistant/icons/ascii-art.html
     sleep 10
-    clear
+    clear -x
     read -p "press [ENTER] to exit"
     exit 0
 elif [[ $1 = "--no-internet" ]] || [[ $1 == "-ni" ]]; then    
