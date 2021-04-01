@@ -85,7 +85,9 @@ $ wget -qO- https://raw.githubusercontent.com/Itai-Nelken/Pi-Assistant/main/unin
 `--no-ask-exit-output` - don't ask to exit and don't print any extra output (has no use as of writing).<br>
 `--output-no-ask-exit` - print extra output but don't ask to exit (used when manually updating).<br>
 `--all-executable` - make all scripts executable (has no use as of writing).<br>
-the default is to print extra output and ask to exit, the flags that have no use are there just to have all options in case I'll need them in the future.
+
+the default is to print extra output and ask to exit.<br>
+the flags that have no use are there just to have all options in case I'll need them in the future.
 
 ## To do:
 
@@ -96,7 +98,7 @@ the default is to print extra output and ask to exit, the flags that have no use
 - [x] add dialog GUI
 - [ ] add my QEMU debs.
 - [ ] add box86 install script for 64bit OS's
-- [ ] maybe change whole gui to use YAD? or make a GUI using python? or using c?
+- [ ] maybe change whole gui to use YAD? or make a GUI using python? or using gtk and c?
 - [ ] implement app "remembering" system - in other words make Pi-Assistant remember every app it installs.
 
 
