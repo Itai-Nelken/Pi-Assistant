@@ -20,7 +20,7 @@ APPVER="v1.4.0"
 UPDATE=1
 
 #set NOINTERNETCHECK variable to 0 (check)
-if [ ! "$NOINTERNETCHECK" = 1 ]; then
+if [ ! "$NOINTERNETCHECK" == 1 ]; then
 NOINTERNETCHECK=0
 fi
 
