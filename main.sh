@@ -122,7 +122,7 @@ apps="$APPS/appinstaller.sh" #apps variable used for my testing.
 systools="$DIRECTORY/systools.sh"
 sysinfo="$DIRECTORY/sys-info.sh"
 other="$DIRECTORY/other.sh"
-exit="exit 1"
+exit="exit 0"
 
 #change to $DIRECTORY (for $COMMIT to work)
 cd $DIRECTORY
