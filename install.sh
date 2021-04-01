@@ -4,9 +4,6 @@ function error {
   echo -e "\e[91m$1\e[39m"
 }
 
-DIRECTORY="$HOME/Pi-Assistant"
-APPS="$HOME/Pi-Assistant/apps"
-
 cd $HOME
 echo "cloning repo..."
 git clone https://github.com/Itai-Nelken/Pi-Assistant.git
