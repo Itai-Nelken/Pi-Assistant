@@ -69,31 +69,8 @@ sudo chmod +x /usr/local/bin/piassist
 #mark all scripts as executables
 echo "marking all scripts as executable..."
 cd $DIRECTORY
-sudo chmod +x main.sh
-sudo chmod +x passwd.sh
-sudo chmod +x systools.sh
-sudo chmod +x other.sh
-sudo chmod +x install.sh
-sudo chmod +x update.sh
-sudo chmod +x updater.sh
-sudo chmod +x uninstall.sh
-sudo chmod +x sys-info.sh
-sudo chmod +x apps/appinstaller.sh
-sudo chmod +x apps/gparted.sh
-sudo chmod +x apps/chromium.sh
-sudo chmod +x apps/firefox.sh
-sudo chmod +x apps/blender.sh
-sudo chmod +x apps/audacity.sh
-sudo chmod +x apps/inkscape.sh
-sudo chmod +x apps/snap.sh
-sudo chmod +x apps/ssr.sh
-sudo chmod +x apps/kdenlive.sh
-sudo chmod +x apps/gsysmon.sh
-sudo chmod +x apps/flatpak.sh
-sudo chmod +x apps/etcher.sh
-sudo chmod +x apps/zoom.sh
-sudo chmod +x apps/box86.sh
-
+sudo chmod +x *.sh
+sudo chmod +x apps/*.sh
 #print in green 'installation succesful' and in orange how to run system tools
 echo "$(tput setaf 2)Installation succesful! $(tput sgr 0)"
 echo -e "$(tput setaf 3)to run Pi-Assistant, run the desktop shortcut or main menu>other>Pi-Assistant
