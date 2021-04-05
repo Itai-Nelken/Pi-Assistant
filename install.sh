@@ -71,7 +71,7 @@ echo "marking all scripts as executable..."
 cd $DIRECTORY
 sudo chmod +x *.sh
 sudo chmod +x apps/*.sh
-#print in green 'installation succesful' and in orange how to run system tools
+#print in green 'installation succesful' and in orange how to run Pi-Assistant
 echo "$(tput setaf 2)Installation succesful! $(tput sgr 0)"
 echo -e "$(tput setaf 3)to run Pi-Assistant, run the desktop shortcut or main menu>other>Pi-Assistant
 or type 'piassist' in terminal. to see a list of all commands, run 'piassist --help' in terminal$(tput sgr 0)"
