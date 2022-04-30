@@ -1,5 +1,6 @@
 # <img src="https://github.com/Itai-Nelken/Pi-Assistant/raw/main/icons/pi-assistant-logopng.png" alt="logo" width="60"/> Pi-Assistant
 ![version badge](https://img.shields.io/github/v/release/Itai-Nelken/Pi-Assistant?include_prereleases&style=for-the-badge) ![license badge](https://img.shields.io/github/license/Itai-Nelken/Pi-Assistant?style=for-the-badge) ![made-with-bash badge](https://img.shields.io/badge/Made%20with-bash-green?style=for-the-badge&logo=GNU%20bash)<br>
+***NOTE:*** **Pi-Assistant isn't maintained anymore. use at your own risk!**<br>
 Pi-Assistant is a simple terminal app made for the Raspberry Pi that makes updating the system, installing apps, viewing system information, and more easier and faster, especially if you are new to the Linux command line or you forget the commands.
 
 ## links
